@@ -1,0 +1,4 @@
+QisKit
+qiskit-ibm-runtime
+qiskit[visualization]
+jupyter
