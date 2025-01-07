@@ -1,9 +1,76 @@
-\section{Cloning und Teleportation}
+\section{Cloning und Teleportation} \label{sec:cloning-und-teleportation}
 \subsection{No Cloning Theorem} \label{subsec:no-cloning}
+One of the most intriguing aspects of quantum mechanics is the impossibility of
+perfectly duplicating an arbitrary unknown quantum state.
+This concept is encapsulated in the No-Cloning Theorem, a foundational result in quantum information theory.
+The theorem has profound implications not only for quantum computing and quantum communication
+but also for our understanding of the nature of information in quantum systems.
 
-- Proof by Contradiction (Umkehrbare Operationen)
+In classical physics, duplicating information is simple:
+a copy machine can reproduce a document without altering the original.
+However, in quantum mechanics, this straightforward act becomes a nontrivial and forbidden operation.
+The No-Cloning Theorem asserts that there is no universal quantum operation
+that can create an identical copy of an arbitrary unknown quantum state.
 
-- Macht Klassische Error Correction unmöglich
+In this section, we will explore the No-Cloning Theorem from a variety of perspectives, discuss its proof,
+examine its consequences, and understand how it shapes the landscape of quantum technologies.
+\subsubsection{Definition}
+The No-Cloning Theorem states that it is impossible to create an identical copy of an unknown quantum state.
+Mathematically, there is no unitary operator UU that satisfies the following condition:
+\begin{equation}
+    U(\ket{\psi}\bigotimes\ket{e})=\ket{\psi}\bigotimes\ket{\psi}\label {eq:cloning_assertion}
+\end{equation}
+where $\ket{\psi}\ket{\psi}$ is an arbitrary quantum state and
+$\ket{e}\ket{e}$ represents an auxiliary, blank state.
+This equation expresses the idea that if we apply the operator UU to the state $\ket{\psi}\ket{\psi}$
+(combined with an auxiliary state), the result should be two copies of the original state.
+The theorem tells us that no such operator can exist for arbitrary $\ket{\psi}\ket{\psi}$,
+because quantum information is fundamentally different from classical information.
+\subsubsection{Proof}
+The proof of the No-Cloning Theorem is typically framed in terms of unitary evolution
+and the linear nature of quantum mechanics.
+To explain this, consider a quantum state $\ket{\psi}\ket{\psi}$ and an auxiliary state $\ket{e}\ket{e}$.
+Suppose we have a unitary operator UU that, when applied to
+$\ket{\psi}\bigotimes\ket{e}\ket{\psi}\bigotimes\ket{e}$,
+produces two copies of the state $\ket{\psi}\ket{\psi}$, as described above.
+
+Now, imagine we apply the same operator UU to two different quantum states,
+say $\ket{\psi_1}\ket{\psi_1}$ and $\ket{\psi_2}\ket{\psi_2}$, 
+with the goal of producing two identical copies in each case:
+\begin{equation}
+    U(\ket{\psi_1}\bigotimes\ket{e})=\ket{\psi_1}\bigotimes\ket{\psi_1}
+    U(\ket{\psi_2}\bigotimes\ket{e})=\ket{\psi_2}\bigotimes\ket{\psi_2} \label{eq:cloning_two_sates}
+\end{equation}
+But according to the linearity of quantum mechanics, the operator UU must satisfy:
+\begin{equation}
+    U(\alpha\ket{\psi_1}+\beta\ket{\psi_2})=\alpha U\ket{\psi_1}+\beta U\ket{\psi_2}
+    \label{eq:cloning_linearity_distribution}
+\end{equation}
+
+% TODO make proof more clear
+This leads to a contradiction because the action of UU on a superposition of states 
+$\ket{\psi_1}\ket{\psi_1}$ and $\ket{\psi_2}\ket{\psi_2}$
+cannot yield two identical copies of both states simultaneously.
+The impossibility of creating an identical copy of arbitrary quantum states arises from the fact that
+quantum states behave in a way that is fundamentally different from classical objects.
+
+\subsubsection{Implications}
+The No-Cloning Theorem has far-reaching implications for a number of fields in
+quantum mechanics and quantum information science:
+
+In quantum computing, the No-Cloning Theorem places fundamental limits on error correction.
+While classical computers can easily replicate information to protect against errors
+(e.g., by making redundant copies of data), this strategy is not possible in quantum computing.
+Instead, quantum error correction schemes rely on entangling qubits in such a way that the information is spread across
+multiple qubits in a manner that allows for recovery even if some of the qubits are disturbed or damaged.
+However, these methods do not involve copying the quantum information itself.
+
+One of the most practical consequences of the No-Cloning Theorem is in the realm of quantum cryptography,
+specifically in quantum key distribution (QKD). In protocols like BB84, the theorem guarantees that an eavesdropper
+cannot perfectly copy the quantum states transmitted between two parties.
+This property ensures the security of quantum communication, as any attempt to intercept the quantum information
+would necessarily disturb the system and alert the legitimate parties to the presence of an intruder.
+
 
 \subsection{Verschränkte Teleportation}
 

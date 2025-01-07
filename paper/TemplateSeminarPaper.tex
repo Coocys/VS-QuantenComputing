@@ -12,6 +12,12 @@
 \usepackage[authoryear,round]{natbib}
 % package for header
 \usepackage[automark,headsepline]{scrlayer-scrpage}
+\usepackage{mathtools}
+% qc state brackets
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
 \pagestyle{scrheadings}
 \ihead[]{Name of students}
 \ohead[]{\today}
