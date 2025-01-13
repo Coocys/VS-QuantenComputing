@@ -1,5 +1,4 @@
-\section{Cloning und Teleportation} \label{sec:cloning-und-teleportation}
-\subsection{No Cloning Theorem} \label{subsec:no-cloning}
+\section{No Cloning Theorem} \label{sec:no-cloning}
 One of the most intriguing aspects of quantum mechanics is the impossibility of
 perfectly duplicating an arbitrary unknown quantum state.
 This concept is encapsulated in the No-Cloning Theorem, a foundational result in quantum information theory.
@@ -14,47 +13,73 @@ that can create an identical copy of an arbitrary unknown quantum state.
 
 In this section, we will explore the No-Cloning Theorem from a variety of perspectives, discuss its proof,
 examine its consequences, and understand how it shapes the landscape of quantum technologies.
-\subsubsection{Definition}
+\subsection{Definition}\label{subsec:definition}
 The No-Cloning Theorem states that it is impossible to create an identical copy of an unknown quantum state.
-Mathematically, there is no unitary operator UU that satisfies the following condition:
+Mathematically, there is no unitary operator $U$ that satisfies the following condition:
 \begin{equation}
     U(\ket{\psi}\bigotimes\ket{e})=\ket{\psi}\bigotimes\ket{\psi}\label {eq:cloning_assertion}
 \end{equation}
-where $\ket{\psi}\ket{\psi}$ is an arbitrary quantum state and
-$\ket{e}\ket{e}$ represents an auxiliary, blank state.
-This equation expresses the idea that if we apply the operator UU to the state $\ket{\psi}\ket{\psi}$
+where $\ket{\psi}$ is an arbitrary quantum state and
+$\ket{e}$ represents an auxiliary, blank state.
+This equation expresses the idea that if we apply the operator $U$ to the state $\ket{\psi}$
 (combined with an auxiliary state), the result should be two copies of the original state.
-The theorem tells us that no such operator can exist for arbitrary $\ket{\psi}\ket{\psi}$,
+The theorem tells us that no such operator can exist for arbitrary $\ket{\psi}$,
 because quantum information is fundamentally different from classical information.
-\subsubsection{Proof}
-The proof of the No-Cloning Theorem is typically framed in terms of unitary evolution
-and the linear nature of quantum mechanics.
-To explain this, consider a quantum state $\ket{\psi}\ket{\psi}$ and an auxiliary state $\ket{e}\ket{e}$.
-Suppose we have a unitary operator UU that, when applied to
-$\ket{\psi}\bigotimes\ket{e}\ket{\psi}\bigotimes\ket{e}$,
-produces two copies of the state $\ket{\psi}\ket{\psi}$, as described above.
+\subsection{Proof}\label{subsec:proof}
+As a fundamental conclusion of quantum mechanics there have been several proofs of the theorem.
+One such proof, a proof by contradiction chosen to be easy to follow, can be defined as follows.
 
-Now, imagine we apply the same operator UU to two different quantum states,
-say $\ket{\psi_1}\ket{\psi_1}$ and $\ket{\psi_2}\ket{\psi_2}$, 
-with the goal of producing two identical copies in each case:
+First, we take two arbitrary quantum states, $\ket{\psi_1}$ and $\ket{\psi_2}$.
+Next, both these states are cloned with the cloning operator $U$, which we defined in the previous section and now assume
+exists for our proof by contradiction, and an auxiliary state $e$.
+
 \begin{equation}
-    U(\ket{\psi_1}\bigotimes\ket{e})=\ket{\psi_1}\bigotimes\ket{\psi_1}
-    U(\ket{\psi_2}\bigotimes\ket{e})=\ket{\psi_2}\bigotimes\ket{\psi_2} \label{eq:cloning_two_sates}
-\end{equation}
-But according to the linearity of quantum mechanics, the operator UU must satisfy:
-\begin{equation}
-    U(\alpha\ket{\psi_1}+\beta\ket{\psi_2})=\alpha U\ket{\psi_1}+\beta U\ket{\psi_2}
-    \label{eq:cloning_linearity_distribution}
+\begin{split}
+    U(\ket{\psi_1} \bigotimes \ket{e}) = \ket{\psi_1} \bigotimes \ket{\psi_1}\\
+    U(\ket{\psi_2} \bigotimes \ket{e}) = \ket{\psi_2} \bigotimes \ket{\psi_2}
+\end{split}\label{eq:clone_two_states}
 \end{equation}
 
-% TODO make proof more clear
-This leads to a contradiction because the action of UU on a superposition of states 
-$\ket{\psi_1}\ket{\psi_1}$ and $\ket{\psi_2}\ket{\psi_2}$
-cannot yield two identical copies of both states simultaneously.
-The impossibility of creating an identical copy of arbitrary quantum states arises from the fact that
-quantum states behave in a way that is fundamentally different from classical objects.
+Using this information, we now have two ways to write the scalar product of
+$\braket{U(\psi_1 \bigotimes e)}{U(\psi_2 \bigotimes e)}$.
+One uses the result of the previous equation
+while the other uses the fact that quantum operations preserve the scalar product of their inputs\cite{findsource}.
 
-\subsubsection{Implications}
+\begin{equation}
+\begin{split}
+    \braket{U(\psi_1 \bigotimes e)}{U(\psi_2 \bigotimes e)} = \braket{\psi_1 \bigotimes \psi_1}{\psi_2 \bigotimes \psi_2}\\
+    \braket{U(\psi_1 \bigotimes e)}{U(\psi_2 \bigotimes e)} = \braket{\psi_1 \bigotimes e}{\psi_2 \bigotimes e}
+\end{split}\label{eq:two_scalar_products}
+\end{equation}
+
+Simple substitution leads then to the following equation:
+\begin{equation}
+    \braket{\psi_1 \bigotimes \psi_1}{\psi_2 \bigotimes \psi_2} =
+    \braket{\psi_1 \bigotimes e}{\psi_2 \bigotimes e}
+\label{eq:tensor_equals}
+\end{equation}
+
+Because the scalar and tensor products are compatible that further simplifies to:
+
+\begin{equation}
+    \braket{\psi_1}{\psi_2}\braket{\psi_1}{\psi_2}=\braket{\psi_1}{\psi_2}\braket{e}{e}
+    \label{eq:scalar_equals}
+\end{equation}
+
+And finally, because for any state $\ket{e}$ the equation $\braket{e}{e} = 1$ holds we arrive at this equation:
+\begin{equation}
+    \braket{\psi_1}{\psi_2}^2 = \braket{\psi_1}{\psi_2}
+    \label{eq:square_equals_single}
+\end{equation}
+
+It should now be obvious that this equation only has two solutions:
+$\braket{\psi_1}{\psi_2} = 1$ or $\braket{\psi_1}{\psi_2} = 0$.
+The first solution implies that $\psi_1 = \psi_2$, which does not help a general copying operation but does imply
+an operation producing copies of a specific quantum state is possible.
+While the second solution allows for $\psi_1$ and $\psi_2$ to differ and is as such more promising for a general operation
+it also implies that the two states are orthogonal to each other which, while less restrictive than demanding that the
+two states are equal is still to restrictive for a general copying operation while allowing some specialised copy operations.
+\subsection{Implications}\label{subsec:implications}
 The No-Cloning Theorem has far-reaching implications for a number of fields in
 quantum mechanics and quantum information science:
 
@@ -72,10 +97,28 @@ This property ensures the security of quantum communication, as any attempt to i
 would necessarily disturb the system and alert the legitimate parties to the presence of an intruder.
 
 
-\subsection{Verschränkte Teleportation}
+\section{Quantum Teleportation}\label{sec:quantum-teleportation}
 
-- Braucht Setup (verschränktes Qubit teilen)
+\subsection{Introduction}\label{subsec:introduction}
+Quantum teleportation is a groundbreaking phenomenon that allows the transfer of quantum information
+between two distant locations without physically moving the particle or object carrying the information.
+Unlike the theoretical classical teleportation, which involves the transportation of matter or energy,
+quantum teleportation focuses on the transmission of quantum states.
+This process leverages the principles of quantum mechanics, including entanglement, superposition,
+and the no-cloning theorem which we explained in the previous section\ref{sec:no-cloning},
+to transfer the state of a quantum object (such as a photon or an electron) from one place to another,
+without regard for distance.
 
-- überträgt einen Quantenzustand
+The term ``quantum teleportation'' can be somewhat misleading because, in the process, no actual matter is teleported.
+Instead, what is ``teleported'' is the information about the quantum state of a particle.
+The key to quantum teleportation is quantum entanglement,
+a phenomenon where two or more particles become correlated in such a way that the state of one particle instantaneously
+influences the state of the other, no matter how far apart they are.
+This ``spooky action at a distance'', as Albert Einstein famously called it,
+allows for the transfer of quantum information between distant parties without regard for speed-of-light delays.
 
-- - Zustand am Ursprung wird zerstört (no cloning theorem)
+\subsection{Setup}
+
+\subsection{Measurement}
+
+\subsection{State reconstruction}
