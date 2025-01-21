@@ -115,10 +115,77 @@ The key to quantum teleportation is quantum entanglement,
 a phenomenon where two or more particles become correlated in such a way that the state of one particle instantaneously
 influences the state of the other, no matter how far apart they are.
 This ``spooky action at a distance'', as Albert Einstein famously called it,
-allows for the transfer of quantum information between distant parties without regard for speed-of-light delays.
+allows for the transfer of quantum information between distant parties without having to transport the frequently fragile
+quantum states themselves.
 
-\subsection{Setup}
+\subsection{Setup}\label{subsec:setup}
+To perform a quantum teleportation several setup conditions are required.
+In particular, the following must be true:
 
-\subsection{Measurement}
+There has to be a Quantum Entanglement Pair available.
+This pair has to be in the Bell state\cite{explain_bell_state} to ensure that the measurement of one will affect the state of the other.
+This pair is typically created through a process called
+spontaneous parametric down-conversion\cite{something} or quantum entanglement generation\cite{something} and for now
+typically uses simple photons or ions.
 
-\subsection{State reconstruction}
+There also have to be two parties at the Endpoints of the teleportation, hereafter called Alice and Bob, who are both
+equipped to interact with quantum systems and take measurements, which usually means a limited functionality
+Quantum Computer.
+
+Finally, a classical communication channel between Alice and Bob must exist.
+The key for quantum teleportation is here, that this channel need not be able to transport quantum states - that is
+what the teleportation is for -, just traditional bits.
+
+\subsection{Process}\label{subsec:process}
+
+With the setup complete, the question is now what actually needs to be done to perform the quantum teleportation.
+This can be further split into several distinct steps.
+
+\subsubsection{Alice's Bell State Measurement}
+The first step performed by Alice is the Bell-State Measurement, which involves two key sub-steps.
+
+First, Alice combines the particle she wants to teleport with her half of the entangled pair.
+This is typically achieved by using a beam splitter or an interferometer to put them into a superposition state.
+
+Second, Alice measures the two combined particles in the Bell basis\cite{some}, which collapses the particles from their
+previous four possible states into a single one.
+This measurement is critical because it determines how Bob will have to adjust his particle to recreate the state that
+Alice is teleporting.
+\subsubsection{Classical Communication}
+Next, Alice uses their classical communication channel to send her measurement to Bob.
+This requires the transmission of just two bits (the observed state of the state two teleport and the observed state of
+the entangled pair), which should pose no problem for any communication channel.
+Indeed, this low bandwidth requirement in the classical communication makes several communication channels available
+that would not normally be considered for their low bandwidth, particularly if the teleportation is to happen over large
+distances.
+This information is however sufficient to instruct Bob how to adjust his own System.
+\subsubsection{Bob's Quantum Operation}
+Now that Bob has received the classical measurement he has to apply one or both (depending on the measurement) of the
+Pauli-X gate\cite{} for a bit-flip or the Pauli-Z gate for a phase flip.
+Performing this operation places his quantum state into the same state that Alice's quantum particles had before her
+measurement collapsed the superposition.
+
+Once Bob has dones so, the quantum Teleportation is complete.
+\subsection{Proof}\label{subsec:proof2}
+
+\subsection{Challenges}\label{subsec:challenges}
+While quantum teleportation is a promising avenue of research there are nevertheless still several challenges to be
+overcome and limitations to keep in mind.
+
+One such problem is the required entangled pair, which has to be split between the start and end point of the teleportation
+during the setup.
+This problem is only made more difficult by the problem of decoherence that all quantum systems share and will be
+discussed in more detail in a later section of this paper\ref{sec:hardware}.
+While there have been increases in figuring out improvements to this problem like quantum repeaters\cite{s}, these are
+very much still in early stages of development and as such an active avenue of research.
+
+Another problem stems from the increasing complexity of larger quantum systems, which makes scalability difficult.
+As quantum teleportation can only teleport a quantum register as large as the entangled register, larger teleports
+also require large groups of entangled particles, something that has proven very difficult to achieve \cite{s} and
+thus will likely limit quantum teleportation to small states for the foreseeable future.
+
+A final limitation currently plaguing all quantum technologies is the lack of availability of quantum resources.
+Obtaining the necessary quantum computers and moving the entangled pair (without breaking the entanglement) are still
+rather difficult tasks only possible in specialised laboratories.
+It is of course expected that, should the science advance far enough that these systems become economical, there will
+be standardised systems for such in the future, which should greatly reduce the effort required to obtain the resources.
