@@ -86,14 +86,6 @@ Der als $\hbar\omega_{01}$ gekennzeichnete Energieunterschied ist unser Qubit\\
 \textbf{Steuerung und Auslesung}\\
 Die Steuerung der Josephson-Junktion erfolgt durch Mikrowellenpulse, welche die Energie des Qubits verändern. Die Auslesung erfolgt durch eine Mikrowellenresonanz, welche die Energie des Qubits misst.\\
 
-\subsubsection{Topologische Quantencomputer}
-\label{subsub:topologische_quantencomputer}
-Die Funktionsweise von Topologische Quantencomputer unterscheidet sich hauptsächlich auf welche Art sie Quantenbits erzeugen.
-Im gegensatz zu den vorher genannten Ansätzen, welche ihre Quantenbits auf Eigenschaften von einzelne Protonen oder Elektornen basieren, sind Quantenbits in Topologischen Quantencomputern aus einer größeren Anzahl von Elektornen aufgebaut.
-Diese zusammengesetzten Elektronen werden als Majorana Partikel bezeichnet und treten nur in paaren auf. Durch die Verwendung von Majorana Partikeln wird die Dekohärenz der Quantenbits minimiert, da Majorana Partikel durch ihre topologischen Eigenschaften gegenüber Störungen weniger empfindlich sind.
-Vorstellen kann man sich dies wie eine Brücke welche dürch die Majorana Partikel gebildet werden auf welcher sie die Elektornen bewegen. Diese Brücke wird durch eine 
-Es bleibt jedoch die frage wie mit diesen Majorana Partikeln Quantenbits erzeugt werden können. Wie vorher beschrieben basieren Topologische Quantencomputer nicht auf einem einzelnen Elektorn sondern 
-
 \subsubsection{Quantenpunkte}
 \label{subsub:quantenpunkte}
 Quantencomputer basierend auf Quantenpunkten auch Quantum-Dot genannt nutzen winzige Halbleiterstrukturen um Qubits zu realisieren.
@@ -103,3 +95,85 @@ Die größe eines Quantum-Dots typischerweise 2-10 Nanometer, und es schließt e
 Für die fertigung werden oftmals Galliumarsenid (GaAs) oder Silizium (Si) verwendet. Der physikalische einschluss der Elektronen schränkt ihre
 Bewegung stark ein, wodurch ein quantisiertes Energienivea entsteht. Dies ähnelt den Energieniveaus eines Atoms, weswegen Quantum-Dots auch als künstliche Atome bezeichnet werden.\\
 
+Die Zustände der Qubits werden durch die Eigenschaften einzelner Elektronen in den Quantum Dots definiert. Es gibt zwei Hauptansätze zur Realisierung von Qubits mit Quantum Dots.\\
+
+\textbf{Ladungs-Qubits}\\
+Der Ladungszustand eine Quantum Dots kann als Qubit verwendet werden. Die Ladung eines Elektrons kann entweder 0 oder 1 sein, was als $\ket{0}$ und $\ket{1}$ interpretiert wird.
+Für eine messung wird der Ladungszustand mit einer Kapazitätsmessung der Tunnelströme ermittelt.
+Für die Manipulation des Qubits werden elektrische Felder verwendet, um die Elektronen in den Quantum Dots zu bewegen.\\
+
+Diese Methode ist durch die Ladungsquantisierung sehr genau, jedoch auch sehr empfindlich gegenüber Störungen durch die Umgebung.\\
+
+\textbf{Spin-Qubits}\\
+Die Spin-Eigenschaften von Elektronen in Quantum Dots können auch als Qubit verwendet werden. Hierbei sind die beiden Spinrichtungen($\uparrow$ für Spin-Up und $\downarrow$ für Spin-Down)
+diese beiden Spinrichtungen entsprechen den Zuständen $\ket{0}$ und $\ket{1}$. Und die kombination aus beiden Zuständen ergibt eine Superposition.\\
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{img/QD.png}
+    \caption{Ein doppel Quantum-Dot Qubit}
+    \label{fig:double-Quantum-Dot}
+\end{figure}
+
+In der Abbildung ist ein doppel Quantum-Dot Qubit dargestellt. Sowohl in $S_L$ als auch $S_R$ befinden sich Elektornen. Beide können seperat von einander, sowohl im Spin als auch Ladung, manipuliert werden.
+Durch die Physikalische nähe der beiden Quantum-Dots können durch Tunnelkopplung und Austauschwechselwirkung die beiden Qubits miteinander verschränkt werden.\\
+
+Die umsetzung dieser Methode beschränkt such hauptsächlich auf die Spin variante. Der Grund dafür ist das Durch die hohe ladungsanforderung der Ladungsvariante die Qubits sehr empfindlich gegenüber Störungen sind.
+Außerdem sind die Nachteile der Spin variante gegenüber der Ladungsvariante nicht so gravierend.\\
+Jedoch sind die größten herausforderungen die Herstellung der Halbleiterstrukturen und die Kontrolle der Elektronen in den Quantum-Dots.
+Damit ist der Größte vorteil, die hohe Skalierbarkeit, auch der größte nachteil, da die Herstellung und Kontrolle von vielen Quantum-Dots sehr aufwendig und schwierig ist.\\
+
+\subsubsection{Topologische Quantencomputer}
+\label{subsub:topologische_quantencomputer}
+Der Ansatz von Topologischen Quantencomputern ist völlig anders als die bisher genannten. Im gegensatz zu diesen, welche auf eigenschaften einzelner Elektronen oder Energieniveaus basieren, basieren Topologische Quantencomputer auf topologischen Eigenschaften von Materie.\\
+Diese Methode soll das Problem der Dekoheränz minimieren, indem sie Qubits aus Majorana-Partikeln aufbauen.\\
+
+\textbf{Topologie in der Physik}\\
+In einem Physikalischem System beschreibt die Topologie die Eigenschaften welche sich nicht durch deformiermation verändern lassen.
+Ein Beispiel hierfür ist ein Kaffeebecher, welcher sich durch verformung in eine Donutform umwandeln lässt, beide haben die Topologische Eigenschaft eines Loches.
+Daraus folgernd ist es nicht möglich ein Kaffeebecher oder ein Donut in eine Kugel zu verformen ohne die Topologische Eigenschaft zu verändern.\\
+
+\textbf{Funktionsweise}\\
+Die physikalische Grundlage für topologische Quantencomputer liegt in speziellen Materialien und Systemen, die topologische Materiephasen unterstützen.
+Ein prominentes Beispiel ist die Verwendung von Majorana-Quasiteilchen, die in bestimmten Supraleitern auftreten können.\\
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{img/Majorana.png}
+    \caption{Nanowire mit Majorana-Quasiteilchen}
+    \label{fig:Majorana}
+\end{figure}
+
+In der Abbildung ist ein Nanowire dargestellt, welcher durch ein Supraleiter und ein Magnetfeld in eine topologische Phase gebracht wird.
+Diese Art von Partikel treten immer als Paar auf und bilden eine Art Brücke zwischen den Elektronen. Diese Brücke wird durch die topologischen Eigenschaften der Majorana-Partikel stabilisiert und ist somit weniger anfällig gegenüber Störungen.\\
+
+\begin{tcolorbox}[title=Kommentar,
+    title filled=false,
+    colback=cyan!5!white,
+    colframe=cyan!75!black]
+    Die Vertiefung der durch den Quanten-Hall Effekt entsteht wird nur oberflächlich behandelt. Ist jedoch essentiell für die Funktionsweise von Topologischen Quantencomputern.
+\end{tcolorbox}\\
+
+\textbf{Verpflechtung}\\
+Braiding ist der Prozess, bei dem die Majorana-Partikel miteinander verflochten werden, um die Quantenbits zu manipulieren. 
+Dies Passiert auf einer zweidimensionalen Oberfläche, auf welcher die Majorana-Partikel miteinander verflochten werden.\\
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.75\linewidth]{img/TQC.png}
+    \caption{Braiding von Majorana-Quasiteilchen}
+    \label{fig:Braiding}
+\end{figure}
+
+Hierbei ist es wichtig in welcher reihenfolge da durch diese Reihenfolge Quantenoperationen realisiert werden.
+Jede Verpflechtung entspricht einer Quantenoperation, und durch die Kombination von mehreren Verpflechtungen können beliebige Quantenoperationen realisiert werden.\\
+
+Da die Informationen und Quantenoperationen in der Topologie steckt, sind sie gegenüber kleinen Fehlern in der Bewegung/Störungen unempfindlich.\\
+
+\begin{tcolorbox}[title=Kommentar,
+    title filled=false,
+    colback=cyan!5!white,
+    colframe=cyan!75!black]
+    Die Technische umsetzung von Topologischen Quantencomputern ist deutlich komplizierter als in diesem Abschnitt oberflächlich beschrieben ist.\\
+    Bisher hat nur Google einen Topologischen Quantencomputer vorgestellt, welcher jedoch noch nicht in der Lage ist Quantenoperationen durchzuführen.
+\end{tcolorbox}\\
