@@ -52,8 +52,18 @@ Indem man den Kohärenzverlust experimentell misst und die Werte in eine exponen
 
 \subsection{Universelle Quantencomputer}
 \label{sub:universelle_quantencomputer}
-Universelle Quantencomputer beruhen grundlegend auf einem Gate Modell wie bereits in diesem Artikel beschrieben. Folgend sind drei der meist erforschten
-Methoden dieses Modell Physikalisch umzusetzen.
+Universelle Quantencomputer beruhen grundlegend auf einem Gatter Modell wie bereits in diesem Artikel beschrieben. Folgend sind drei der meist erforschten
+Methoden dieses Modell Physikalisch umzusetzen.\\
+
+Ein Prominentes beispiel für die Umsetzung eines Universellen Quantencomputers ist der \textbf{Sycamore Chip}, welcher auf Supraleitenden Qubits basiert.
+Dieser chip ist in einem Gatter angeordnete für die Kommunikation zwischen Qubits und die Durchführung von Quantenoperationen.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{img/SycamoreChip.png}
+    \caption{Sycamore Chip von Google}
+    \label{fig:Sycamore}
+\end{figure}
 
 \subsubsection{Superleitenden Qubits}
 \label{subsub:superleiter}
@@ -67,7 +77,7 @@ Zwei häufig benutze Qubit-Typen dieser elektrischen Schaltkreisen sind:\\
 Beide Ansätze basieren auf dem \textbf{Josephson-Effekt}, welcher auftritt wenn ein supraleitender Strom durch eine dünne Isolierschicht zwischen zwei Supraleitern fließt.\\
 Dieser Effekt hat zur folge das eine nichtlineare Spannung-Stom-Beziehung erntsteht und für die Manipulation von Qubits genutzt wird.\\
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{img/JJ.png}
     \caption{Josephson-Effekt mit einem Josephson Junktion}
@@ -108,7 +118,7 @@ Diese Methode ist durch die Ladungsquantisierung sehr genau, jedoch auch sehr em
 Die Spin-Eigenschaften von Elektronen in Quantum Dots können auch als Qubit verwendet werden. Hierbei sind die beiden Spinrichtungen($\uparrow$ für Spin-Up und $\downarrow$ für Spin-Down)
 diese beiden Spinrichtungen entsprechen den Zuständen $\ket{0}$ und $\ket{1}$. Und die kombination aus beiden Zuständen ergibt eine Superposition.\\
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{img/QD.png}
     \caption{Ein doppel Quantum-Dot Qubit}
@@ -137,7 +147,7 @@ Daraus folgernd ist es nicht möglich ein Kaffeebecher oder ein Donut in eine Ku
 Die physikalische Grundlage für topologische Quantencomputer liegt in speziellen Materialien und Systemen, die topologische Materiephasen unterstützen.
 Ein prominentes Beispiel ist die Verwendung von Majorana-Quasiteilchen, die in bestimmten Supraleitern auftreten können.\\
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{img/Majorana.png}
     \caption{Nanowire mit Majorana-Quasiteilchen}
@@ -152,13 +162,13 @@ Diese Art von Partikel treten immer als Paar auf und bilden eine Art Brücke zwi
     colback=cyan!5!white,
     colframe=cyan!75!black]
     Die Vertiefung der durch den Quanten-Hall Effekt entsteht wird nur oberflächlich behandelt. Ist jedoch essentiell für die Funktionsweise von Topologischen Quantencomputern.
-\end{tcolorbox}\\
+\end{tcolorbox}
 
 \textbf{Verpflechtung}\\
 Braiding ist der Prozess, bei dem die Majorana-Partikel miteinander verflochten werden, um die Quantenbits zu manipulieren. 
 Dies Passiert auf einer zweidimensionalen Oberfläche, auf welcher die Majorana-Partikel miteinander verflochten werden.\\
 
-\begin{figure}[!ht]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{img/TQC.png}
     \caption{Braiding von Majorana-Quasiteilchen}
@@ -176,4 +186,84 @@ Da die Informationen und Quantenoperationen in der Topologie steckt, sind sie ge
     colframe=cyan!75!black]
     Die Technische umsetzung von Topologischen Quantencomputern ist deutlich komplizierter als in diesem Abschnitt oberflächlich beschrieben ist.\\
     Bisher hat nur Google einen Topologischen Quantencomputer vorgestellt, welcher jedoch noch nicht in der Lage ist Quantenoperationen durchzuführen.
-\end{tcolorbox}\\
+\end{tcolorbox}
+
+\subsection{Quantum Error Correction}
+\label{sub:quantum_error_correction}
+Quantum Error Correction oder auf QEC genannt ist grundlegend wichtig für die funktionellen betrieb eines Quantencomputers. Wie bereits in den vorherigen Abschnitten beschrieben,
+sind Qubits sehr anfällig gegenüber Dekoheränz und Quantenrauschen.\\
+
+\textbf{Warum ist Fehlerkorrektur notwendig}\\
+Fehler treten in Quantencomputer durch drei Hauptquellen auf.\\
+1. \textbf{Dekoheränz} welche durch äußere Einflüsse wie Temperaturschwankungen oder elektromagnetische Felder die koheränten Eigenschaften der Qubits zerstört.\\
+2. \textbf{Phasen-Flip-Fehler} Hierbei werden die Phasenwinkel zwischen den Quantenzuständen verändert($\ket{0}\rightarrow\ket{0},\ket{1}\rightarrow-\ket{1}$).\\ 
+3. \textbf{Bit-Flip-Fehler} Hierbei werden die Zustände der Qubits verändert ($\ket{0}\rightarrow\ket{1},\ket{1}\rightarrow\ket{0}$).\\
+
+Bei der Fehlerkorrektur von Quantencomputern ist jedoch zu beachten das dies nicht wie bei herkömmlichen Computern da durch das No-Cloning-Theorem keine Quanteninformationen kopier werden können.\\
+
+\textbf{Grundprinzip}\\
+Quanten-Fehlerkorrektur verwendet \textbf{Redundanz}, um Fehler zu detektieren und zu korrigieren, ohne das die eigentliche Quanteninformationen direkt ausgelesen werden.\\
+
+Eine art der Redundanz ist der Steane-Code, welcher auf 7 Qubits basiert. Dieser zusammenschluss aus 7 Physischen Qubits bildet ein logisches Qubit,
+welche ein fehler auf einem der 7 Qubits korrigieren kann. Treten jedcoh mehrere Fehler auf, kann der Steane-Code diese nicht korrigieren.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{img/Steane.png}
+    \caption{Steane-Code}
+    \label{fig:Steane}
+\end{figure}
+
+Um die Qubits zu überwachen werden zusätzliche Qubits benötigt, da das direkte auslesen dieser den Quantenzustand zerstören würde.
+Diese zusätzlichen Qubits werden als \textbf{Ancilla qubit} bezeichnet und mit den eigentlichen Qubits verschränkt.\\
+
+\textbf{Fehlertoleranz}\\
+Diese Herangehensweise ist jedoch auch nicht perfekt, die Ancilla Qubits sind gleichermaßen anfällig gegenüber Fehlern wie die eigentlichen Qubits.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{img/Fehlertoleranz.png}
+    \caption{Fehlertoleranz von Ancilla Qubits}
+    \label{fig:Fehlertoleranz}
+\end{figure}
+
+Dieses Abbildung zeigt wie eine einzelner Fehler in einem CNOT Gatter auf dem Ancilla bit Messung der daten qubits als Fehler kennzeichnet obwohl diese nicht fehlerhaft sind.\\
+Die Folge hieraus ist das die Fehlerkorrektur mit wenigen Qubits nicht ausreicht, um diesen Logischen Qubit volkommen Fehlerfrei zu halten.\\
+
+Hierbei werden zwischen zwei Parität checks unterschieden. Ein $Z$ und $X$ Parität welcher festlegt ob der Fehler in den Ancilla Qubits CNOT Gattern oder den Daten Qubits aufgetreten ist.\\
+
+\textbf{Suface Code}\\
+Eine weitere Methode zur Fehlerkorrektur ist der Surface Code, welcher auf einem 2D Gitter von Qubits basiert.
+Dieser Code ist in der Lage Fehler zu detektieren und zu korrigieren, solange die Fehlerdichte unter einem bestimmten Wert bleibt.\\
+
+Die Größe des Surface Codes ist variabel und kann Skaliert werden, um die Fehlerkorrektur zu verbessern.
+Es gibt jedoch ein Threshold an der die vergößerung des Codes keine Verbesserung mehr bringt.
+Durch die vorher besprochene Fehlertoleranz der Ancilla Qubits wird die Effektivität des Surface Codes gedeckelt, die Fehler in der Korrektur an sich werden hierbei mehr als wenn keine Korrektur vorgenommen wird, und es würde keinen sinn ergeben den Surface Code weiter zu vergößern.\\
+
+Die Nachfolgende Abbildung eines Surface Codes des grades $d=3$ zeigt wie die Qubits in einem 2D Gitter angeordnet sind und wie die Fehlerkorrektur durchgeführt wird.
+Jede überschneidung des Gatters stellt ein Physichen Qubit dar. Die Kreise in den Quadraten sind die Ancilla Qubits, welche die Fehlerkorrektur durchführen.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/Errors.png}
+    \caption{Fehlerkorrektur durch Surface Code des Grades $d=3$}
+    \label{fig:Surface-Code}
+\end{figure}
+
+Ancilla Qubits in einem Weißen feld prüfen die Qubits auf ein logischen $X$ und Ancilla Qubits in einem Schwarzen Feld prüfen die Qubits auf ein logisches $Z$.\\
+
+Ancilla Qubits die ein Fehler erkennen werden als Blau markiert, und durch die Position dieser und für welche daten Qubits diese zuständig sind wissen wir welche Qubits fehlerhaft sind.\\
+
+\textbf{Praktische Umsetzung}\\
+Am 09.12.2024 hat Google den ersten selbst Korrigierenden Quantencomputer vorgestellt, welcher auf dem Surface Code basiert.
+Der Chip namens \textbf{Willow} basiert auf 105 Physischen Qubits wobei diese auf der 7x7 Surface Code Architektur aufbaut.
+Dies Resultiert in 49 Qubits welche deutlich weniger anfälliggegen fehler sind als Phyische Qubits, die restlichen Qubits werden für Parität und error Korrektur gebraucht.\\
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{img/Surface-Code-Scaling.png}
+    \caption{Error Korrektur des 7x7 Surface Code}
+    \label{fig:Willow}
+\end{figure}
+
+Außerdem wurde durch die anwendung des Surface Codes die $T_1$ zeit von $20\mu s$ auf $68\mu s\pm13\mu s$ erhöht und ermöglich hierdurch mehr Operationen pro Qubit.\\
