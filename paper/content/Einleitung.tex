@@ -13,11 +13,14 @@ Ein Qbit, das nach der Messung mit gleicher Wahrscheinlichkeit in einen der beid
 
 Ein Vektor $\binom{\alpha}{\beta}$ wird als „Zustandsvektor“ bezeichnet und stellt den Zustand der Superposition eines Qubits dar. Die Bedingung $\left|\alpha\right|^2+\left|\beta\right|^2=1$ sorgt dafür, dass der Zustandsvektor immer ein Einheitsvektor ist. Dadurch kann jeder Zustand eines Qubits auf dem Einheitskreis eines zweidimensionalen Vektorsystems dargestellt werden. Somit kann ein Quantenbit unendlich viele Zustände haben, die auf einen definierten Bereich abgebildet werden können. 
 
+\begin{tcolorbox}[title=Kommentar,
+    title filled=false,
+    colback=cyan!5!white,
+    colframe=cyan!75!black]
 Zum Zeitpunkt, als wir uns das Grundwissen erarbeitet haben, war uns nicht klar, weshalb $\alpha$ und $\beta$ komplexe Zahlen sein sollten und warum sie „Amplituden“ und nicht „Wahrscheinlichkeiten“ oder Ähnliches genannt wurden. Wir gingen davon aus, dass wir früher oder später auf einen Use Case stoßen würden, in denen komplexe Zahlen und Amplituden wichtig werden würden. Dies war allerdings nur für die letzte Frage bedingt der Fall. Um kurz vorzugreifen: es gibt Algorithmen, in denen die Phase eines Zustandsvektors (also der Winkel des Zustandsvektors ausgehend vom Ursprung relativ zu einer der Achsen) eine wichtige Rolle spielt. Daher Amplituden? Kp.. Später kommt Sinus und Cosinus vor   
 
-
 Wieso komplexe Zahlen? Weil Physik: siehe: https://www.cs.utep.edu/vladik/2023/tr23-44.pdf Man rechnet in Quanteninformatik eh nur mit reellen Zahlen.
-
+\end{tcolorbox}
 
 Um mit Quantenbits rechnen zu können, muss man den Zustand eines Quantenbits verändern können. Wie dies physikalisch umgesetzt wird, wird später beschrieben. Aus mathematischer Sicht geschieht dies über unitäre 2x2 Matrizen. 
 
