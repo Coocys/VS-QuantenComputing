@@ -1,0 +1,183 @@
+\section{Quantenteleportation}\label{sec:quantum-teleportation}
+
+\subsection{Einführung}\label{subsec:introduction}
+Quantenteleportation ist ein bahnbrechendes Phänomen, das die Übertragung von Quanteninformationen
+zwischen zwei entfernten Orten ermöglicht, ohne dass das Teilchen oder Objekt, das die Information trägt, physisch bewegt wird.
+Im Gegensatz zur theoretischen klassischen Teleportation, bei der es um den Transport von Materie oder Energie geht,
+konzentriert sich die Quantenteleportation auf die Übertragung von Quantenzuständen.
+Dieser Prozess nutzt die Prinzipien der Quantenmechanik, einschließlich Verschränkung, Superposition,
+und das No-Cloning-Theorem, das wir im vorherigen Abschnitt erläutert haben,
+um den Zustand eines Quantenobjekts (z. B. eines Photons oder eines Elektrons) von einem Ort zum anderen zu übertragen,
+ohne Rücksicht auf die Entfernung.
+
+Der Begriff ``Quantenteleportation'' kann etwas irreführend sein, da bei diesem Prozess keine eigentliche Materie teleportiert wird.
+Was stattdessen ``teleportiert'' wird, ist die Information über den Quantenzustand eines Teilchens.
+Der Schlüssel zur Quantenteleportation ist die Quantenverschränkung,
+ein Phänomen, bei dem zwei oder mehr Teilchen so miteinander korrelieren, dass der Zustand des einen Teilchens den Zustand des anderen augenblicklich
+den Zustand des anderen Teilchens beeinflusst, unabhängig davon, wie weit sie voneinander entfernt sind.
+Diese ``gespenstische Fernwirkung'', wie Albert Einstein sie nannte,
+ermöglicht die Übertragung von Quanteninformation zwischen weit entfernten Parteien, ohne dass die oft fragilen Quantenzustände selbst transportiert werden müssen.
+
+\subsection{Aufbau}\label{subsec:setup}
+
+Es muss ein Quanten-Verschränkungspaar vorhanden sein.
+Dieses Paar muss sich im Bell-Zustand\cite{quantuminfocambridge} befinden, um sicherzustellen, dass die Messung des einen den Zustand des anderen beeinflusst.
+Dieses Paar wird in der Regel durch einen Prozess wie
+Spontane parametrische Abwärtsumwandlung\cite{couteau2018spontaneous} erzeugt und derzeit
+werden in der Regel einfache Photonen oder Ionen verwendet.
+
+
+Außerdem müssen sich an den Endpunkten der Teleportation zwei Parteien befinden, im Folgenden Alice und Bob genannt, die beide
+die beide in der Lage sind, mit Quantensystemen zu interagieren und Messungen vorzunehmen, was normalerweise einen Quantencomputer mit begrenzter Funktionalität bedeutet.
+
+Schließlich muss ein klassischer Kommunikationskanal zwischen Alice und Bob bestehen.
+Der Schlüssel für die Quantenteleportation ist hier, dass dieser Kanal nicht in der Lage sein muss, Quantenzustände zu transportieren - dafür ist die Teleportation gedacht -, sondern nur herkömmliche Bits.
+
+<Diagramm Aufbau>
+
+\subsection{Vorgang}\label{subsec:process}
+
+Nachdem der Aufbau abgeschlossen ist, stellt sich nun die Frage, was tatsächlich getan werden muss, um die Quantenteleportation durchzuführen.
+Dies kann in mehrere Schritte aufgeteilt werden.
+
+\subsubsection{Alices Bell Zustand Messung}
+Der erste Schritt, den Alice durchführt, ist die Bell-State-Messung, die zwei wichtige Teilschritte umfasst.
+
+Zunächst kombiniert Alice das Teilchen, das sie teleportieren möchte, mit ihrer Hälfte des verschränkten Paares.
+Dies geschieht in der Regel mithilfe eines Strahlenteilers oder eines Interferometers, um die beiden Teilchen in einen Superpositionszustand zu versetzen.
+
+Zweitens misst Alice die beiden kombinierten Teilchen in der Bell-Basis, die die Teilchen aus ihren vier möglichen Zuständen in einen einzigen zusammenfallen lässt.
+Diese Messung ist entscheidend, denn sie bestimmt, wie Bob sein Teilchen anpassen muss, um den Zustand wiederherzustellen, den
+Alice teleportiert.
+\subsubsection{Klassische Kommunikation}
+Als Nächstes verwendet Alice ihren klassischen Kommunikationskanal, um ihre Messung an Bob zu senden.
+Dies erfordert die Übertragung von nur zwei Bits (den beobachteten Zustand des zu teleportierenden Qubits und den beobachteten Zustand des
+des verschränkten Paares), was für keinen Kommunikationskanal ein Problem darstellen sollte.
+Diese geringe Bandbreitenanforderung in der klassischen Kommunikation macht in der Tat mehrere Kommunikationskanäle verfügbar
+die normalerweise wegen ihrer geringen Bandbreite nicht infrage kämen, insbesondere wenn die Teleportation über große
+Entfernungen stattfinden soll.
+Diese Information reicht jedoch aus, um Bob zu instruieren, wie er sein eigenes System einstellen muss.
+\subsubsection{Bobs Quantenoperation}
+Nun, da Bob die klassische Messung erhalten hat, muss er eine oder beide (je nach Messung) der folgenden Methoden anwenden: Das
+Pauli-X-Gatter für einen Bit-Flip oder das Pauli-Z-Gatter für einen Phasen-Flip.
+Durch diese Operation wird sein Quantenzustand in denselben Zustand versetzt, den Alices Quantenteilchen hatten, bevor ihre
+Messung die Superposition kollabierte.
+Hier ist auch noch einmal darauf hinzuweisen, dass Bob den Zustand erst erstellt, nachdem Alice ihn mit der Messung
+bereits zerstört hat - wie das No-Cloning-Theorem besagt\ref{sec:no-cloning} wird der Zustand nie kopiert, sondern nur
+übertragen.
+
+Sobald Bob dies getan hat, ist die Quantenteleportation abgeschlossen.
+\subsection{Mathematik}\label{subsec:proof2}
+
+\subsubsection{Verschränkung und Bell-Zustände}
+
+Zu Beginn des Prozesses haben wir zwei Teilchen (Teilchen 2 und 3), die sich an den Orten A und B befinden.
+Diese Teilchen werden in einem verschränkten Zustand (Bell-Zustand) erzeugt.
+Ein Bell-Zustand ist eine der vier möglichen maximal verschränkten Zustände, die ein Paar von Quantenobjekten haben kann.
+Ein Beispiel für einen solchen Zustand ist:
+
+\begin{equation}
+|\Phi^+\rangle = \frac{1}{\sqrt{2}} \left( |00\rangle + |11\rangle \right)
+\end{equation}
+
+Dieser Zustand wird zwischen den beiden Teilchen 2 und 3 geteilt, wobei Teilchen 2 bei A und Teilchen 3 bei B ist.
+
+\subsubsection{Der zu teleportierende Zustand}
+
+Nun nehmen wir an, dass wir den Zustand eines dritten Teilchens (Teilchen 1) teleportieren möchten, das sich am Ort A befindet. Der Zustand des Teilchens 1 kann allgemein als:
+
+\[
+|\psi\rangle_1 = \alpha |0\rangle + \beta |1\rangle
+\]
+
+ausgedrückt werden, wobei \(\alpha\) und \(\beta\) komplexe Zahlen sind, die den Zustand beschreiben.
+
+\subsubsection{Verschränkung und Messung}
+
+Der gesamte Zustand des Systems (Teilchen 1, 2 und 3) kann als Produktzustand von Teilchen 1 und dem verschränkten Zustand von Teilchen 2 und 3 beschrieben werden:
+
+\[
+|\Psi\rangle_{123} = |\psi\rangle_1 \otimes |\Phi^+\rangle_{23} = \frac{1}{\sqrt{2}} \left( \alpha |0\rangle_1 + \beta |1\rangle_1 \right) \otimes \left( |00\rangle_{23} + |11\rangle_{23} \right)
+\]
+
+Durch Anwenden der Distributivität ergibt sich:
+
+\begin{gather*}
+    |\Psi\rangle_{123} = \frac{1}{\sqrt{2}} \left( \alpha |0\rangle_1 \otimes (|00\rangle_{23} + |11\rangle_{23}) + \beta |1\rangle_1 \otimes (|00\rangle_{23} + |11\rangle_{23}) \right)\\
+    |\Psi\rangle_{123} = \frac{1}{\sqrt{2}} \left( \alpha |000\rangle_{123} + \alpha |011\rangle_{123} + \beta |100\rangle_{123} + \beta |111\rangle_{123} \right)\\
+\end{gather*}
+
+Nun wird eine Bell-Zustandsmessung auf den Teilchen 1 und 2 durchgeführt, die den Zustand des Systems in einen der vier Bell-Zustände projiziert. Die Messung ist zufällig, und die Ergebnisse können durch die folgenden Zustände beschrieben werden:
+
+\[
+|\Phi^+\rangle_{12}, |\Phi^-\rangle_{12}, |\Psi^+\rangle_{12}, |\Psi^-\rangle_{12}
+\]
+
+\subsubsection*{Klassische Kommunikation und Zustandserstellung}
+
+Nachdem die Messung durchgeführt wurde, sendet der Ort A das Messresultat an Ort B über einen klassischen Kanal. Anhand der Nachricht kann Ort B den Zustand des Teilchens 3 (das ursprünglich am Ort B war) in den gewünschten Zustand \(|\psi\rangle_1\) transformieren. Dazu wird eine der folgenden Operationen durchgeführt, abhängig von der Messung, die an Ort A durchgeführt wurde:
+
+\begin{gather*}
+    |0\rangle_3 \quad \text{(falls Messung das Ergebnis } |\Phi^+\rangle\text{ ergibt)}\\
+    X|0\rangle_3 \quad \text{(falls Messung das Ergebnis } |\Phi^-\rangle\text{ ergibt)}\\
+    Z|0\rangle_3 \quad \text{(falls Messung das Ergebnis } |\Psi^+\rangle\text{ ergibt)}\\
+    XZ|0\rangle_3 \quad \text{(falls Messung das Ergebnis } |\Psi^-\rangle\text{ ergibt)}\\
+\end{gather*}
+
+Durch diese Operationen wird der Zustand des Teilchens 3 in den ursprünglichen Zustand von Teilchen 1 (\( \alpha |0\rangle + \beta |1\rangle \)) überführt.
+
+
+\subsection{Herausforderungen}\label{subsec:challenges}
+Obwohl die Quantenteleportation ein vielversprechender Forschungszweig ist, gibt es noch einige Herausforderungen zu bewältigen
+
+\subsubsection{Verschränkung Erzeugen und Erhalten}
+Eine der größten Herausforderung ist die Erzeugung und Erhaltung eines verschränkten Systems zwischen dem Start- und Zielpunkt
+der Teleportation.
+Die Teleportation ist zwar theoretisch nicht durch Entfernung begrenzt, aber je größer die Entfernung zwischen den Orten
+des do schwieriger ist es die verschränkten Teilchen aufzuteilen, ohne die Verschränkung zu beschädigen.
+
+Ein Lösungsansatz sind hier Quantenrepeater: Spezialisierte Geräte die die Entfernung zwischen direkt verschränkten Teilchen reduzieren,
+indem sie diese nur zwischen Repeater Stationen aufteilen müssen.
+In der Station werden dann mithilfe von Entanglement Swapping zwei Verbindungen des Repeaters verschränkt.
+
+\subsubsection{Klassische Kommunikation}
+Auch wenn die benötigte Bandbreite der klassischen Kommunikation minimal ist, muss trotzdem ein Kommunikationskanal
+existieren.
+Das hat zwei signifikante Nachteile: Zum einen ist die klassische Kommunikation auf die Lichtgeschwindigkeit begrenzt,
+was ein Geschwindigkeitslimit für die Teleportation erzeugt, auch wenn die ``spukhafte Fernwirkung'' der Quantenmechanik
+schneller passieren könnte\cite{}.
+Zum anderen sind klassische Kommunikationskanäle anfällig für Observation - ein Angreifer kann zwar
+ohne das verschränkte Teilchen den Quantenzustand nicht reproduzieren ist aber in der Lage festzustellen, dass die
+Kommunikation stattgefunden hat.
+Ebenfalls könnte der Angreifer auch die Kommunikation stören, was zwar bei geeigneten Protokollen den Teilnehmern
+offensichtlich ist aber trotzdem eine Schwachstelle darstellt.
+
+Die einzige bekannte Lösung ist hier ein robustes klassisches Kommunikationssystem, was für andere Kommunikationszwecke
+bereits aufgebaut ist oder wird aber leider die Lichtgeschwindigkeitslimitation nicht umgehen kann.
+
+
+\subsubsection{Skalierbarkeit}
+
+Ein weiteres bedeutendes Problem der Quantenteleportation ist die Skalierbarkeit.
+Während die Quantenteleportation in kleinen, kontrollierten Systemen von einigen wenigen Qubits relativ einfach durchgeführt werden kann,
+stellt die Skalierung auf größere Netzwerke und damit nützliche Datenmengen und die Integration in reale Kommunikationssysteme eine enorme Herausforderung dar.
+Um Quantenteleportation praktisch nutzen zu können würde es ein großflächiges System von Kommunikationskomponenten
+benötigen.
+Die Erstellung dieser bräuchte Quantentechnologien in einer Menge in der diese momentan einfach weder technisch möglich
+noch finanziell tragbar, wenn man bestehende Preise hochrechnet.
+
+Hier ist allerdings die Erwartung, dass weitere Forschung dieses Problem beheben wird.
+Es wird sowohl an günstigeren Methoden zur Erstellung von verschränkten Systemen und der Stabilisierung dieser
+als auch an der Erstellung von Quantenkomponenten rege geforscht.
+Auch an Forschungsbudget fehlt es hier nicht, da alle große Technologiefirmen an Quantentechnologie forschen.
+
+\subsubsection{Fehlerquellen und Messgenauigkeit}
+Die Messgenauigkeit ist entscheidend für die erfolgreiche Durchführung der Quantenteleportation.
+Eine fehlerhafte Messung der Bell-Zustände kann dazu führen, dass der teleportierte Zustand nicht korrekt wiederhergestellt werden kann.
+Fehlerquellen können in den Messinstrumenten, in der Kommunikation oder auch in der Quantenverschränkung selbst liegen.
+
+Auch hier wird rege geforscht da alle drei Aspekte nicht eigen zur Quantenteleportation sind, sondern nahezu alle
+Quantenoperationen betreffen.
+
+
+
