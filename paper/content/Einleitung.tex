@@ -1,15 +1,14 @@
 \section{Einführung in die Quanteninformatik} 
 \label{sec:Einführung in die Quanteninformatik}
 \subsection{Quantenbits}
-Ein Quantenbit, im Folgenden auch Qubit genannt, ist das Medium und die kleinste Einheit, auf dem in der Quanteninformatik gerechnet wird. Auf die genaue physische Realisierung wird in einem späteren Abschnitt der Quantenhardware eingegangen. Bis dahin reicht es das Quantenbit als eine Art Computer-Bit zu verstehen, das sich in einer sogenannten Superposition befindet. Im Zustand der Superposition kann es gleichzeitig den Wert ‚0‘ und ‚1‘ annehmen. Ein Quantenbit bleibt in dieser Superposition, bis es gemessen wird, woraufhin es diesen Zustand verliert und einen der Werte 0 und 1 annimmt. Die Wahrscheinlichkeit, mit der ein Quantenbit in den einen oder anderen Wert zerfällt, muss nicht gleichverteilt sein und kann beeinflusst werden. Dies macht Berechnungen auf Qbits erst möglich.
+Ein Quantenbit, im Folgenden auch Qubit genannt, ist das Medium und die kleinste Einheit, auf dem in der Quanteninformatik gerechnet wird. Auf die genaue physische Realisierung wird in einem späteren Abschnitt der Quantenhardware eingegangen. Bis dahin reicht es das Quantenbit als eine Art Computer-Bit zu verstehen, das sich in einer sogenannten "Superposition" befindet. Im Zustand der Superposition kann es gleichzeitig den Wert ‚0‘ und ‚1‘ annehmen. Ein Quantenbit bleibt in dieser Superposition, bis es gemessen wird, woraufhin die Superposition zerstört wird und das Qubit einen der Zustände 0 oder 1 annimmt. Die Wahrscheinlichkeit, mit der ein Quantenbit in den einen oder anderen Zustand zerfällt, muss nicht gleich verteilt sein und kann beeinflusst werden. Dies macht Berechnungen auf Qubits erst möglich.\\
 
-Mathematisch betrachtet, werden die Zustände ‚0‘ und ‚1‘ in der Quanteninformatik als Vektoren \(\binom{1}{0}\) $\equiv$ 0 und \(\binom{0}{1}\) $\equiv$ 1 dargestellt. Für die einfache Lesbarkeit werden diese Vektoren in der Quanteninformatik häufig in der sog. Ket-Darstellung beschrieben. 
-
-Also \(\binom{1}{0}\) $\equiv$ $\left|0\right\rangle$ und \(\binom{0}{1}\) $\equiv$ $\left|1\right\rangle$. 
+Mathematisch betrachtet, werden die Zustände ‚0‘ und ‚1‘ in der Quanteninformatik als Vektoren \(\binom{1}{0}\) $\equiv$ 0 und \(\binom{0}{1}\) $\equiv$ 1 dargestellt. Für die einfache Lesbarkeit werden diese Vektoren in der Quanteninformatik in der Bra-Ket-Notation dargestellt.
+Also \(\binom{1}{0}\) $\equiv$ $\left|0\right\rangle$ und \(\binom{0}{1}\) $\equiv$ $\left|1\right\rangle$. \\
 
 Um die Wahrscheinlichkeit zu beschreiben, welchen der beiden Werte ein Quantenbit nach der Messung annehmen wird, wird beiden Werten eine Amplitude $\alpha$ oder $\beta$ zugeordnet. Demnach wird ein Quantenbit in einer beliebigen Superposition als $\alpha\cdot\left|0\right\rangle+\beta\cdot\left|1\right\rangle$ dargestellt. $\alpha$ und $\beta$ sind komplexe Zahlen für die $\left|\alpha\right|^2+\left|\beta\right|^2=1$ gilt. 
 
-Ein Qbit, das nach der Messung mit gleicher Wahrscheinlichkeit in einen der beiden Zustände 0 und 1 zerfällt, würde folglich als $\frac{1}{\sqrt2}\cdot\left|0\right\rangle+\frac{1}{\sqrt2}\cdot\left|1\right\rangle$ dargestellt werden. Dabei gilt $\alpha = \beta = \frac{1}{\sqrt2}$ und erfüllt die Bedingung $\left|\frac{1}{\sqrt2}\right|^2+\left|\frac{1}{\sqrt2}\right|^2=1$.
+Ein Qbit, das nach der Messung mit gleicher Wahrscheinlichkeit in einen der beiden Zustände 0 und 1 zerfällt, würde folglich als $\frac{1}{\sqrt2}\cdot\left|0\right\rangle+\frac{1}{\sqrt2}\cdot\left|1\right\rangle$ oder $\frac{1}{\sqrt{2}}(\left|0\right.\rangle+\left|1\right.\rangle)$ dargestellt werden. Dabei gilt $\alpha = \beta = \frac{1}{\sqrt2}$ und erfüllt die Bedingung $\left|\frac{1}{\sqrt2}\right|^2+\left|\frac{1}{\sqrt2}\right|^2=1$.\\
 
 Ein Vektor $\binom{\alpha}{\beta}$ wird als „Zustandsvektor“ bezeichnet und stellt den Zustand der Superposition eines Qubits dar. Die Bedingung $\left|\alpha\right|^2+\left|\beta\right|^2=1$ sorgt dafür, dass der Zustandsvektor immer ein Einheitsvektor ist. Dadurch kann jeder Zustand eines Qubits auf dem Einheitskreis eines zweidimensionalen Vektorsystems dargestellt werden. Somit kann ein Quantenbit unendlich viele Zustände haben, die auf einen definierten Bereich abgebildet werden können. 
 
@@ -17,41 +16,69 @@ Ein Vektor $\binom{\alpha}{\beta}$ wird als „Zustandsvektor“ bezeichnet und 
     title filled=false,
     colback=cyan!5!white,
     colframe=cyan!75!black]
-Zum Zeitpunkt, als wir uns das Grundwissen erarbeitet haben, war uns nicht klar, weshalb $\alpha$ und $\beta$ komplexe Zahlen sein sollten und warum sie „Amplituden“ und nicht „Wahrscheinlichkeiten“ oder Ähnliches genannt wurden. Wir gingen davon aus, dass wir früher oder später auf einen Use Case stoßen würden, in denen komplexe Zahlen und Amplituden wichtig werden würden. Dies war allerdings nur für die letzte Frage bedingt der Fall. Um kurz vorzugreifen: es gibt Algorithmen, in denen die Phase eines Zustandsvektors (also der Winkel des Zustandsvektors ausgehend vom Ursprung relativ zu einer der Achsen) eine wichtige Rolle spielt. Daher Amplituden? Kp.. Später kommt Sinus und Cosinus vor   
+Zu dem Zeitpunkt, als wir uns das Grundwissen erarbeitet haben, war uns nicht klar, weshalb $\alpha$ und $\beta$ komplexe Zahlen sein müssten und warum sie „Amplituden“ und nicht „Wahrscheinlichkeiten“ oder Ähnliches genannt werden. Wir gingen davon aus, dass wir früher oder später auf einen Use Case stoßen würden, in denen komplexe Zahlen und Amplituden wichtig werden. Dies war allerdings nur für letztes bedingt der Fall. Um kurz vorzugreifen: Amplituden von zwei Qubits können miteinander summiert werden. Dadurch ist es möglich, dass sich manche Amplituden gegenseitig aufheben. Dies wäre mit Wahrscheinlichkeitsverteilungen, die nicht negativ sein dürften, schwer darzustellen. Siehe dazu Erklärung des Mach-Zehnder-Interferometer (S. 255).
 
-Wieso komplexe Zahlen? Weil Physik: siehe: https://www.cs.utep.edu/vladik/2023/tr23-44.pdf Man rechnet in Quanteninformatik eh nur mit reellen Zahlen.
+Warum $\alpha$ und $\beta$ komplexe Zahlen sind, war schwer greifbar. Scheinbar hat dies mit der der Quanteninformatik zugrundeliegenden Quantenmechanik zu tun. Nach etwas Recherchearbeit stellte sich heraus, dass eine Antwort auf diese Frage einiges an Vorwissen in der Physik bedurfte. Da wir uns diese Frage am Anfang des Lernprozesses stellten und noch dabei waren in den Konzepten der Quanteninformatik Fuß fassen, entscheiden wir uns auf diese Frage zurück zu kommen, sobald komplexe Zahlen relevant werden würden. Da in der Quanteninformatik mit $\alpha$ und $\beta$ allerdings gerechnet wird, als seien sie reelle Zahlen (https://www.cs.utep.edu/vladik/2023/tr23-44.pdf Seite 1 und Buch Seite 22), trat dieser Fall nie ein. 
+
+Während der Erstellung dieses Dokuments haben uns unsere erlangten Kenntnisse beim Verstehen der Quantenmechanik nicht weiter helfen können, um eine zufriedenstellende Antwort zu formulieren. Da es sehr zeitaufwändig geworden wäre, sämtliche Begrifflichkeiten wie aus dem Kurs Skript von John D Stack (https://courses.physics.illinois.edu/phys580/fa2013/susy\_v2.pdf) zu verstehen, nur um diese Frage zu klären, entscheiden wir uns dieser nicht weiter nachzugehen.
 \end{tcolorbox}
 
-Um mit Quantenbits rechnen zu können, muss man den Zustand eines Quantenbits verändern können. Wie dies physikalisch umgesetzt wird, wird später beschrieben. Aus mathematischer Sicht geschieht dies über unitäre 2x2 Matrizen. 
+Um mit Quantenbits rechnen zu können, muss man den Zustand eines Quantenbits verändern können. Wie dies technisch umgesetzt wird, wird später angerissen. Aus mathematischer Sicht geschieht dies über unitäre $2\times2$ Matrizen. \\
 
-Eine Matrix A ist dann unitär, wenn ihre inverse Matrix $A^{-1}$ gleich ihrer adjungierten Matrix $A^\dag$ ist. Adjungiert ist eine Matrix $A^\dag$ dann, wenn die Matrix A komplex konjugiert – also jedes Element der Matrix $z_{ij}=a+ib$ zu $z_{ij}^\ast=a–ib$ komplex konjugiert – und die Matrix dann transponiert wird. Für die Quanteninformatik reicht oft die Bedingung $A^{-1}=A^T$, da meistens mit $\alpha$ und $\beta$ gerechnet wird, als seien sie reelle Zahlen. Durch diese Bedingung haben unitäre Matrizen die Eigenschaft, dass wenn sie zwei Mal mit einem Zustandsvektor verrechnet werden, der Zustandsvektor unverändert bleibt. Unitäre Transformationen sind also reversibel. Diese Bedingung ist notwendig, um die Länge der Zustandsvektoren beizubehalten.
+Eine Matrix A ist dann unitär, wenn ihre inverse Matrix $A^{-1}$ gleich ihrer adjungierten Matrix $A^\dag$ ist. Adjungiert ist eine Matrix $A^\dag$ dann, wenn die Matrix A komplex konjugiert – also jedes Element der Matrix $z_{ij}=a+ib$ zu $z_{ij}^\ast=a–ib$ komplex konjugiert – und die Matrix dann transponiert wird. Also muss für alle Matritzen A gelten:
+$$A^{-1}=(A^*)^T=A^\dag$$
 
-Beispielhaft kann dies an einer Matrix $$B=\left(\begin{matrix}\frac{1}{2}&\frac{\sqrt3}{2}\\\frac{\sqrt3}{2}&-\frac{1}{2}\\\end{matrix}\right)$$ demonstriert werden, die ein Qubit im Zustand $\left|0\right\rangle$ in den Zustand $\frac{1}{2}\left|0\right\rangle+\frac{\sqrt3}{2}\left|1\right\rangle$ versetzt. Dies wird wie folgt berechnet:
+Für die Quanteninformatik reicht oft die Bedingung $A^{-1}=A^T$, da hier meist mit $\alpha$ und $\beta$ gerechnet wird, als seien sie reelle Zahlen. Durch diese Bedingung haben unitäre Matrizen die Eigenschaft, dass ein Zustandsvektor unverändert bleibt, wenn eine unitäre Matrix zwei Mal mit ihm verrechnet wird. 
+
+Unitäre Transformationen sind also reversibel. Diese Bedingung ist notwendig, um die Länge der Zustandsvektoren beizubehalten.
+
+Beispielhaft kann dies an einer Matrix $$B=\left(\begin{matrix}\frac{1}{2}&\frac{\sqrt3}{2}\\\frac{\sqrt3}{2}&-\frac{1}{2}\\\end{matrix}\right)$$ demonstriert werden. Wendet man diese Matrix auf ein Qubit im Zustand $\left|0\right\rangle$ an, Transformiert sie es in den Zustand $\frac{1}{2}\left|0\right\rangle+\frac{\sqrt3}{2}\left|1\right\rangle$. Diese Transformation wird über eine Multiplikation beschrieben:
 
 $$B\left|\left.0\right\rangle\ =\ \right.\left(\begin{matrix}\frac{1}{2}&\frac{\sqrt3}{2}\\\frac{\sqrt3}{2}&-\frac{1}{2}\\\end{matrix}\right)\cdot\binom{1}{0}=\ \binom{\frac{1}{2}}{\frac{\sqrt3}{2}}$$
 
-Daraus ergibt sich: $\alpha=\frac{1}{2}$ und $\beta=\frac{\sqrt3}{2}$. Die Bedingung $\left|\alpha\right|^2+\left|\beta\right|^2=1$ trifft für beide Zustandsvektoren $\binom{1}{0} und \binom{\frac{1}{2}}{\frac{\sqrt3}{2}}$ zu. Zudem ist $B$ unitär, da $B=B^T= B^{-1}$, und daher eine zulässige Transformation.
+Daraus ergibt sich: $\alpha=\frac{1}{2}$ und $\beta=\frac{\sqrt3}{2}$. Die Bedingung $\left|\alpha\right|^2+\left|\beta\right|^2=1$ trifft für beide Zustandsvektoren $\binom{1}{0}$ und $\binom{\frac{1}{2}}{\frac{\sqrt3}{2}}$ zu. Zudem ist $B$ unitär, da $B=B^T= B^{-1}$, und daher eine zulässige Transformation.
 
-Wenn man die Transformation B erneut an, ergibt sich folgendes:
+Wendet man die Transformation B erneut an, ergibt sich folgendes:
 $$B\binom{\frac{1}{2}}{\frac{\sqrt3}{2}}=\left(\begin{matrix}\frac{1}{2}&\frac{\sqrt3}{2}\\\frac{\sqrt3}{2}&-\frac{1}{2}\\\end{matrix}\right)\cdot\binom{\frac{1}{2}}{\frac{\sqrt3}{2}}=\ \binom{1}{0}.$$
 
 Der Ursprungszustand ist mit der zweiten Anwendung der Transformation wieder hergestellt. Dies ist eine der Grundprinzipien der Quanteninformatik.
 
 \subsection{Hadamard-Matrix}
 
-Eine unitäre Transformation, die im Laufe unseres Lernprozesses immer wieder vorgekommen ist, ist die sog. Hadamard-Matrix $$H=\left(\begin{matrix}\frac{1}{\sqrt2}&\frac{1}{\sqrt2}\\\frac{1}{\sqrt2}&-\frac{1}{\sqrt2}\\\end{matrix}\right).$$ Multipliziert mit dem Zustand $\left|0\right\rangle$ transformiert sie ihn in den Zustand $\frac{1}{\sqrt2}(\left|\left.0\right\rangle+\right.\left|\left.1\right\rangle)\right.$ und mit $\left|1\right\rangle$ transformiert sie ihn in den Zustand $\frac{1}{\sqrt2}(\left|\left.0\right\rangle-\right.\left|\left.1\right\rangle)\right.$. Beide Folgezustände haben die gleiche Wahrscheinlichkeit bei der Messung in einen der Zustände $\left|0\right\rangle$ oder $\left|1\right\rangle$ zu zerfallen.
+Eine unitäre Transformation, die im Laufe unseres Lernprozesses immer wieder vorgekommen ist, ist die sogenannte "Hadamard-Matrix": $$H=\left(\begin{matrix}\frac{1}{\sqrt2}&\frac{1}{\sqrt2}\\\frac{1}{\sqrt2}&-\frac{1}{\sqrt2}\\\end{matrix}\right).$$ Multipliziert mit einem Qubit im Zustand $\left|0\right\rangle$ transformiert sie es in den Zustand $\frac{1}{\sqrt2}(\left|\left.0\right\rangle+\right.\left|\left.1\right\rangle)\right.$ und mit einem im Zustand $\left|1\right\rangle$ transformiert sie es in den Zustand $\frac{1}{\sqrt2}(\left|\left.0\right\rangle-\right.\left|\left.1\right\rangle)\right.$. Beide Folgezustände haben die gleiche Wahrscheinlichkeit bei der Messung einen der Zustände $\left|0\right\rangle$ oder $\left|1\right\rangle$ anzunehmen. \\
 
-Damit ließe sich beispielsweise ein Münzwurf simulieren. Der Schaltkreis eines Münzwurfs sieht folgendermaßen aus: [hier Bild vom Münzwurfschaltkreis einfügen] Schaltkreise eigenen sich dafür Quantenalgorithmen anschaulich darzustellen. Auf sie wird später genauer eingegangen.
+\begin{tcolorbox}[title=Kommentar,
+    title filled=false,
+    colback=cyan!5!white,
+    colframe=cyan!75!black]
+Beide Zustände haben eine 50\%-ige Wahrscheinlichkeit beim Messen den Zustand $\left|0\right\rangle$ oder $\left|1\right\rangle$ anzunehmen. Sie unterscheiden sich nur im Vorzeichen der $\beta$-Amplitude. Würde man die Amplituden als Wahrscheinlichkeiten darstellen (zum Beispiel als $0.5\cdot\left|0\right.\rangle+0.5\cdot\left|1\right.\rangle$), ließe sich bei der erneuten Hadamard-Transformation nicht eindeutig sagen, in welchem Zustand sich das Bit vor der ersten Transformation befunden hat. Da die Umkehrbarkeit der Transformationen eine der Grundprinzipien der Quanteninformatik ist, wäre eine Darstellung mit Wahrscheinlichkeitsverteilungen eher unpraktisch.
+\end{tcolorbox}
 
-Zuerst wird ein Quantenbit in den Zustand $\left|0\right\rangle$ gebracht. (Man könnte es auch in den Zustand $\left|1\right\rangle$ bringen. Das ist für diesen Algorithmus unwichtig.) Danach wendet man die Hadamard-Transformation darauf an, um das Quantenbit in eine Superposition zu bringen, in der $\left|0\right\rangle$ und $\left|1\right\rangle$ mit gleicher Wahrscheinlichkeit vorkommen. Anschließend wird gemessen und die Superposition zerfällt zufällig in einen der Zustände $\left|0\right\rangle$ oder $\left|1\right\rangle$.
+Mit dieser Gleichverteilung ließe sich beispielsweise ein Münzwurf simulieren. Der Schaltkreis eines Münzwurf Algorithmus sieht folgendermaßen aus: \\
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{img/MuenzwurfSchaltkreis.png}
+    \caption{Schaltkreis für den Münzwurf Algorithmus}
+    \label{fig:Muenzwurf}
+\end{figure}
+
+
+Schaltkreise eigenen sich dafür Quantenalgorithmen anschaulich darzustellen. Auf diese wird später genauer eingegangen.\\
+
+Zuerst wird ein Quantenbit in den Zustand $\left|0\right\rangle$ gebracht. (Man könnte es auch in den Zustand $\left|1\right\rangle$ bringen. Das ist für diesen Algorithmus unwichtig.) Danach wendet man die Hadamard-Transformation darauf an, um das Quantenbit in eine Superposition zu bringen, in der die Wahrscheinlichkeit $\left|0\right\rangle$ oder $\left|1\right\rangle$ zu messen gleich verteilt ist. Anschließend wird gemessen und die Superposition zerfällt zufällig in einen der Zustände $\left|0\right\rangle$ oder $\left|1\right\rangle$.
 
 Formal beschrieben sieht der Algorithmus so aus:
-	$$\left|\left.x\right\rangle\right.\ \gets\ \left|\left.0\right\rangle\right.\ 
-	\left|\left.x\right\rangle\right.\ \gets\ H\left|\left.x\right\rangle\right.
-	Miss\left|\left.x\right\rangle\right.$$
+\begin{align*}
+    &\left|x\right\rangle \gets\ \left|0\right\rangle  \\
+    &\left|x\right\rangle \gets\ H\left|x\right\rangle \\
+    &Miss\left|x\right\rangle
+\end{align*}
+
+	
 „$\left|x\right\rangle$“ ist dabei die Bezeichnung des Quantenbits auf dem gerechnet wird.
 
-Mit diesem Algorithmus ist möglich echte Zufallszahlen zu generieren, da es physikalisch unmöglich ist vorauszusagen, in welchen Zustand die Superposition zerfallen wird. Im Gegensatz zu einem echten Münzwurf, bei dem man das Wurfergebnis theoretisch berechnen könnte, wenn man sämtliche Variablen, wie z.B. Wurfhöhe, Drehmoment der Münze, Luftwiederstand, ect. kennen würde. Oder im Gegensatz zu einem herkömmlichen Computer, der nur Pseudozufallszahlen generieren kann. 
+Mit diesem Algorithmus ist es möglich echte Zufallszahlen zu generieren, da es physikalisch unmöglich ist vorauszusagen, in welchen Zustand die Superposition zerfallen wird. Im Gegensatz zu einem echten Münzwurf, bei dem man das Wurfergebnis theoretisch berechnen könnte, wenn man sämtliche Variablen, wie z.B. Wurfhöhe, Drehmoment der Münze, Luftwiederstand, ect. kennen würde. Oder im Gegensatz zu einem herkömmlichen Computer, der nur Pseudozufallszahlen generieren kann. 
 \subsection{Quantenregister}
 
 Ein Quantenregister ist eine Aneinanderreihung mehrerer voneinander unabhängiger Quantenbits. Diese werden benötigt, um Quantenschaltkreise zu realisieren, damit auf ihnen logische Operationen durchgeführt werden können. 
@@ -59,7 +86,7 @@ Ein Quantenregister ist eine Aneinanderreihung mehrerer voneinander unabhängige
 Der Zustand eines Quantenregisters der Länge m wird als m-faches Tensorprodukt aller Zustände der einzelnen Quantenbits des Registers dargestellt. Ein Quantenregister R mit 2 Qubits $\left|\left.x_0\right\rangle\ \right.$und $\left|\left.x_1\right\rangle\ \right.$in beispielsweise den Basiszuständen $\left|\left.x_0\right\rangle\ \right.=\binom{0}{1}$ und $\left|\left.x_1\right\rangle\ \right.=\binom{1}{0}$ befindet sich im Zustand:
 $$R\ =\ \left|\left.x_0\right\rangle\ \right.\otimes\left|\left.x_1\right\rangle\ \right.=\binom{0}{1}\otimes\binom{1}{0}=\left(\begin{matrix}0\\\begin{matrix}0\\\begin{matrix}1\\0\\\end{matrix}\\\end{matrix}\\\end{matrix}\right)$$
 
-Alternativ würde man $R=\left|1\right\rangle\otimes\left|0\right\rangle=\left|10\right\rangle$ schreiben. Manchmal werden die Basiszustände zur Übersichtlichkeit auch in dezimalform dargestellt. $\left|10\right\rangle$ wäre demnach $\left|2\right\rangle$. 
+Alternativ würde man $R=\left|1\right\rangle\otimes\left|0\right\rangle=\left|10\right\rangle$ schreiben. Manchmal werden die Basiszustände zur Übersichtlichkeit auch in Dezimalform dargestellt. $\left|10\right\rangle$ wäre demnach $\left|2\right\rangle$. 
 
 Wie auch die einzelnen Qubits, kann sich das gesamte Quantenregister in einer Superposition befinden. Sind die Qubits aus dem obigen Beispiel in den Zuständen 
 $\left|\left.x_0\right\rangle\right.=\beta_0\left|\left.0\right\rangle\ \right.+\beta_1\left|\left.1\right\rangle\ \right.$ und $\left.\left|\left.x_1\right\rangle\right.=\gamma_0\left|\left.0\right\rangle\ \right.+\gamma_1\left|\left.1\right\rangle\ \right.\right.$
