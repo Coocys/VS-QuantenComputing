@@ -4,13 +4,13 @@ Einer der faszinierendsten Aspekte der Quantenmechanik ist, dass es unmöglich i
 einen beliebigen unbekannten Quantenzustand perfekt zu duplizieren.
 Dieses Konzept ist mit dem No-Cloning-Theorem beschrieben, einem grundlegenden Ergebnis der Quanteninformationstheorie.
 Das Theorem hat nicht nur tiefgreifende Auswirkungen auf die Quanteninformatik und die Quantenkommunikation,
-sondern auch für unser Verständnis der Natur der Information in Quantensystemen.
+sondern auch für unser Verständnis der Natur der Information in Quantensystemen.\\
 
 In der klassischen Physik ist die Vervielfältigung von Informationen einfach:
 Ein Kopiergerät kann ein Dokument vervielfältigen, ohne das Original zu verändern.
 In der Quantenmechanik wird dieser einfache Vorgang jedoch zu einer nicht trivialen und verbotenen Operation.
 Das No-Cloning-Theorem besagt, dass es keine universelle Quantenoperation gibt
-die eine identische Kopie eines beliebigen unbekannten Quantenzustands erzeugen kann.
+die eine identische Kopie eines beliebigen unbekannten Quantenzustands erzeugen kann.\\
 
 In diesem Abschnitt werden wir das No-Cloning-Theorem aus verschiedenen Blickwinkeln betrachten, seinen Beweis diskutieren,
 seine Konsequenzen untersuchen und verstehen, wie es die Landschaft der Quantentechnologien prägt.
@@ -91,7 +91,7 @@ Quantenmechanik und Quanteninformatik.
 \subsubsection{Quantenkommunikation}
 In der klassischen Informationstheorie ist das Kopieren von Daten eine zentrale Technik, um Information zu vervielfältigen und zu übertragen.
 Bei klassischen Bits kann man exakt den gleichen Wert duplizieren, indem man eine Kopie eines Bits erstellt.
-Im Gegensatz dazu verhindert das No-Cloning-Theorem das Erstellen von exakten Kopien von Quantenbits (Qubits).
+Im Gegensatz dazu verhindert das No-Cloning-Theorem das Erstellen von exakten Kopien von Quantenbits (Qubits).\\
 
 Das bedeutet, dass im Bereich der Quantenkommunikation, insbesondere bei der Quantenkryptographie, ein Angreifer,
 der versucht, die Quanteninformation abzufangen oder zu kopieren, in der Regel Fehler einführen wird, die entdeckt werden können.
@@ -105,7 +105,7 @@ In klassischen Computersystemen kann ein Angreifer beliebig viele Kopien von Inf
 um sie zu analysieren und gegebenenfalls zu entschlüsseln.
 In einem quantenmechanischen System jedoch kann ein Datenexfiltrationsversuch oder das Kopieren eines Zustands
 nicht ohne weiteres erfolgen, ohne dass der Versuch des Kopierens den Zustand verändert
-und die Quanteninformation damit entwertet wird.
+und die Quanteninformation damit entwertet wird.\\
 
 Ein gutes Beispiel für diese Art von Sicherheit ist das BB84-Protokoll für Quantenkryptographie.
 Bei der Quantenverschlüsselung wird eine Nachricht durch verschränkte Quantenbits übertragen.
@@ -116,26 +116,37 @@ Jeder Versuch, die Nachricht zu kopieren oder abzufangen, verändert den Zustand
 Das No-Cloning-Theorem hat auch tiefgehende Auswirkungen auf das Quantencomputing.
 In klassischen Computern ist das Kopieren von Informationen eine grundlegende Technik, die in vielen Algorithmen und Protokollen verwendet wird.
 Quantencomputer hingegen können keine exakten Kopien eines Zustands herstellen, was bedeutet,
-dass traditionelle Techniken wie fehlerkorrigierende Codes, die in klassischen Computern üblich sind, in der Quantenwelt nicht direkt anwendbar sind.
+dass traditionelle Techniken wie fehlerkorrigierende Codes, die in klassischen Computern üblich sind, in der Quantenwelt nicht direkt anwendbar sind.\\
 
 Allerdings existieren spezielle Quantenfehlerkorrekturcodes, die darauf ausgelegt sind, Fehler zu korrigieren,
 die durch das Fehlen einer exakten Kopierbarkeit von Quanteninformation entstehen.
 Diese Codes erfordern jedoch eine zusätzliche Anzahl von Qubits und eine komplexe Fehlerkorrekturstrategie,
 was das Quantencomputing technisch anspruchsvoll macht.
 Trotzdem sind Quantenfehlerkorrekturmethoden von entscheidender Bedeutung für die zukünftige Skalierbarkeit
-und Zuverlässigkeit von Quantencomputern und werden später in diesem Artikel genauer beschrieben\ref{something}.
+und Zuverlässigkeit von Quantencomputern und werden später in diesem Artikel genauer beschrieben[\ref{sub:quantum_error_correction}].
+
+\begin{tcolorbox}[title=Kommentar,
+    title filled=false,
+    colback=cyan!5!white,
+    colframe=cyan!75!black]
+Verschiedene Messmethoden
+Jeder Quantenalgorithmus ist auch grundsätzlich anders als ein klassischer Algorithmus, da Operationen anders implementiert
+werden müssen, auch wenn die Theorie des Algorithmus identisch zu einem klassischen Algorithmus ist.
+    Dieser Aspekt wird hier allerdings nicht näher behandelt werden.
+\end{tcolorbox}
 
 \subsubsection{Speicherung von Quanteninformation}
 Das No-Cloning-Theorem hat weitreichende Konsequenzen für die Quanteninformationstheorie,
 insbesondere für die Konzepte der Informationsspeicherung und -übertragung.
 Die Unmöglichkeit des Klonens ist eng mit den grundlegenden Prinzipien der Quantenmechanik wie Überlagerung und Verschränkung verknüpft.
-Sie hindert die Schaffung von perfekten Kopien von Quanteninformation und erfordert, dass Information auf neue, kreative Weise verarbeitet und gespeichert wird.
+Sie hindert die Schaffung von perfekten Kopien von Quanteninformation und erfordert, dass Information auf neue, kreative Weise verarbeitet und gespeichert wird.\\
 
 Ein interessantes Beispiel ist die Quantenlogikgatter, die in Quantencomputern verwendet werden.
 Diese Gatter müssen mit den Einschränkungen des No-Cloning-Theorems arbeiten und können keine klassischen,
 deterministischen Kopien erzeugen, sondern müssen die Quanteninformation in verschränkten oder überlagerten Zuständen manipulieren.
 
 \subsubsection{Messungen und Messgenauigkeit}
+
 In der Quantenmetrologie, die sich mit der präzisen Messung von quantenmechanischen Systemen beschäftigt,
 beeinflusst das No-Cloning-Theorem ebenfalls die Art und Weise, wie Messungen durchgeführt werden können.
 Da das exakte Kopieren von Zuständen nicht möglich ist, kann das Präzisionsmaß für Messungen nicht durch das
