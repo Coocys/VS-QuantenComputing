@@ -1,20 +1,25 @@
 \documentclass[a4paper]{article}
 \usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 % package for including graphics with figure-environment
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{float}
 % colors for hyperlinks
 % colored borders (false) colored text (true)
 \hypersetup{colorlinks=true,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
 
 % Commentbox package
 \usepackage[most]{tcolorbox}
+\usepackage{braket}
 
 % package for bibliography
 \usepackage[authoryear,round]{natbib}
 % package for header
 \usepackage[automark,headsepline]{scrlayer-scrpage}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{color}
 \pagestyle{scrheadings}
 \ihead[]{Meyer, Springer, Kawamura, Heidenreich}
 \ohead[]{\today}
@@ -59,9 +64,10 @@ This template can be used for seminar papers. For more tips and tricks regarding
 	\newpage
 	\tableofcontents
 	\newpage
-\include{content/introduction}
-\include{content/cloning-and-teleportation}
-\include{content/quantenhardware}
+%\include{content/introduction}
+\include{content/Einleitung2}
+%\include{content/cloning-and-teleportation}
+%\include{content/quantenhardware}
 
 \newpage 
 
