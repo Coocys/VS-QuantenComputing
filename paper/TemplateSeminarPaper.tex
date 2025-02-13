@@ -1,6 +1,8 @@
 \documentclass[a4paper]{article}
-\usepackage[english]{babel}
+\usepackage[german]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
 % package for including graphics with figure-environment
 \usepackage{graphicx}
 \usepackage{hyperref}
@@ -17,6 +19,8 @@
 
 % package for bibliography
 \usepackage[authoryear,round]{natbib}
+% Commentbox package
+\usepackage[most]{tcolorbox}
 % package for header
 \usepackage[automark,headsepline]{scrlayer-scrpage}
 \pagestyle{scrheadings}
@@ -63,7 +67,8 @@ This template can be used for seminar papers. For more tips and tricks regarding
 	\newpage
 	\tableofcontents
 	\newpage
-\include{content/introduction}
+  
+\include{content/Einleitung}
 \include{content/cloning-and-teleportation}
 \include{content/quantenhardware}
 
