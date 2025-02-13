@@ -6,9 +6,16 @@
 % package for including graphics with figure-environment
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{float}
+\usepackage{amssymb,stmaryrd}
 % colors for hyperlinks
 % colored borders (false) colored text (true)
 \hypersetup{colorlinks=true,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
+
+% Commentbox package
+\usepackage[most]{tcolorbox}
+% Braket notation package
+\usepackage{braket}
 
 % package for bibliography
 \usepackage[authoryear,round]{natbib}
@@ -17,7 +24,7 @@
 % package for header
 \usepackage[automark,headsepline]{scrlayer-scrpage}
 \pagestyle{scrheadings}
-\ihead[]{Name of students}
+\ihead[]{Meyer, Springer, Kawamura, Heidenreich}
 \ohead[]{\today}
 \cfoot[]{\pagemark} 
 
@@ -37,12 +44,12 @@
 	% \author{Name of student}	
 	
 	% Insert here your name and correct mail address
-	\author{\Large \href{mailto:first.student@smail.th-koeln.de}{First Student} \and \Large \href{mailto:second.student@smail.th-koeln.de}{Second Student}
+	\author{\Large \href{mailto:ben_konrad.meyer@smail.th-koeln.de@smail.th-koeln.de}{Ben Konrad Meyer} \and \Large \href{mailto:mike.springer@smail.th-koeln.de}{Mike Springer} \and \Large \href{mailto:kai.kawamura@smail.th-koeln.de}{Kai Kawamura} \and \Large \href{mailto:karl_julian.heidenreich@smail.th-koeln.de}{Julian Heidenreich} \\
 	\vspace{1cm}}
 	
 	% name of the course and module
 	\date{
-	\large Module: Modulename \\ Course: Coursename \\ 
+	\large Modul: Verteilte Systeme \\ 
 	\vspace{0.8cm}
 	\large Lecturer: Name of the lecturer \\
 	\vspace{1cm}
@@ -60,7 +67,10 @@ This template can be used for seminar papers. For more tips and tricks regarding
 	\newpage
 	\tableofcontents
 	\newpage
+  
 \include{content/Einleitung}
+\include{content/cloning-and-teleportation}
+\include{content/quantenhardware}
 
 \newpage 
 
