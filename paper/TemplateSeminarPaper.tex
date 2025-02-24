@@ -1,18 +1,26 @@
 \documentclass[a4paper]{article}
-\usepackage[english]{babel}
+\usepackage[german]{babel}
 \usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
 % package for including graphics with figure-environment
 \usepackage{graphicx}
 \usepackage{hyperref}
+\usepackage{float}
+\usepackage{amssymb,stmaryrd}
 % colors for hyperlinks
 % colored borders (false) colored text (true)
 \hypersetup{colorlinks=true,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
 
 % Commentbox package
 \usepackage[most]{tcolorbox}
+% Braket notation package
+\usepackage{braket}
 
 % package for bibliography
 \usepackage[authoryear,round]{natbib}
+% Commentbox package
+\usepackage[most]{tcolorbox}
 % package for header
 \usepackage[automark,headsepline]{scrlayer-scrpage}
 \usepackage{mathtools}
@@ -67,9 +75,9 @@ This template can be used for seminar papers. For more tips and tricks regarding
 	\newpage
 	\tableofcontents
 	\newpage
-\include{content/introduction}
+\include{content/Einleitung}
 \include{content/cloning}
-\include{content/quanten-teleportation}
+\include{content/quanten-teleportation}  
 \include{content/quantenhardware}
 
 \newpage 
