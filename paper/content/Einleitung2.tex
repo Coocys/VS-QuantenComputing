@@ -21,7 +21,7 @@ Diese Reversibilität der Rechenschritte stellt einen fundamentalen Unterschied 
 
 Die Messung verändert den Zustand des Systems auf den gemessenen Wert, sodass die ursprüngliche Superposition zerstört wird.\\
 
-In diesen Prinzipien unterscheidet sich das Quanten Computing wesentlich von klassischen Computern.
+In diesen Prinzipien unterscheidet sich das Quanten Computing wesentlich von klassischen Computern.\\
 
 
 \subsection{Verschränkung}
@@ -35,21 +35,23 @@ Dies bildet auch die Grundlage für die Quanten-Teleportation, auf die wir spät
 
 Wie erzeugen wir eine solche Verschränkung?
 Dazu betrachten wir exemplarisch ein Zwei-Bit-Register $\ket{b_{1}b_{2}}$ im Zustand $\ket{00}$.
-Wir wenden auf das erste Bit die Hadamard-Transformation an und anschließend auf beide Bits die Operation CNOT\@.
+Wir wenden auf das erste Bit die Hadamard-Transformation an und anschließend auf beide Bits die Operation CNOT\@.\\
 \begin{equation}
     CNOT : \ket{x,y} \rightarrow \ket{x,y\oplus x}
 \end{equation}
+\\
 
-Das ergibt:
+Das ergibt:\\
 \begin{align}
     \ket{00} &\xrightarrow{H\otimes I_{2}} \frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\ket{0} = \frac{1}{\sqrt{2}}(\ket{00}+\ket{10}) \\
     &\xrightarrow{CNOT} \frac{1}{\sqrt{2}}(\ket{00}+\ket{11})
 \end{align}
+\\
 
 Wenn wir nun das erste Bit messen, kommt mit einer Wahrscheinlichkeit 50\% das Ergebnis $\ket{0}$ mit dem Folgezustand $\ket{00}$ und mit einer Wahrscheinlichkeit von 50\% das Ergebnis $\ket{1}$ mit dem Folgezustand $\ket{11}$ heraus.
 Wir wissen also nach der ersten Messung schon, bevor wir das zweite Qubit überhaupt gemessen haben, wie der Endzustand des Quantenregisters ist.
 Und wie bereits zuvor erwähnt, bleibt diese Eigenschaft bei räumlicher Trennung der Qubits erhalten.
-Hierbei ist auch zu erwähnen, dass es egal ist, welches der Qubits zuerst gemessen wird oder ob diese überhaupt gleichzeitig gemessen werden.
+Hierbei ist auch zu erwähnen, dass es egal ist, welches der Qubits zuerst gemessen wird oder ob diese überhaupt gleichzeitig gemessen werden.\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{img/Verschränkung Definition}
@@ -61,15 +63,16 @@ Diesen Zustand nennt man auch Bell-Zustand.
 Es gibt insgesamt 4 solcher Bell-Zustände.
 Diese beschreiben verschränkte Bits mit einer starken Kopplung (maximal verschränkt).\\
 Daraus resultierend gibt es auch Verschränkungen mit einer weniger starken Kopplung.
-Ein solcher Zustand könnte beispielsweise so aussehen:
+Ein solcher Zustand könnte beispielsweise so aussehen:\\
 \begin{equation}
     \ket{\phi} = 0.9\ket{00} + 0.1\ket{11}
 \end{equation}
+\\
 
 Hier sind die Qubits auch wieder miteinander verschränkt, allerdings sind die Wahrscheinlichkeiten für die Messergebnisse ungleich verteilt.
 Das heißt, wir bekommen mit einer Wahrscheinlichkeit von 90\%, also sehr sicher, den Zustand $\ket{00}$ und nur mit 10\% den Zustand $\ket{11}$, also unsicher.
 Diese weniger stark gekoppelten Qubits kommen in der Praxis häufiger vor, etwa durch äußere Einflüsse wie Rauschen oder Dekohärenz auf ehemals maximal verschränkte Qubits.
-Das geht mit Leistungseinbußen einher, weshalb versucht wird, den Zustand der maximalen Verschränkung möglichst lange zu erhalten.
+Das geht mit Leistungseinbußen einher, weshalb versucht wird, den Zustand der maximalen Verschränkung möglichst lange zu erhalten.\\
 
 
 \subsection{Quantengatter \& Quantenschaltkreise}
@@ -77,7 +80,7 @@ Das geht mit Leistungseinbußen einher, weshalb versucht wird, den Zustand der m
 
 „Klassische Schaltkreise bestehen aus Leitungen und Gattern.
 Ganz analog bestehen Quantenschaltkreise aus Quantenleitungen und Quantengattern.
-Jede Quantenleitung entspricht einem Quantenbit und ein Quantengatter führt eine unitäre Transformation aus“
+Jede Quantenleitung entspricht einem Quantenbit und ein Quantengatter führt eine unitäre Transformation aus.“\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.35\textwidth]{img/Quantengatter Basic}
@@ -85,10 +88,11 @@ Jede Quantenleitung entspricht einem Quantenbit und ein Quantengatter führt ein
     \label{fig:quantenschaltkreis}
 \end{figure}
 
-Wenn wir eine Berechnung mit mehreren Qubits ausführen, ergibt sich der Endzustand $\ket{x´, y´, z´}$ aus dem Tensorprodukt der einzelnen Gatter:
+Wenn wir eine Berechnung mit mehreren Qubits ausführen, ergibt sich der Endzustand $\ket{x´, y´, z´}$ aus dem Tensorprodukt der einzelnen Gatter:\\
 \begin{equation}
     (I_{2} \otimes W \otimes I_{2})(U \otimes V)\ket{x, y, z}
 \end{equation}
+\\
 
 \begin{figure}[H]
     \centering
@@ -104,12 +108,13 @@ Auf den Grund dafür kommen wir später nochmal zurück.\\
 
 Eine der wichtigsten Operationen in der Quanteninformatik ist die Negation, genauer die kontrollierte Negation CNOT\@.
 Dieses Gatter wird für alle Quantenoperationen benötigt, so zum Beispiel bei der Verschränkung.
-Darstellen lässt es sich wie folgt:
+Darstellen lässt es sich wie folgt:\\
 \begin{equation}
     CNOT : \ket{x,y} \rightarrow \ket{x,y\oplus x}
 \end{equation}
+\\
 
-oder als Matrix:
+oder als Matrix:\\
 \begin{equation}
     CNOT =
     \begin{pmatrix}
@@ -119,12 +124,13 @@ oder als Matrix:
         0 & 0 & 1 & 0
     \end{pmatrix}
 \end{equation}
+\\
 
 Dieses CNOT-Gatter negiert nur dann das zweite Qubit, wenn das erste Qubit im Zustand $\ket{1}$ ist.\\
 
 Weitere wichtige Operationen sind die Hadamard-Transformation, die wir bereits kennen, sowie die Pauli-Matrizen.
 Die Pauli-Matrizen negieren ebenfalls, mithilfe einer unitären Transformation auf einem Bit.
-Die bekannteste ist der „Bitflip“ X:
+Die bekannteste ist der „Bitflip“ X:\\
 \begin{equation}
     X =
     \begin{pmatrix}
@@ -132,8 +138,9 @@ Die bekannteste ist der „Bitflip“ X:
         1 & 0
     \end{pmatrix}
 \end{equation}
+\\
 
-Die zwei weiteren Pauli-Matrizen sind der „Phasenflip“ Z:
+Die zwei weiteren Pauli-Matrizen sind der „Phasenflip“ Z:\\
 \begin{equation}
     Z =
     \begin{pmatrix}
@@ -141,8 +148,9 @@ Die zwei weiteren Pauli-Matrizen sind der „Phasenflip“ Z:
         0 & -1
     \end{pmatrix}
 \end{equation}
+\\
 
-und der „Y-Flip“ Y:
+und der „Y-Flip“ Y:\\
 \begin{equation}
     Y =
     \begin{pmatrix}
@@ -150,6 +158,7 @@ und der „Y-Flip“ Y:
         i & 0
     \end{pmatrix}
 \end{equation}
+\\
 
 \begin{figure}[H]
     \centering
@@ -161,7 +170,7 @@ und der „Y-Flip“ Y:
 Durch die Kombination dieser drei Gatter CNOT, Hadamard-Transformation, sowie Pauli-Matrizen lassen sich alle Quantenberechnungen abbilden.
 Sie bilden die grundlegendsten Rechenoperationen eines Quantencomputers.
 Mit einem wesentlichen Unterschied zu logischen Gattern: bei diesen lässt sich der Endzustand nicht unbedingt wieder in den Anfangszustand überführen.
-Bei Quantengattern ist dies eine zwingende Voraussetzung, sie müssen umkehrbar sein.
+Bei Quantengattern ist dies eine zwingende Voraussetzung, sie müssen umkehrbar sein.\\
 
 
 \subsection{Umkehrbare Berechnungen}
@@ -177,7 +186,7 @@ Allerdings kann jede klassische Operation in eine umkehrbare Operation umgewande
 Veranschaulichen wir uns dies anhand des Toffoli-Gatters.\\
 
 Das Toffoli-Gatter ist ein universelles, umkehrbares Gatter, welches AND, OR und NOT Operationen ersetzen kann.
-Es besteht aus drei Eingabebits a, b, c und drei Ausgabebits a, b und $c\oplus(a\land b)$:
+Es besteht aus drei Eingabebits a, b, c und drei Ausgabebits a, b und $c\oplus(a\land b)$:\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.35\textwidth]{img/Umkehrbare_Berechnungen Toffoli}
@@ -190,7 +199,7 @@ Dann ergibt die Rechnung über das Toffoli-Gatter (1, 1, 1), denn $(1\land 1) \o
 Hier ist nun auch zu sehen, dass die Berechnung umkehrbar ist, wenn wir die Schritte einmal rückwärts gehen.
 Dies ist genauso für die anderen Operatoren möglich, bedarf gegebenenfalls nur Umformung und den Einsatz mehrerer Toffoli-Gatter.\\
 
-Auf diese Weise können wir jede klassische Rechenoperation umkehrbar gestalten, sodass diese auch für unsere Quantenschaltkreise nutzbar sind.
+Auf diese Weise können wir jede klassische Rechenoperation umkehrbar gestalten, sodass diese auch für unsere Quantenschaltkreise nutzbar sind.\\
 
 
 \subsection{Gestörte Berechnungen}
@@ -218,12 +227,11 @@ Das heißt, bei 50 Quantengattern welche einen Fehler von 2\% hinzufügen, betr�
 Wenn die Fehler nun aber exponentiell wachsen würden, hätten wir nach 3 Gattern einen Fehler von 8\%, nach 50 Gattern (theoretisch) einen Fehler von $2^{50}$\%.\\
 
 Um die Frage vom Beginn des Kapitels nochmal aufzunehmen: Einer der Gründe weshalb nicht jeder einen Quantencomputer zu Hause stehen hat, ist die Fehleranfälligkeit der Berechnungen.
-Es bedarf großen Aufwands solche Fehler zu vermeiden und zu korrigieren.
+Es bedarf großen Aufwands solche Fehler zu vermeiden und zu korrigieren.\\
 
 
 \subsection{Grenzen}
 \label{subsec:grenzen}
-\textcolor{red}{\textbf{INCOMPLETE}}\\
 
 Angenommen in 10 Jahren ist das Problem der Dekohärenz gelöst, werden Quanten Computer die Lösung aller mathematischen Probleme sein?
 Obwohl Quanten Computing noch mitten in der Entwicklung stecken, lässt sich jetzt schon absehen: Die Antwort darauf ist „Nein“.\\
@@ -232,7 +240,21 @@ Eine der zentralen Fragen der Komplexitätstheorie beschäftigt sich mit NP-voll
 Sie beschreibt Probleme, welche sich zwar leicht überprüfen lassen, doch algorithmisch mindestens eine exponentielle (O($2^{n}$), häufig sogar fakultative (O(n!)) Laufzeit haben.
 Und würde man für ein NP-vollständiges Problem eine Lösung finden, also ein Algorithmus mit polynomieller O($n^{x}$) Laufzeit, so könnten alle dieser Probleme darauf umgeformt und gelöst werden.\\
 
-Doch selbst Quanten Computer scheinen keine Lösung für diese Probleme finden zu können.\\
+Doch selbst Quantencomputer scheinen keine Lösung für diese Probleme finden zu können.
+Das liegt daran, dass selbst Quantenalgorithmen, wie etwa der bekannte Shor-Algorithmus (zur Faktorisierung großer Zahlen),
+oder der Grover-Algorithmus (zur unstrukturierten Suche in Datenbanken), zwar eine deutliche Geschwindigkeitsverbesserung im Vergleich zu klassischen Algorithmen bieten,
+jedoch keine exponentielle Reduktion der Komplexität bei NP-vollständigen Problemen ermöglichen.
+Hier stoßen Quantencomputer also auf dieselben grundlegenden Herausforderungen wie klassische Computer.\\
+
+Zusammenfassend bedeutet es, dass Quantencomputer zwar eine große Bereicherung für die Informatik darstellen, jedoch nicht alle Probleme lösen können.
+Es wird also auch in Zukunft noch klassische Computer geben, die für bestimmte Probleme besser geeignet sind als Quantencomputer.\\
+
+
+\subsection{Zukunft}
+\label{subsec:zunft}
+
+
+
 
 
 
