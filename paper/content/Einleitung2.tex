@@ -33,20 +33,32 @@ Das heißt, messen wir den Zustand von Qubit 1, wissen wir auch sofort den Zusta
 Und was das Ganze noch faszinierender macht: Selbst über große Entfernungen zwischen den verschränkten Qubits bleibt die Eigenschaft der Verschränkung erhalten.
 Dies bildet auch die Grundlage für die Quanten-Teleportation, auf die wir später noch zurückkommen.\\
 
+\begin{tcolorbox}[title=Kommentar,
+    title filled=false,
+    colback=cyan!5!white,
+    colframe=cyan!75!black]
+    Die Verschränkung war mir bisher ein unbekanntes Konzept, welches sich nur sehr schwer greifen lässt.
+    Dementsprechend schwierig war es auch, die Verschränkung zu verstehen und in eigenen Worten zu erklären.
+    Besonders, dass diese unabhängig von der räumlichen Entfernung der Qubits erhalten bleibt.\\
+
+    Dazu half mir ein kleines Beispiel: Stellen wir uns zwei Würfel vor, einen roten Würfel und einen blauen Würfel.
+    Der blaue Würfel zeigt immer dieselbe Augenzahl wie der Rote.
+    Wenn wir nun mit dem Roten würfeln und dieser eine 6 zeigt, wissen wir auch, dass der Blaue eine 6 zeigt, ohne diesen gewürfelt zu haben.
+    Und das unabhängig davon, wie weit die beiden Würfel voneinander entfernt sind.
+\end{tcolorbox}
+
 Wie erzeugen wir eine solche Verschränkung?
 Dazu betrachten wir exemplarisch ein Zwei-Bit-Register $\ket{b_{1}b_{2}}$ im Zustand $\ket{00}$.
 Wir wenden auf das erste Bit die Hadamard-Transformation an und anschließend auf beide Bits die Operation CNOT\@.\\
 \begin{equation}
     CNOT : \ket{x,y} \rightarrow \ket{x,y\oplus x}
-\end{equation}
-\\
+\end{equation}\\
 
 Das ergibt:\\
 \begin{align}
     \ket{00} &\xrightarrow{H\otimes I_{2}} \frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\ket{0} = \frac{1}{\sqrt{2}}(\ket{00}+\ket{10}) \\
     &\xrightarrow{CNOT} \frac{1}{\sqrt{2}}(\ket{00}+\ket{11})
-\end{align}
-\\
+\end{align}\\
 
 Wenn wir nun das erste Bit messen, kommt mit einer Wahrscheinlichkeit 50\% das Ergebnis $\ket{0}$ mit dem Folgezustand $\ket{00}$ und mit einer Wahrscheinlichkeit von 50\% das Ergebnis $\ket{1}$ mit dem Folgezustand $\ket{11}$ heraus.
 Wir wissen also nach der ersten Messung schon, bevor wir das zweite Qubit überhaupt gemessen haben, wie der Endzustand des Quantenregisters ist.
@@ -66,8 +78,7 @@ Daraus resultierend gibt es auch Verschränkungen mit einer weniger starken Kopp
 Ein solcher Zustand könnte beispielsweise so aussehen:\\
 \begin{equation}
     \ket{\phi} = 0.9\ket{00} + 0.1\ket{11}
-\end{equation}
-\\
+\end{equation}\\
 
 Hier sind die Qubits auch wieder miteinander verschränkt, allerdings sind die Wahrscheinlichkeiten für die Messergebnisse ungleich verteilt.
 Das heißt, wir bekommen mit einer Wahrscheinlichkeit von 90\%, also sehr sicher, den Zustand $\ket{00}$ und nur mit 10\% den Zustand $\ket{11}$, also unsicher.
@@ -91,8 +102,7 @@ Jede Quantenleitung entspricht einem Quantenbit und ein Quantengatter führt ein
 Wenn wir eine Berechnung mit mehreren Qubits ausführen, ergibt sich der Endzustand $\ket{x´, y´, z´}$ aus dem Tensorprodukt der einzelnen Gatter:\\
 \begin{equation}
     (I_{2} \otimes W \otimes I_{2})(U \otimes V)\ket{x, y, z}
-\end{equation}
-\\
+\end{equation}\\
 
 \begin{figure}[H]
     \centering
@@ -111,8 +121,7 @@ Dieses Gatter wird für alle Quantenoperationen benötigt, so zum Beispiel bei d
 Darstellen lässt es sich wie folgt:\\
 \begin{equation}
     CNOT : \ket{x,y} \rightarrow \ket{x,y\oplus x}
-\end{equation}
-\\
+\end{equation}\\
 
 oder als Matrix:\\
 \begin{equation}
@@ -123,8 +132,7 @@ oder als Matrix:\\
         0 & 0 & 0 & 1 \\
         0 & 0 & 1 & 0
     \end{pmatrix}
-\end{equation}
-\\
+\end{equation}\\
 
 Dieses CNOT-Gatter negiert nur dann das zweite Qubit, wenn das erste Qubit im Zustand $\ket{1}$ ist.\\
 
@@ -137,8 +145,7 @@ Die bekannteste ist der „Bitflip“ X:\\
         0 & 1 \\
         1 & 0
     \end{pmatrix}
-\end{equation}
-\\
+\end{equation}\\
 
 Die zwei weiteren Pauli-Matrizen sind der „Phasenflip“ Z:\\
 \begin{equation}
@@ -147,8 +154,7 @@ Die zwei weiteren Pauli-Matrizen sind der „Phasenflip“ Z:\\
         1 & 0 \\
         0 & -1
     \end{pmatrix}
-\end{equation}
-\\
+\end{equation}\\
 
 und der „Y-Flip“ Y:\\
 \begin{equation}
@@ -157,8 +163,7 @@ und der „Y-Flip“ Y:\\
         0 & -i \\
         i & 0
     \end{pmatrix}
-\end{equation}
-\\
+\end{equation}\\
 
 \begin{figure}[H]
     \centering
@@ -245,6 +250,18 @@ Das liegt daran, dass selbst Quantenalgorithmen, wie etwa der bekannte Shor-Algo
 oder der Grover-Algorithmus (zur unstrukturierten Suche in Datenbanken), zwar eine deutliche Geschwindigkeitsverbesserung im Vergleich zu klassischen Algorithmen bieten,
 jedoch keine exponentielle Reduktion der Komplexität bei NP-vollständigen Problemen ermöglichen.
 Hier stoßen Quantencomputer also auf dieselben grundlegenden Herausforderungen wie klassische Computer.\\
+
+\begin{tcolorbox}[title=Kommentar,
+    title filled=false,
+    colback=cyan!5!white,
+    colframe=cyan!75!black]
+    Wir hatten zunächst überlegt, den Grover- oder Shor-Algorithmus genauer zu beleuchten, haben uns dann aber dagegen entschieden,
+    da wir uns auf die Grundlagen des Quanten Computing konzentrieren und uns nicht in einem komplexen Algorithmus verlieren wollten.\\
+
+    Als wir mit dem Thema und der Recherche zur Quanteninformatik begonnen haben, war mir nicht bewusst, dass selbst Quantencomputer,
+    welche noch in den Anfängen stecken und ein großes Potenzial bieten, schon jetzt an Grenzen stoßen, wie bei den NP-vollständigen Problemen.
+    Es ist faszinierend zu sehen, dass selbst Quantencomputer, eine Technologie die man sonst nur aus Sci-Fi Serien kennt, nicht alle mathematischen Probleme lösen kann.
+\end{tcolorbox}
 
 Zusammenfassend bedeutet es, dass Quantencomputer zwar eine große Bereicherung für die Informatik darstellen, jedoch nicht alle Probleme lösen können.
 Es wird also auch in Zukunft noch klassische Computer geben, die für bestimmte Probleme besser geeignet sind als Quantencomputer.\\
