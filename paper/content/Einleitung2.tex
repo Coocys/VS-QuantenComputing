@@ -17,7 +17,8 @@ Jede Operation kann lokal beschrieben werden, wobei nur zwei Qubits gleichzeitig
 
 Diese Reversibilität der Rechenschritte stellt einen fundamentalen Unterschied zu klassischen Computern dar, bei denen Informationen während der Berechnung verloren gehen können.\\
 
-\textbullet Prinzip 3 - \textbf{Messungen}: Misst man den Zustand eines Quantenregisters, so erhält man als Ergebnis einen der Basiszustände mit einer Wahrscheinlichkeit, die durch die Amplitude dieses Zustands in der Superposition gegeben ist.
+\textbullet Prinzip 3 - \textbf{Messungen}: Misst man den Zustand eines Quantenregisters, so erhält man als Ergebnis einen der Basiszustände mit einer Wahrscheinlichkeit, die aus der Amplitude dieses Zustands abgeleitet werden kann.
+
 Die Messung verändert den Zustand des Systems auf den gemessenen Wert, sodass die ursprüngliche Superposition zerstört wird.\\
 
 In diesen Prinzipien unterscheidet sich das Quanten Computing wesentlich von klassischen Computern.
@@ -29,7 +30,7 @@ In diesen Prinzipien unterscheidet sich das Quanten Computing wesentlich von kla
 Eine der interessantesten Eigenschaften von Quantenregistern ist die Verschränkung.
 Bei der Verschränkung teilen sich zwei Qubits denselben Zustand.
 Das heißt, messen wir den Zustand von Qubit 1, wissen wir auch sofort den Zustand von Qubit 2, ohne dieses gemessen zu haben.
-Und was das Ganze noch faszinierender macht, selbst über große Entfernungen zwischen den verschränkten Qubits, bleibt die Eigenschaft der Verschränkung erhalten.
+Und was das Ganze noch faszinierender macht: Selbst über große Entfernungen zwischen den verschränkten Qubits bleibt die Eigenschaft der Verschränkung erhalten.
 Dies bildet auch die Grundlage für die Quanten-Teleportation, auf die wir später noch zurückkommen.\\
 
 Wie erzeugen wir eine solche Verschränkung?
@@ -57,7 +58,8 @@ Hierbei ist auch zu erwähnen, dass es egal ist, welches der Qubits zuerst gemes
 \end{figure}
 
 Diesen Zustand nennt man auch Bell-Zustand.
-Es gibt insgesamt 4 solcher Bell-Zustände, diese beschreiben verschränkte Bits mit einer starken Kopplung (maximal verschränkt).\\
+Es gibt insgesamt 4 solcher Bell-Zustände.
+Diese beschreiben verschränkte Bits mit einer starken Kopplung (maximal verschränkt).\\
 Daraus resultierend gibt es auch Verschränkungen mit einer weniger starken Kopplung.
 Ein solcher Zustand könnte beispielsweise so aussehen:
 \begin{equation}
@@ -65,7 +67,7 @@ Ein solcher Zustand könnte beispielsweise so aussehen:
 \end{equation}
 
 Hier sind die Qubits auch wieder miteinander verschränkt, allerdings sind die Wahrscheinlichkeiten für die Messergebnisse ungleich verteilt.
-Das heißt, wir bekommen mit einer Amplitude von 90\%, also sehr sicher, den Zustand $\ket{00}$ und nur mit 10\% den Zustand $\ket{11}$, also unsicher.
+Das heißt, wir bekommen mit einer Wahrscheinlichkeit von 90\%, also sehr sicher, den Zustand $\ket{00}$ und nur mit 10\% den Zustand $\ket{11}$, also unsicher.
 Diese weniger stark gekoppelten Qubits kommen in der Praxis häufiger vor, etwa durch äußere Einflüsse wie Rauschen oder Dekohärenz auf ehemals maximal verschränkte Qubits.
 Das geht mit Leistungseinbußen einher, weshalb versucht wird, den Zustand der maximalen Verschränkung möglichst lange zu erhalten.
 
@@ -171,7 +173,7 @@ So folgt aus 1 AND 0 = 0, jedoch ebenfalls aus 0 AND 0 = 0.
 Sehen wir den Endzustand 0, wissen wir also nicht, welchen Zustand die beiden Bits zu Beginn hatten.
 Das bedeutet, wir können Quantenrechenprozesse nicht auf dieselbe Art verarbeiten wie klassische Rechenprozesse.\\
 
-Allerding kann jede klassische Operation in eine umkehrbare Operation umgewandelt werden.
+Allerdings kann jede klassische Operation in eine umkehrbare Operation umgewandelt werden.
 Veranschaulichen wir uns dies anhand des Toffoli-Gatters.\\
 
 Das Toffoli-Gatter ist ein universelles, umkehrbares Gatter, welches AND, OR und NOT Operationen ersetzen kann.
@@ -185,8 +187,8 @@ Es besteht aus drei Eingabebits a, b, c und drei Ausgabebits a, b und $c\oplus(a
 
 Exemplarisch für AND: Wollen wir zum Beispiel ein Bit negieren, mit der Eingabe (a, b, c) = (1, 1, 0).
 Dann ergibt die Rechnung über das Toffoli-Gatter (1, 1, 1), denn $(1\land 1) \oplus 0 = 1$.
-Hier ist nun auch zusehen, dass die Berechnung umkehrbar ist, wenn wir die Schritte einmal rückwärts gehen.
-Dies ist genauso für die anderen Operatoren möglich, bedarf gegebenenfalls nur Umformung und den Einsatz mehrere Toffoli-Gatter.\\
+Hier ist nun auch zu sehen, dass die Berechnung umkehrbar ist, wenn wir die Schritte einmal rückwärts gehen.
+Dies ist genauso für die anderen Operatoren möglich, bedarf gegebenenfalls nur Umformung und den Einsatz mehrerer Toffoli-Gatter.\\
 
 Auf diese Weise können wir jede klassische Rechenoperation umkehrbar gestalten, sodass diese auch für unsere Quantenschaltkreise nutzbar sind.
 
@@ -194,11 +196,11 @@ Auf diese Weise können wir jede klassische Rechenoperation umkehrbar gestalten,
 \subsection{Gestörte Berechnungen}
 \label{subsec:gestoerte-berechnungen}
 
-Wie wir bisher sehen konnte, scheint alles, was wir mit klassischen Computern berechnen, ebenfalls genauso effizient mit Quantencomputern berechnen zu lassen.
+Wie wir bisher sehen konnten, scheint alles, was wir mit klassischen Computern berechnen, genauso effizient mit Quantencomputern berechenbar.
 Warum also steht nicht bei jedem ein Quantenrechner zu Hause (wenn wir die Kosten mal außen vor lassen)?\\
 
-Der Grund dafür liegt in der Fehleranfälligkeit.
-Während klassische Bits die Zustände 0 oder 1 abbilden, können Quantenbits bis zur Messung $\ket{0}$ oder $\ket{1}$ oder jeden Zustand dazwischen annehmen.
+Einer der Gründe dafür ist die Fehleranfälligkeit.
+Während klassische Bits die Zustände 0 oder 1 abbilden, können Quantenbits bis zur Messung $\ket{0}$ oder $\ket{1}$ oder beide Zustände gleichzeitig annehmen.
 Verdeutlichen wir, was das in der Praxis bedeutet: Nehmen wir an, der Zustand 0 eines klassischen Bits wird durch 0V und der Zustand 1 durch 5V dargestellt.
 Nun kann es zu Spannungsschwankungen kommen und wir geben 4V statt 5V\@.
 Da wir aber keinen Zustand für 4V haben, aber nur 2 Zustände abbilden können, können wir auch sagen, der Zustand 0 wir durch eine Spannung <2,5V abgebildet und der Zustand 1 durch >2,5V.
@@ -208,10 +210,14 @@ Die ist allerdings nicht für Quantenbits möglich, da wir nicht nur diese zwei 
 Was bedeutet also hier eine Spannungsschwankung von 5V auf 4V?
 Das wissen wir nicht, da bis zur Messung der Zustand nicht feststeht, so können wir also auch kein zuverlässiges Ergebnis mehr liefern.
 So können selbst kleinste Störungen Quantenberechnungen verfälschen.
-Was jedoch zu beachten ist, bei einem gestörten Quantengitter addiert sich der Fehler.
-Das heißt, der Fehler wird in nachfolgenden Berechnungen nicht weiter verstärkt.\\
+Zu beachten ist, dass bei einem gestörten Quantengitter sich der Fehler nur addiert.
+Das heißt, der Fehler eines Gatters bleibt zwar in weiteren Berechnungen erhalten, jedoch wird er nicht größer.\\
 
-Um die Frage vom Beginn des Kapitels also nochmal aufzunehmen: Der Grund weshalb nicht jeder einen Quantencomputer zu Hause stehen hat, ist die Fehleranfälligkeit der Berechnungen.
+Würden wir zum Beispiel ein Qubit durch 3 Quantengatter nacheinander umformen, wobei jedes dieser Gatter einen Fehler von 2\% hinzufügt, so beträgt der Fehler des Endzustands 6\%.
+Das heißt, bei 50 Quantengattern welche einen Fehler von 2\% hinzufügen, beträgt der Fehler des Endzustands 100\%.
+Wenn die Fehler nun aber exponentiell wachsen würden, hätten wir nach 3 Gattern einen Fehler von 8\%, nach 50 Gattern (theoretisch) einen Fehler von $2^{50}$\%.\\
+
+Um die Frage vom Beginn des Kapitels nochmal aufzunehmen: Einer der Gründe weshalb nicht jeder einen Quantencomputer zu Hause stehen hat, ist die Fehleranfälligkeit der Berechnungen.
 Es bedarf großen Aufwands solche Fehler zu vermeiden und zu korrigieren.
 
 
