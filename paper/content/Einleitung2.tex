@@ -241,6 +241,8 @@ Es bedarf großen Aufwands solche Fehler zu vermeiden und zu korrigieren.\\
 Angenommen in 10 Jahren ist das Problem der Dekohärenz gelöst, werden Quanten Computer die Lösung aller mathematischen Probleme sein?
 Obwohl Quanten Computing noch mitten in der Entwicklung stecken, lässt sich jetzt schon absehen: Die Antwort darauf ist „Nein“.\\
 
+\subsubsection{NP-vollständige Probleme}
+\label{subsubsec:np-vollstaendige-probleme}
 Eine der zentralen Fragen der Komplexitätstheorie beschäftigt sich mit NP-vollständigen Problemen.
 Sie beschreibt Probleme, welche sich zwar leicht überprüfen lassen, doch algorithmisch mindestens eine exponentielle (O($2^{n}$), häufig sogar fakultative (O(n!)) Laufzeit haben.
 Und würde man für ein NP-vollständiges Problem eine Lösung finden, also ein Algorithmus mit polynomieller O($n^{x}$) Laufzeit, so könnten alle dieser Probleme darauf umgeformt und gelöst werden.\\
@@ -263,12 +265,60 @@ Hier stoßen Quantencomputer also auf dieselben grundlegenden Herausforderungen 
     Es ist faszinierend zu sehen, dass selbst Quantencomputer, eine Technologie die man sonst nur aus Sci-Fi Serien kennt, nicht alle mathematischen Probleme lösen kann.
 \end{tcolorbox}
 
-Zusammenfassend bedeutet es, dass Quantencomputer zwar eine große Bereicherung für die Informatik darstellen, jedoch nicht alle Probleme lösen können.
-Es wird also auch in Zukunft noch klassische Computer geben, die für bestimmte Probleme besser geeignet sind als Quantencomputer.\\
+\subsubsection{Die perfekte Uhr}
+\label{subsubsec:die-perfekte-uhr}
+Ein weiteres Problem, auf welches Quantencomputer stoßen werden, ist die perfekte Zeitmessung, also die perfekte Uhr.
+Jede Uhr hat zwei fundamentale Eigenschaften: Präzision und Zeitauflösung.
+Die Zeitauflösung gibt an, wie klein die messbaren Zeitintervalle sind (also wie oft die Uhr tickt) und die Präzision gibt an, mit welcher Ungenauigkeit bei jedem Tick zu rechnen ist.
+Ein Forscherteam hat gezeigt, dass es unmöglich ist gleichzeitig die perfekte Präzision und die perfekte Zeitauflösung zu erreichen.\\
+
+Warum ist das wichtig für das Quanten Computing?
+Aktuell haben Quantencomputer noch mit anderen Problemen, wie etwa der Dekohärenz oder Ungenauigkeiten bei den verwendeten Bauteilen zu kämpfen.
+Allerdings zeigen Rechnungen, dass man nicht mehr so weit davon entfernt ist, bis die physikalische Grenze der Zeitrechnung die nächste Limitation für Geschwindigkeit und Zuverlässigkeit darstellt.\\
+
+\begin{tcolorbox}[title=Kommentar,
+    title filled=false,
+    colback=cyan!5!white,
+    colframe=cyan!75!black]
+    An der Stelle nur ein kleiner Ausblick auf die perfekte Uhr.
+    Da ich bei meiner Recherche schnell in der Thermodynamik und Quantenmechanik gelandet bin und es ein umfangreiches physikalisches Wissen voraussetzt, vertiefe ich die perfekte Uhr nicht weiter.
+\end{tcolorbox}
 
 
 \subsection{Zukunft}
 \label{subsec:zunft}
+
+Wie sieht die Zukunft des Quanten Computing aus?
+Was sind oder werden Anwendungsgebiete für diese Technologie sein?\\
+
+\subsubsection{Quantum Machine Learning}
+\label{subsubsec:quantum-machine-learning}
+Künstliche Intelligenz oder auch Machine Learning sind zwei der Bereiche, in denen Quantencomputer eine große Rolle spielen könnten.
+So schreibt die Fraunhofer-Allianz Big Data und Künstliche Intelligenz: \("\)Verfahren der künstlichen Intelligenz und des Machine Learnings lassen sich für Quantencomputer so anpassen, dass sie mehrere Lösungswege gleichzeitig beschreiten können.
+Damit können Quantencomputer große Datenbestände in einem einzigen Schritt verarbeiten, Muster in den Daten aufspüren, die klassische Computer nicht entdecken und auch auf unvollständigen oder unsicheren Daten verlässliche Ergebnisse liefern.\("\)
+Quantencomputer könnten also die Lernverfahren von KI deutlich beschleunigen und verbessern.\\
+
+Dies birgt allerdings auch ein Risiko, dessen ist sich auch das Bundesamt für Sicherheit in der Informationstechnik bewusst und gab in Kooperation mit Capgemini und dem Fraunhofer-Institut für Intelligente Analyse- und Informationssysteme eine Studie in Auftrag, die Quantum Machine Learning (QML) im Kontext von IT-Sicherheit untersuchen soll.
+So hat QML beispielsweise großes Potenzial für die Malware und Spam Erkennung, sowie Kryptografie.
+Gleichzeitig weiß man jetzt schon, dass aktuelle Verschlüsselungsmethoden, wie RSA oder ECC, durch Quantencomputer gebrochen werden können.
+Daher wird bereits an quanten-resistenten Verschlüsselungsmethoden gearbeitet.\\
+
+\begin{tcolorbox}[title=Kommentar,
+    title filled=false,
+    colback=cyan!5!white,
+    colframe=cyan!75!black]
+    Die Studie des BSI ist tatsächlich sehr interessant zu lesen.
+    Sie ist zwar von 2022, aber gibt einen guten Überblick über die Möglichkeiten und Risiken von Quantum Machine Learning.
+    Allerdings würde es den Rahmen sprengen, hier näher darauf einzugehen, da wir uns auf die Grundlagen beschränken wollen.
+\end{tcolorbox}
+
+\subsubsection{Simulationen}
+\label{subsubsec:simulationen}
+Die Simulation von chemischen Molekülen, etwas bei dem selbst Supercomputer an ihre Grenzen stoßen.
+Erstaunlicherweise ist die detaillierte Simulation von etwas so Kleinem wie Molekülen eine der größten Herausforderungen für unsere modernen Computer.
+Hier könnten Quantencomputer Unterstützung leisten
+
+
 
 
 
