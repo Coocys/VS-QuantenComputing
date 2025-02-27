@@ -23,10 +23,18 @@
 \usepackage[most]{tcolorbox}
 % package for header
 \usepackage[automark,headsepline]{scrlayer-scrpage}
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{comment}
+% qc state brackets
+\DeclarePairedDelimiter\bra{\langle}{\rvert}
+\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
 \pagestyle{scrheadings}
 \ihead[]{Meyer, Springer, Kawamura, Heidenreich}
 \ohead[]{\today}
-\cfoot[]{\pagemark} 
+\cfoot[]{\pagemark}
 
 \begin{document}
 	\title{
@@ -67,9 +75,9 @@ This template can be used for seminar papers. For more tips and tricks regarding
 	\newpage
 	\tableofcontents
 	\newpage
-  
 \include{content/Einleitung}
-\include{content/cloning-and-teleportation}
+\include{content/cloning}
+\include{content/quanten-teleportation}  
 \include{content/quantenhardware}
 
 \newpage 
