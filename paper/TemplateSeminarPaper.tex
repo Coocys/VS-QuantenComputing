@@ -1,29 +1,41 @@
 \documentclass[a4paper]{article}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
 % package for including graphics with figure-environment
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{float}
+\usepackage{amssymb,stmaryrd}
 % colors for hyperlinks
 % colored borders (false) colored text (true)
 \hypersetup{colorlinks=true,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
 
 % Commentbox package
 \usepackage[most]{tcolorbox}
+% Braket notation package
 \usepackage{braket}
 
 % package for bibliography
 \usepackage[authoryear,round]{natbib}
+% Commentbox package
 % package for header
 \usepackage[automark,headsepline]{scrlayer-scrpage}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{color}
+\usepackage{mathtools}
+\usepackage{comment}
+% qc state brackets
+%\DeclarePairedDelimiter\bra{\langle}{\rvert}
+%\DeclarePairedDelimiter\ket{\lvert}{\rangle}
+%\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
 \pagestyle{scrheadings}
 \ihead[]{Meyer, Springer, Kawamura, Heidenreich}
 \ohead[]{\today}
-\cfoot[]{\pagemark} 
+\cfoot[]{\pagemark}
 
 \begin{document}
 	\title{
@@ -32,7 +44,7 @@
 			\includegraphics[width=0.26\textwidth]{img/THlogoheader.pdf}
 	\end{figure}
 	\vspace{1cm}
-	\Huge Here you can insert the title of \\ your seminar paper \\
+	\Huge Quantencomputer Verstehen
 	}
 	
 	\vspace{1cm}
@@ -48,7 +60,7 @@
 	\date{
 	\large Modul: Verteilte Systeme \\ 
 	\vspace{0.8cm}
-	\large Lecturer: Name of the lecturer \\
+	\large Dozent: Lutz Köhler \\
 	\vspace{1cm}
 	\today
 	}
@@ -57,19 +69,16 @@
 	\setlength{\parindent}{0pt}
 
 \vspace{2cm}
-\begin{abstract}
-This template can be used for seminar papers. For more tips and tricks regarding the use of figures, tables, quotations, references, footnotes, enumerations, etc. please download the Masterthesis template. 
-
-\end{abstract}
 	\newpage
 	\tableofcontents
 	\newpage
 \include{content/einleitung}
 \include{content/einführung in die Quanteninformatik 2}
+\include{content/cloning}
+\include{content/quanten-teleportation}  
+\include{content/quantenhardware}
 \include{content/schluss}
 \include{content/quellen}
-
-
 
 \newpage 
 
