@@ -6,8 +6,84 @@
 \label{subsec:chsh_geschichte}
 
 
-\subsection{Bell Theorem}
-\label{subsec:chsh_bell_theorem}
+\subsection{Bell`s Inequalität}
+\label{subsec:bells_inequality}
+Bell`s Inequalität bezieht sich auf die statistische korrelation zwischen Messungen von verschränkten Teilchen.
+Die Ungleichung wurde von John Bell 1964 formuliert und besagt, dass die Wahrscheinlichkeit der Messergebnisse von verschränkten Teilchen durch eine lokale versteckte Variable erklärt werden können, und hierdurch begrenzt ist.
+Wenn die korrelation jedoch über die Grenze der Ungleichung hinausgeht, kann dies nur durch Quantenmechanik erklärt werden.\\
+
+Bell setzte für seine Idee voraus mehrere kopien von verschränkten Teilchen zu haben, dise Partikel können heutzutage druch ein Zerfallsprozess erreicht werden in dem ein Partikel in zwei verschränkte Teilchen zerfällt.\\
+
+Durch den Zerafll eines Teilchen, und dem Stern-Gerlach-Experiment, wissen wir das ein Teilchen mit einem Spin von 0 in zwei Teilchen mit einem Spin von 1/2 zerfällt.
+\begin{equation}
+    S = 0 \rightarrow S_1 = S_2 = \pm\frac{1}{2}
+\end{equation}
+Beide Teilchen haben den Spin von $\pm\frac{1}{2}$ müssen jedoch sich gegenseitig aufheben, sodass die Summe der Spins 0 ergibt.
+Dies nennt man auch spin up und spin down. Wenn das eine Teilchen spin up ist muss das andere spin down sein und anders herum.\\
+Dadurch sind die beide Teilchen miteinander verschränkt und kann wie folgt beschrieben werden:
+\begin{equation}
+    \ket{\psi} = \frac{1}{\sqrt{2}}(\ket{\uparrow}\ket{\downarrow} - \ket{\downarrow}\ket{\uparrow})
+\end{equation}
+
+Gehen wir davon aus das wir zwei Messungen durchführen, die Messung von Alice und die Messung von Bob.
+Beide dürfen den Spin des Partikels in jede beliebige Richtung messen, wie sind die beiden Messungen korreliert?\\
+Laut Einstein ist jedes einzelne Teilchen deterministisch, das bedeutet das die Messung vom Spin des Teilchens nicht zufällig ist, sondern durch eine versteckte Variable bestimmt wird und dadurch der Spin beider Teilchen nicht korreliert sind.\\
+Daraus folgernd muss die Messergebnisse deterministisch sein. Wenn Bob $(+a, +b, -c)$ misst, dann muss Alice $(-a, -b, +c)$ sein welches durch die versteckte Variable vorherbestimmt ist und zusammen ein 0 spin ergibt.
+Durch die voraussetzung des aufheben des spins kann eine Tabelle an alle deterministischen messergebnissen erstellt werden.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{img/BellList.png}
+    \caption{Bell zuständen nach der versteckten Variable}
+    \label{fig:BellList}
+\end{figure}
+
+Jetzt errechnen wir die Wahrscheinlichkeit das Alice und Bob, bei unabhängigen Messungen, das selbe vorzeichen messen. Die Wahrscheinlichkeit in Zeile 1 und 8 sind $0\%$und in Zeile 2 bis 7 sind es $P = \frac{4}{9}$.
+Das bedeutet das nach Einstein die Wahrscheinlichkeit das Alice und Bob das selbe messen $P \leq \frac{4}{9}$ ist. Dies ist Bell`s Inequalität.\\
+Vorliegendes beispiel ist generalisiert und kann auf beliebige Winkel angewendet werden, wobei die Wahrscheinlichkeit wie folgt für alle möglichen Winkel berechnet wird.
+\begin{equation}
+    E(\overrightarrow{a}, \overrightarrow{b}) = \int d\lambda \rho(\lambda) A(\overrightarrow{a}, \lambda) B(\overrightarrow{b}, \lambda)
+\end{equation}
+
+Nun zu der Wahrscheinlichkeit nach der Quantenmechanik. Wir gehen davon aus das Bob den spin in $a$ richtung misst beispielsweise spin up, daraus folgernd muss wenn Alice in $a$ richtung misst das Ergebniss spin down sein.\\
+Dadurch das wir das Ergebniss einer der achsen kennen, können wir die Wahrscheinlichkeit für die anderen Achsen mit folgender Gleichung berechnen.
+\begin{equation}
+    P(b) = \cos^2(\frac{\theta}{2})
+\end{equation}
+Hierbei ist $\theta$ der Winkel zwischen den Achsen. Wenden wir dies auf das beispiel auf die Achse $b$ an so setzen wir $\theta = 60^\circ$
+\begin{equation}
+    P(b) = \cos^2(\frac{60^\circ}{2}) = \frac{3}{4}
+\end{equation}
+Machen wir dies auch für die andere Achse $c$ wo $\theta = 120^\circ$ ist erhalten wir
+\begin{equation}
+    P(c) = \cos^2(\frac{120^\circ}{2}) = \frac{1}{4}
+\end{equation}
+Von diesen beiden Wahrscheinlichkeit errechnen wir den durchschnitt von $P = \frac{1}{2}$, was bedeutet das Bell`s Inequalität mit $P = \frac{1}{2} \ge \frac{4}{9}$ verletzt ist.\\
+
+\subsubsection{Bell im Quantumcomputer}
+\label{subsubsec:bell_quantumcomputer}
+Wir haben das Beispiel von Bell`s Inequalität in der Quantenmechanik gezeigt, jedoch ist es auch möglich dies in einem Quantumcomputer zu zeigen.
+Hierbei haben wir das Bells Theorem folgendermaßen umgesetzt.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{img/BellCircuit.png}
+    \caption{Bell`s Theorem im Quantumcomputer}
+    \label{fig:BellCircuit}
+\end{figure}
+
+Die beiden linien $q_0$ und $q_1$ sind die beiden verschränkten Teilchen, die durch den zerfall eines Teilchens entstanden sind.
+Den verschänkten zustand erreichen wir durch die beiden $X$ gates, dass $H$ gate und das CNOT gate.
+Nachdem wir den verschränkten Zustand erreicht haben, messen wir $q_0$ in der $a$ Achse und $q_1$ an der $b$ Achse. Dies ist mit dem $R_y$ gate realisiert der die messung um $120^\circ$ dreht.\\
+
+Um eine genaueres Ergebniss zu erhalten, führen wir diese Messungen 30000 mal durch
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/BellResult.png}
+    \caption{Ergebniss von Bell`s Theorem im Quantumcomputer}
+    \label{fig:BellResult}
+\end{figure}
+
+Die Ergebnisse zeigen das die Wahrscheinlichkeit das selbe vorzeichen zu messen bei $P = (7620 + 7357) / 30000 = 0.49923$ oder auch 49,923\% liegt, was Bell`s Inequalität verletzt.\\
 
 
 \subsection{CHSH experimentell}
