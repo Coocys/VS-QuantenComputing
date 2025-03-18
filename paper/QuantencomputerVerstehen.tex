@@ -1,6 +1,6 @@
 \documentclass[a4paper]{article}
 \usepackage[german]{babel}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts} 
 % package for including graphics with figure-environment
@@ -9,7 +9,6 @@
 \usepackage{float}
 \usepackage{amssymb,stmaryrd}
 % colors for hyperlinks
-% colored borders (false) colored text (true)
 \hypersetup{colorlinks=true,citecolor=black,filecolor=black,linkcolor=black,urlcolor=black}
 
 % Commentbox package
@@ -17,20 +16,15 @@
 % Braket notation package
 \usepackage{braket}
 
-% package for bibliography
-\usepackage[authoryear,round]{natbib}
 % Commentbox package
 % package for header
 \usepackage[automark,headsepline]{scrlayer-scrpage}
 \usepackage[T1]{fontenc}
-\usepackage{amsmath}
 \usepackage{color}
 \usepackage{mathtools}
 \usepackage{comment}
-% qc state brackets
-%\DeclarePairedDelimiter\bra{\langle}{\rvert}
-%\DeclarePairedDelimiter\ket{\lvert}{\rangle}
-%\DeclarePairedDelimiterX\braket[2]{\langle}{\rangle}{#1\,\delimsize\vert\,\mathopen{}#2}
+
+
 
 \pagestyle{scrheadings}
 \ihead[]{Meyer, Springer, Kawamura, Heidenreich}
@@ -72,19 +66,19 @@
 	\newpage
 	\tableofcontents
 	\newpage
+	
 
-\include{content/einleitung}
-\include{content/einführung in die Quanteninformatik 2}
+\include{content/einleitung1}
+\include{content/einleitung2}
 \include{content/cloning}
 \include{content/quanten-teleportation}  
 \include{content/quantenhardware}
 \include{content/chsh}
 \include{content/schluss}
-\include{content/quellen}
+% \include{content/quellen}
 
-\newpage 
 
-\bibliographystyle{natdin}
-	\bibliography{references} % expects file "references.bib"
-	\addcontentsline{toc}{section}{References}
+\bibliographystyle{apalike}
+\bibliography{references} % expects file "references.bib"
+
 \end{document}

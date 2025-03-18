@@ -27,7 +27,7 @@ Während der Erstellung dieses Dokuments haben uns unsere erlangten Kenntnisse b
 
 Um mit Quantenbits rechnen zu können, muss man den Zustand eines Quantenbits verändern können. Wie dies technisch umgesetzt wird, wird später angerissen. Aus mathematischer Sicht geschieht dies über unitäre $2\times2$ Matrizen. \\
 
-Eine Matrix A ist dann unitär, wenn ihre inverse Matrix $A^{-1}$ gleich ihrer adjungierten Matrix $A^\dag$ ist. Adjungiert ist eine Matrix $A^\dag$ dann, wenn die Matrix A komplex konjugiert – also jedes Element der Matrix $z_{ij}=a+ib$ zu $z_{ij}^\ast=a–ib$ komplex konjugiert – und die Matrix dann transponiert wird. Also muss für alle Matritzen A gelten:
+Eine Matrix A ist dann unitär, wenn ihre inverse Matrix $A^{-1}$ gleich ihrer adjungierten Matrix $A^\dag$ ist. Adjungiert ist eine Matrix $A^\dag$ dann, wenn die Matrix A komplex konjugiert – also jedes Element der Matrix $z_{ij}=a+ib$ zu $z_{ij}^\ast=a-ib$ komplex konjugiert – und die Matrix dann transponiert wird. Also muss für alle Matritzen A gelten:
 \begin{equation}
     A^{-1}=(A^*)^T=A^\dag
 \end{equation}
@@ -67,7 +67,7 @@ Eine unitäre Transformation, die im Laufe unseres Lernprozesses immer wieder vo
 Beide Zustände,  $\frac{1}{\sqrt2}(\left|\left.0\right\rangle+\right.\left|\left.1\right\rangle)\right.$ und $\frac{1}{\sqrt2}(\left|\left.0\right\rangle-\right.\left|\left.1\right\rangle)\right.$ unterscheiden sich nur im Vorzeichen der $\beta$-Amplitude. Würde man die Amplituden als Wahrscheinlichkeiten darstellen (zum Beispiel als $0.5\cdot\left|0\right.\rangle+0.5\cdot\left|1\right.\rangle$), ließe sich bei der erneuten Hadamard-Transformation nicht eindeutig feststellen, in welchem Zustand sich das Bit vor der ersten Transformation befunden hat. Da die Umkehrbarkeit der Transformationen eine der Grundprinzipien der Quanteninformatik ist, wäre eine Darstellung mit Wahrscheinlichkeitsverteilungen auch ohne die zugrundeliegende quantenmechanische Notwendigkeit für Amplituden eher unpraktisch.
 \end{tcolorbox}
 
-Mit dieser Gleichverteilung der Wahrscheinlichkeiten ließe sich beispielsweise ein Münzwurf simulieren. Der Schaltkreis eines Münzwurf Algorithmus sieht folgendermaßen aus\footnote{Vgl: Homeister, 2022, S. 27.}: \\
+Mit dieser Gleichverteilung der Wahrscheinlichkeiten ließe sich beispielsweise ein Münzwurf simulieren. Der Schaltkreis eines Münzwurf Algorithmus sieht folgendermaßen aus\footnote{\cite[S. 27]{homeister_quantum_2022}}: \\
 
 \begin{figure}[h]
     \centering
@@ -223,7 +223,7 @@ In der Quanteninformatik müssen diese Basen die Eigenschaften der Orthonormalba
 Misst man als Beispiel das Register mit zwei Quantenbits, zerfällt der Zustand des Registers in einen der zugehörigen Basiszustände und man erhält ein Messergebnis.
 Mathematisch ausgedrückt bestimmen beim Messen des 2 Bit-Quantenregisters ``die Projektionen auf die eindimensionalen Unterräume 
 $$Span\{\left|00\right.\rangle\},Span\{\left|01\right.\rangle\},Span\{\left|10\right.\rangle\}\ \text{und}\ Span\{\left|11\right.\rangle\}$$
-das Ergebnis.''\ \footnote{Homeister, 2022, S. 47.} \\
+das Ergebnis.''\ \footnote{\cite[S. 47]{homeister_quantum_2022}} \\
 Diese oben genannte Folge von Unterräumen, die aus der disjunkten Zerlegung der Orthonormalbasis: $\{\left|00\right.\rangle,\left|01\right.\rangle,\left|10\right.\rangle,\left|11\right.\rangle\}$, entstehen, nennt man ``Observable''.
 Diese Unterräume enthalten jeweils einen Basisvektor, der jeweils einen der Zustände bildet, der nach dem vollständigen Messen des Registers $\textit{beobachtet}$ werden kann.\\
 
@@ -242,12 +242,12 @@ $$\left|\alpha_{10}\right|^2+\left|\alpha_{11}\right|^2$$
 in den Zustand 
 $$\left|\phi'\right.\rangle=\frac{\alpha_{10}\left|00\right.\rangle+\alpha_{11}\left|01\right.\rangle}{\sqrt{\left|\alpha_{10}\right|^2+\left|\alpha_{11}\right|^2}}.$$
 Wir erfahren bei der Messung nur den Wert des gemessenen Bits, nicht
-die Amplituden des Folgezustandes.''\ \footnote{Homeister, 2022, S. 47.}\\
+die Amplituden des Folgezustandes.''\ \footnote{\cite[S. 47]{homeister_quantum_2022}}\\
 
 Das Messen in einer anderen Basis, als der, die zur Projektion ein einen Vektorraum genutzt wird, kann genutzt werden, um die Superposition des Quantenbits nach der Messung nicht vollständig zu zerstören. 
 Misst man ein Quantenbit in der Basis $\{\left|+\right.\rangle,\left|-\right.\rangle\}$ mit $\left|+\right.\rangle=\frac{1}{\sqrt{2}}\left(\left|0\right.\rangle+\left|1\right.\rangle\right)$ und $\left|-\right.\rangle=\frac{1}{\sqrt{2}}\left(\left|0\right.\rangle-\left|1\right.\rangle\right)$ erhält man als Ergebnis entweder den Zustand $\frac{1}{\sqrt{2}}\left(\left|0\right.\rangle+\left|1\right.\rangle\right)$ oder $\frac{1}{\sqrt{2}}\left(\left|0\right.\rangle-\left|1\right.\rangle\right)$. Dies ist immer noch eine Superposition. Daher kann nach der Messung mit dem Quantenbit noch weiter gerechnet werden. Allerdings ist es auch hierbei nicht möglich den Zustand zu ermitteln, in dem sich das Bit vor der Messung befunden hat. Die Messung bleibt irreversibel. Die Basis $\{\left|+\right.\rangle,\left|-\right.\rangle\}$ wird ``Hadamard-Basis'' genannt.\\\newpage
 
-Zur Veranschaulichung kann die folgende Abbildung dienen\footnote{Homeister, 2022, S. 44.}: \\
+Zur Veranschaulichung kann die folgende Abbildung dienen\footnote{\cite[S. 44]{homeister_quantum_2022}}: \\
 
 
 \begin{figure}[!h]
@@ -259,7 +259,7 @@ Zur Veranschaulichung kann die folgende Abbildung dienen\footnote{Homeister, 202
 
 Es wird ein Zustandsvektor in der Standardbasis dargestellt. Die Länge der Projektionen des Zustandsvektors auf den beiden Achsen bestimmen die Wahrscheinlichkeit, mit der, nach der Messung, einer der Zustände eingenommen wird. Mit der Wahrscheinlichkeit $\left|\alpha\right|^2$ wird der Zustand nach der Messung $\left|0\right.\rangle$ sein und mit der Wahrscheinlichkeit $\left|\beta\right|^2$ $\left|1\right.\rangle$. 
 
-In der folgenden Abbildung wird derselbe Zustandsvektor gezeigt, mit dem Unterschied, dass die Koordinatenachsen nach der Hadamard-Basis ausgerichtet sind\footnote{Homeister, 2022, S. 45.}.
+In der folgenden Abbildung wird derselbe Zustandsvektor gezeigt, mit dem Unterschied, dass die Koordinatenachsen nach der Hadamard-Basis ausgerichtet sind\footnote{\cite[S. 45]{homeister_quantum_2022}}.
 
 \begin{figure}[h]
     \centering
@@ -280,10 +280,10 @@ Allgemeiner lässt sich zusammenfassen: ``Register R bestehe aus n Quantenbits u
 $$\left|\phi\right.\rangle=\sum_{i=0}^{2^n-1}\alpha_i\left|i\right.\rangle$$
 Wir messen bezüglich der Basis
 $\left|0'\right.\rangle,\left|1'\right.\rangle,...,\left|(2^n-1)'\right.\rangle$
-aus zueinander orthogonalen Vektoren der Länge 1.''\ \footnote{Homeister, 2022, S. 46.} Dies ist eine andere Basis, als die in der sich $\left|\phi\right.\rangle$ befindet. ``Dabei wird die Superposition von $\left|\phi\right.\rangle$ zerstört. Hat $\left|\phi\right.\rangle$ bezüglich der Messbasis die Darstellung
+aus zueinander orthogonalen Vektoren der Länge 1.''\ \footnote{\cite[S. 46]{homeister_quantum_2022}} Dies ist eine andere Basis, als die in der sich $\left|\phi\right.\rangle$ befindet. ``Dabei wird die Superposition von $\left|\phi\right.\rangle$ zerstört. Hat $\left|\phi\right.\rangle$ bezüglich der Messbasis die Darstellung
 $$\sum_{i=0}^{2^n-1}\alpha'_i\left|i\right.\rangle\verb|,|$$
 so finden wir das Register nach der Messung mit Wahrscheinlichkeit $\left|\alpha'_i\right|^2$ im Zustand $\left|i'\right.\rangle$ vor.  Sämtliche anderen Informationen gehen dabei
-verloren.''\ \footnote{Homeister, 2022, S. 46.}\\
+verloren.''\ \footnote{\cite[S. 46]{homeister_quantum_2022}}\\
 
 Das Messen einzelner Bits oder ganzer Register, sowie das Messen von Teilen eines Registers in der Standardbasis oder auch in einer anderen umfasst alles, was beim Messen möglich ist.
 
