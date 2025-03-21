@@ -134,7 +134,7 @@ Um eine genaueres Ergebniss zu erhalten, führen wir diese Messungen 30000 mal d
     \label{fig:BellResult}
 \end{figure}
 
-Die Ergebnisse zeigen das die Wahrscheinlichkeit dasselbe Vorzeichen zu messen bei $P = (7620 + 7357) / 30000 = 0.49923$ oder auch 49,923\% liegt, was Bell`s Inequalität verletzt.\\
+Die Ergebnisse zeigen, dass die Wahrscheinlichkeit, dasselbe Vorzeichen zu messen bei $P = (7620 + 7357) / 30000 = 0.49923$ oder auch 49,923\% liegt, was Bell`s Inequalität verletzt.\\
 
 
 \subsection{CHSH Game}
@@ -147,7 +147,7 @@ In diesem Abschnitt werden wir das CHSH Spiel erklären und wie es in einem Quan
 \subsubsection{Nonlocal Games}
 \label{subsubsec:chsh_nonlocal}
 
-Um die Grundlagen des Spieles zu verstehen müssen wir zuerst erklären was ein \textbf{Nonlocal Game} ist unter welches das CHSH Spiel fällt.
+Um die Grundlagen des Spieles zu verstehen, müssen wir zuerst erklären, was ein \textbf{Nonlocal Game} ist unter welches das CHSH Spiel fällt.
 \begin{enumerate}
     \item Das Spiel wird von zwei Spielern gespielt, Alice und Bob, die in Kooperation zusammenarbeiten. Das bedeutet, dass beide Spieler zusammen gewinnen oder verlieren.
     \item Ein Schiedsrichter leitet das Spiel, indem er den Spielern Fragen stellt und anschließend ihre Antworten überprüft und mitteilt, ob die Spieler gewonnen oder verloren haben.
@@ -163,12 +163,12 @@ Um die Grundlagen des Spieles zu verstehen müssen wir zuerst erklären was ein 
 
 Sowohl die beiden Fragen $x$ und $y$ als auch die Antworten $a$ und $b$ können beliebige Werte annehmen. In unserem Fall werden alle Fragen und Antworten als binäre Bits dargestellt.\\
 
-Um den Spielverlauf zu verstehen, betrachen wir den Schiedsrichter nun etwas genauer und welche aufgaben er hat.
+Um den Spielverlauf zu verstehen, betrachen wir den Schiedsrichter nun etwas genauer und welche Aufgaben er hat.
 \begin{enumerate}
     \item Der Schiedsrichter stellt die Fragen $x$ und $y$ zufällig, in unserem Fall $x, y \in \{0, 1\}$.
-    \item Alice und Bob antworten mit den Antworten $(a, b)$. Wobei sie durch die fehlende Kommunikation nicht wissen, welche Frage der andere Spieler gestellt bekommen hat oder wie dieser geantwortet hat.
+    \item Alice und Bob antworten mit den Antworten $(a, b)$. Durch die fehlende Kommunikation wissen sie nicht, welche Frage der andere Spieler gestellt bekommen hat oder wie er geantwortet hat.
     \item Der Schiedsrichter überprüft die Antworten $(a, b)$ bezogen auf die gestellten Fragen $(x, y)$ und entscheidet nach einer festgelegten Regel, ob die Spieler gewonnen oder verloren haben.
-    \item Beide Spieler kennen die Regel, nach der der Schiedsrichter entscheidet, ob sie gewonnen oder verloren haben.
+    \item Beide Spieler kennen die Regel nach der der Schiedsrichter entscheidet, ob sie gewonnen oder verloren haben.
 \end{enumerate}
 
 Durch die Beschreibung des Schiedsrichters erhalten wir verschiedene Arten von \textbf{Nonlocal Games} wie das CHSH Spiel.\\
@@ -183,7 +183,7 @@ Nun definieren wir den Schiedsrichter für das CHSH Spiel.
         x, y, a, b \in \{0, 1\}
     \end{equation}
     \item Alle Fragen werden zufällig gestellt.
-    \item Ein paar von Antworten $(a, b)$ gewinnt für $(x, y)$, wenn
+    \item Ein Paar der Antworten $(a, b)$ gewinnt für $(x, y)$, wenn
     \begin{equation}
         a \oplus b = x \land y
     \end{equation}
@@ -209,7 +209,7 @@ Mit diesen Gewinnbedingungen können wir nun verschiedene Taktiken für das CHSH
 Wie zuvor bei der Bell Inequalität fangen wir mit der klassischen Taktik an und gehen dann zur Quantentaktik über.\\
 
 \textbf{Klassische Taktik}
-Die Klassische herangehensweie ist die deterministische Taktik mit welcher es nicht möglich ist in allen fällen zu gewinnen.
+Die klassische Herangehensweise ist die deterministische Taktik, mit welcher es nicht möglich ist, in allen Fällen zu gewinnen.
 \begin{align}
     a(0) \oplus b(0) &= 0 \\
     a(1) \oplus b(0) &= 0 \\
@@ -218,27 +218,27 @@ Die Klassische herangehensweie ist die deterministische Taktik mit welcher es ni
 \end{align}
 
 Aus dieser Erkentniss können wir die beste Gewinnwahrscheinlichkeit ablesen.
-Diese beträgt $P = \frac{3}{4}$ und ist recht einfach zu erreichen wenn Alice und Bob auf egal welche Frage immer mit $0$ antworten\\
+Diese beträgt $P = \frac{3}{4}$ und ist recht einfach zu erreichen, wenn Alice und Bob auf egal welche Frage immer mit $0$ antworten\\
 
-Eine ähnliche Taktik ist die probabilistische Taktik, jedoch ist die Gewinnwahrscheinlichkeit hierbei die selbe wie bei der deterministischen Taktik.
-Das hat den Grund das eine probabilistische Taktik als eine zufallswahl eine deterministische Taktik gewertet werden kann und dadurch den selben Effekt erzielt.\\
+Eine ähnliche Taktik ist die probabilistische Taktik, jedoch ist die Gewinnwahrscheinlichkeit hierbei dieselbe wie bei der deterministischen Taktik.
+Das hat den Grund, dass eine probabilistische Taktik als eine Zufallswahl einer deterministische Taktik gewertet werden kann und dadurch den selben Effekt erzielt.\\
 
 \textbf{Quantentaktik}
-Um zu beweisen das der Quantenmechanische Ansatz besser ist als der klassische Ansatz, müssen wir die Gewinnwahrscheinlichkeit berechnen.\\
+Um zu beweisen, dass der quantenmechanische Ansatz besser ist als der klassische Ansatz, müssen wir die Gewinnwahrscheinlichkeit berechnen.\\
 
 Zuerst definieren wir ein Einheitsvektor für alle Winkel $\theta$ (In Rad).
 \begin{equation}
     \ket{\psi_\theta} = \cos(\theta) \ket{0} + \sin(\theta) \ket{1}
 \end{equation}
 
-Außerdem definieren wir für den Einheitsvektor eine Unitäre Matrix $U(\theta)$ um $\psi_\theta$ an $\ket{0}$ und $\psi_{\theta+\pi/2}$ an $\ket{1}$ zu koppeln.
+Außerdem definieren wir für den Einheitsvektor eine unitäre Matrix $U(\theta)$ um $\psi_\theta$ an $\ket{0}$ und $\psi_{\theta+\pi/2}$ an $\ket{1}$ zu koppeln.
 \begin{equation}
     U(\theta) = \ket{0}\bra{\psi_\theta} + \ket{1}\bra{\psi_{\theta+\pi/2}}
 \end{equation}
 
 Nun kommen die beiden verschränkten Teilchen ins Spiel.\\
 
-Alice wendet nun die Unitäre Matrix wie folgt auf $a$ an.
+Alice wendet nun die unitäre Matrix wie folgt auf $a$ an.
 \begin{equation}
     \begin{Bmatrix}
         U_\theta & \hbox{if} & x = 0 \\
@@ -246,17 +246,17 @@ Alice wendet nun die Unitäre Matrix wie folgt auf $a$ an.
     \end{Bmatrix}
 \end{equation}
 
-Zuletzt misst Alice $a$ und sendet das Ergebniss an den Schiedsrichter. Und Bob macht fast das selbe.
+Zuletzt misst Alice $a$ und sendet das Ergebniss an den Schiedsrichter. Und Bob macht fast dasselbe.
 \begin{equation}
     \begin{Bmatrix}
         U_{\pi/8} & \hbox{if} & y = 0 \\
         U_{-\pi/8} & \hbox{if} & y = 1
     \end{Bmatrix}
 \end{equation}
-Wie diese angaben von $\theta$ zustande kommen, wird im nächsten Abschnitt erklärt.\\
+Wie diese Angaben von $\theta$ zustande kommen wird im nächsten Abschnitt erklärt.\\
 
-Um nun die Gewinnwahrscheinlichkeit zu berechnen, nehmen wir eine der möglichen Fragen und berechnen die Wahrscheinlichkeit wie $(x, y) = (0, 0)$.\\
-Das bedeutet Alice wendet $U_\theta$ an und Bob wendet $U_{\pi/8}$ an.\\
+Um nun die Gewinnwahrscheinlichkeit zu berechnen nehmen wir eine der möglichen Fragen und berechnen die Wahrscheinlichkeit wie $(x, y) = (0, 0)$.\\
+Das bedeutet, Alice wendet $U_\theta$ an und Bob wendet $U_{\pi/8}$ an.\\
 
 \begin{equation}
     (U_\theta \otimes U_{\pi/8})\ket{\phi^+} = \frac{\cos(-\frac{\pi}{8})\ket{00} + \cos(-\frac{5\pi}{8})\ket{01} + \cos(\frac{3\pi}{8})\ket{10} + \cos(-\frac{\pi}{8})\ket{11}}{\sqrt{2}}
@@ -279,11 +279,11 @@ von diesen Wahrscheinlichkeiten interessiert uns welche davon gewinnen und verli
     P_w(a = b) = \frac{2+\sqrt{2}}{4} \approx 0.85 \\
     P_l(a \neq b) = \frac{2-\sqrt{2}}{4} \approx 0.15
 \end{align}
-Für die anderen drei Fragen $(x, y) = (0, 1), (1, 0), (1, 1)$ sind die Wahrscheinlichkeiten die selben. Nur das bei $(1, 1)$ die Gewinnwahrscheinlichkeit $P_w(a \neq b)$ ist.\\
-Der Durchschnitt aller Fragestellungen ergibt eine Gewinnwahrscheinlichkeit von $P = 0.85$ was bedeutet das die Quantentaktik besser ist als die klassische Taktik.\\
+Für die anderen drei Fragen $(x, y) = (0, 1), (1, 0), (1, 1)$ sind die Wahrscheinlichkeiten dieselben. Nur das bei $(1, 1)$ die Gewinnwahrscheinlichkeit $P_w(a \neq b)$ ist.\\
+Der Durchschnitt aller Fragestellungen ergibt eine Gewinnwahrscheinlichkeit von $P = 0.85$ was bedeutet, dass die Quantentaktik besser ist als die klassische Taktik.\\
 
 \textbf{Geometrische Interpretation}\\
-Um besser zu veranschaulichen warum die Winkel von $\theta$ gewählt wurden, können wir dies geometrisch darstellen.\\
+Um besser zu veranschaulichen, warum die Winkel von $\theta$ gewählt wurden, können wir diese geometrisch darstellen.\\
 Dafür benutzen wir die vorherige Gleichung
 \begin{equation}
     \braket{\psi_\alpha \oplus \psi_\beta | \phi^+} = \frac{1}{\sqrt{2}}\braket{\psi_\alpha | \psi_\beta}
@@ -308,11 +308,11 @@ Dies stellt die Wahrscheinlichkeit der Antworten für die Frage $(x, y) = (0, 0)
     \label{fig:CHSHGeometric}
 \end{figure}
 
-Die Blauen Vektoren beschreiben die Wahrscheinlichkeit das, dass Ergebniss 0 ist und die Roten Vektoren das Ergebniss 1 ist.
-Umso näher die Vektoren aneinander sind, desto höher ist die Wahrscheinlichkeit das die Antwort gleich ist.\\
+Die blauen Vektoren beschreiben die Wahrscheinlichkeit, dass das Ergebniss 0 ist und die roten Vektoren das Ergebniss 1 ist.
+Umso näher die Vektoren aneinander sind, desto höher ist die Wahrscheinlichkeit, dass die Antwort gleich ist.\\
 
-Bei den anderen Fragestellungen ist die Darstellung ähnliche, nur bei der Frage $(1, 1)$ sind die Vektoren deutlich weiter auseinander.
-Da wir bei dieser Frage eine unterscheidliche Antwort brauchen ist das aber genau das was wir wollen.\\
+Bei den anderen Fragestellungen ist die Darstellung ähnlich, nur bei der Frage $(1, 1)$ sind die Vektoren deutlich weiter auseinander.
+Da wir bei dieser Frage eine unterscheidliche Antwort brauchen, ist das aber genau das was wir wollen.\\
 
 \subsubsection{CHSH im Quantumcomputer}
 \label{subsubsec:chsh_quantumcomputer}
@@ -326,6 +326,6 @@ Hierbei haben wir mit einem Estimator die Gewinnwahrscheinlichkeit aller Phasen 
     \label{fig:CHSHQuantum}
 \end{figure}
 
-Der Weiße innere bereich ist der Bereich der mit klassischen Methoden erreicht werden kann.
+Der weiße innere Bereich ist der Bereich, der mit klassischen Methoden erreicht werden kann.
 Die beiden Linien zeigen die Wahrscheinlichkeit der Antworten $(a, b)$ für alle Fragen.\\
-Mit Grau ist der Bereich markeirt der nur von Quantenmechanischen Methoden erreicht werden kann. Alles was darüber hinaus geht ist mit keiner bekannten methode zu erreichen.\\
+Mit grau ist der Bereich markiert, der nur von quantenmechanischen Methoden erreicht werden kann. Alles was darüber hinaus geht, ist mit keiner bekannten Methode zu erreichen.\\
