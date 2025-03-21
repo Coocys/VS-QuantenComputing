@@ -9,13 +9,13 @@ Außerdem ist nicht nur die Herstellung der Qubits eine Herausforderung, sondern
 \subsection{Dekohärenz}
 \label{sub:dekohaerenz}
 Dekoheränz ist ein zentrales Konzept, welches wichtig in der Entwicklung von Quantencomputern ist. Der Prozess der Dekoheränz beschreibt den Verlust der koheränten Quanteneigentschaften eines Qubits durch Wechselwirkung mit der Umgebung.
-Diese Veränderung führt zu einem Übergang von quantenmechanischem Verhalten zu einem klassischem Verhalten von Bits.\\
+Diese Veränderung führt zu einem Übergang von quantenmechanischem Verhalten zu einem klassischem Verhalten von Bits.\footnote{\cite{breuer_decoherence_2007}}\\
 
 In der Quantenmechanik können Systeme in Überlagerungszuständen existieren, wobei mehrere Zustände gleichzeitig eingenommen werden können. Diese Eigenschaft erklärt auch das Phänomen der Quanteninterferenz.
 Äußere Einflüsse durch die Umgebung kann eine Verschränkung von Qubits zerstören. Dies führt dazu, dass die Phasenbeziehungen zwischen den Qubits beeinflusst oder gar aufgehoben werden.
 Folgernd verliert das System die Interferenzeffekte und verhält sich zunehmend klassischer. Diese Zeit nennt man Dekoheränzzeit.\\
 
-Die \textbf{Dekoheränzzeit} ($T_2$) eines Qubits misst die Länge der Zeit, in der er in der Lage bleibt kohärent zu bleiben, welcher danach von äußeren Einflüssen zerstört wird.
+Die \textbf{Dekoheränzzeit} ($T_2$) eines Qubits misst die Länge der Zeit, in der er in der Lage bleibt kohärent zu bleiben, welcher danach von äußeren Einflüssen zerstört wird\footnote{\cite{bacciagaluppi_role_2020}}.
 Neben $T_2$ wird auch häufig die \textbf{Relaxationszeit} ($T_1$) gemessen, welche angibt, wie lange ein Qbit im angeregten Zustand bleibt, bevor es auf sein Grundzustand zurückfällt.
 In der Realität ist die Dekoheränzzeit jedoch in den meisten Fällen kürzer als die Relaxationszeit.\\
 
@@ -44,7 +44,7 @@ Indem man den Kohärenzverlust experimentell misst und die Werte in eine exponen
     Die \textbf{Dekoheränzzeit} kann auch durch genauere jedoch auch deutlich kompliziertere weise errechnet werden.
     Bekannte Methoden hierfür wären zum Beispiel die Spektrale Analyse, Dynamische Entkopplung, Hahn-Echo und Ramsey-Interferometrie.
     Außerdem wird duch das häufige messen der Dekoheränzzeit diese indirekt verlänger. Diesen Effekt nennt man Quanten-Zeno-Effekt.\\
-    Zuletzt muss auch die Lindblad-Gleichung genannt werden welche den Zeitverlauf der Dichtematrix in einem Offenen Quantensystem beschreibt.
+    Zuletzt muss auch die Lindblad-Gleichung\footnote{\cite{bacciagaluppi_role_2020}} genannt werden welche den Zeitverlauf der Dichtematrix in einem Offenen Quantensystem beschreibt.
     \begin{equation}
         \frac{dp}{dt} = -i[H,p]+\sum_i(L_ipL^\dagger_i-\frac{1}{2}\{L^\dagger_i L_i,p\})
     \end{equation}
@@ -56,13 +56,13 @@ Indem man den Kohärenzverlust experimentell misst und die Werte in eine exponen
 Universelle Quantencomputer beruhen grundlegend auf einem Gatter Modell, wie bereits in diesem Artikel beschrieben. Folgend sind drei der meist erforschten
 Methoden, welche dieses Modell physikalisch umsetzen.\\
 
-Ein prominentes Beispiel für die Umsetzung eines universellen Quantencomputers ist der \textbf{Sycamore Chip}, welcher auf supraleitenden Qubits basiert.
+Ein prominentes Beispiel für die Umsetzung eines universellen Quantencomputers ist der \textbf{Sycamore Chip}\footnote{\cite{arute_quantum_2019}}, welcher auf supraleitenden Qubits basiert.
 Dieser Chip ist in einem Gatter angeordnet für die Kommunikation zwischen Qubits und die durchführung von Quantenoperationen.\\
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{img/SycamoreChip.png}
-    \caption{Sycamore Chip von Google}
+    \caption{Sycamore Chip von Google \cite{arute_quantum_2019}}
     \label{fig:Sycamore}
 \end{figure}
 
@@ -75,13 +75,13 @@ Zwei häufig benutze Qubit-Typen dieser elektrischen Schaltkreise sind:\\
 \textbf{Transmon-Qubits}, basieren auf der Ladung des Energieniveaus, welche durch eine Josephson-Junktion kontrolliert werden.\\
 \textbf{Flux-Qubits} werden auch durch Josephson-Junktions kontrolliert, beruhen jedoch auf dem magnetischen Fluss in der Schleife.\\
 
-Beide Ansätze basieren auf dem \textbf{Josephson-Effekt}, welcher auftritt, wenn ein supraleitender Strom durch eine dünne Isolierschicht zwischen zwei Supraleitern fließt.\\
+Beide Ansätze basieren auf dem \textbf{Josephson-Effekt}\footnote{\cite{kjaergaard_superconducting_2020}}, welcher auftritt, wenn ein supraleitender Strom durch eine dünne Isolierschicht zwischen zwei Supraleitern fließt.\\
 Dieser Effekt hat zur Folge, dass eine nichtlineare Energie die für die Phasenunterscheidung der Qubits genutzt wird.\\
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{img/JJ.png}
-    \caption{Josephson-Effekt mit einem Josephson Junktion}
+    \caption{Josephson-Effekt mit einem Josephson Junktion \cite{kjaergaard_superconducting_2020}}
     \label{fig:Josephson-junktion}
 \end{figure}
 
@@ -99,7 +99,7 @@ Die Steuerung der Josephson-Junktion erfolgt durch Mikrowellenpulse, welche die 
 
 \subsubsection{Quantenpunkte}
 \label{subsub:quantenpunkte}
-Quantencomputer basierend auf Quantenpunkten, auch Quantum-Dot genannt, nutzen winzige Halbleiterstrukturen um Qubits zu realisieren.
+Quantencomputer basierend auf Quantenpunkten, auch Quantum-Dot\footnote{\cite{loss_quantum_1998}} genannt, nutzen winzige Halbleiterstrukturen um Qubits zu realisieren.
 Quantum-Dots sind künstlich erzeugte Nano-Partikel, in denen Elektronen in drei Dimensionen eingeschlossen sind, was zu quantisierten Einergiezuständen führt.\\
 
 Die Größe eines Quantum-Dots ist typischerweise 2-10 Nanometer und es schließt eine kleine Anzahl oder ein einzelnes Elektron ein.
@@ -122,7 +122,7 @@ Dieser beiden Spinrichtungen entsprechen den Zuständen $\ket{0}$ und $\ket{1}$ 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{img/QD.png}
-    \caption{Ein doppel Quantum-Dot Qubit}
+    \caption{Ein doppel Quantum-Dot Qubit \cite{Golovach_condensed_2006}}
     \label{fig:double-Quantum-Dot}
 \end{figure}
 
@@ -136,7 +136,7 @@ Damit ist der größte Vorteil, die hohe Skalierbarkeit, auch der größte Nacht
 
 \subsubsection{Topologische Quantencomputer}
 \label{subsub:topologische_quantencomputer}
-Der Ansatz von topologischen Quantencomputern ist völlig anders als die bisher genannten. Im Gegensatz zu vorher erläuterten Quantencomputern, welche auf Eigenschaften einzelner Elektronen oder Energieniveaus basieren, basieren topologische Quantencomputer auf topologischen Eigenschaften von Materie.\\
+Der Ansatz von topologischen Quantencomputern\footnote{\cite{nayak_non-abelian_2008}} ist völlig anders als die bisher genannten. Im Gegensatz zu vorher erläuterten Quantencomputern, welche auf Eigenschaften einzelner Elektronen oder Energieniveaus basieren, basieren topologische Quantencomputer auf topologischen Eigenschaften von Materie.\\
 Diese Methode soll das Problem der Dekoheränz minimieren, indem sie Qubits aus Majorana-Partikeln aufbauen.\\
 
 \textbf{Topologie in der Physik}\\
@@ -151,7 +151,7 @@ Ein prominentes Beispiel ist die Verwendung von Majorana-Quasiteilchen, die in b
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{img/Majorana.png}
-    \caption{Nanowire mit Majorana-Quasiteilchen}
+    \caption{Nanowire mit Majorana-Quasiteilchen \cite{aguado_majorana_2020}}
     \label{fig:Majorana}
 \end{figure}
 
@@ -193,7 +193,7 @@ Da die Informationen und Quantenoperationen in der Topologie steckt, sind sie ge
 
 \subsection{Quantum Error Correction}
 \label{sub:quantum_error_correction}
-Quantum Error Correction, oder auch QEC genannt, ist grundlegend wichtig für die funktionellen Betrieb eines Quantencomputers. Wie bereits in den vorherigen Abschnitten beschrieben,
+Quantum Error Correction, oder auch QEC\footnote{\cite{qutech_academy_quantum_2018}} genannt, ist grundlegend wichtig für die funktionellen Betrieb eines Quantencomputers. Wie bereits in den vorherigen Abschnitten beschrieben,
 sind Qubits sehr anfällig gegenüber Dekoheränz und Quantenrauschen.\\
 
 \textbf{Warum ist Fehlerkorrektur notwendig}\\
@@ -215,7 +215,7 @@ welches maximal einen Fehler auf einem der 7 Qubits korrigieren kann. Treten jed
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{img/Steane.png}
-    \caption{Steane-Code}
+    \caption{Steane-Code \cite[2m30s]{qutech_academy_quantum_2018}}
     \label{fig:Steane}
 \end{figure}
 
@@ -228,7 +228,7 @@ Diese Herangehensweise ist jedoch auch nicht perfekt. Die Ancilla Qubits sind gl
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.75\linewidth]{img/Fehlertoleranz.png}
-    \caption{Fehlertoleranz von Ancilla Qubits}
+    \caption{Fehlertoleranz von Ancilla Qubits \cite[50s]{qutech_academy_quantum_2018}}
     \label{fig:Fehlertoleranz}
 \end{figure}
 
@@ -252,7 +252,7 @@ Jede Überschneidung des Gatters stellt ein physisches Qubit dar. Die Kreise in 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\linewidth]{img/Errors.png}
-    \caption{Fehlerkorrektur durch Surface Code des Grades $d=3$}
+    \caption{Fehlerkorrektur durch Surface Code des Grades $d=3$ \cite[5m]{qutech_academy_quantum_2018}}
     \label{fig:Surface-Code}
 \end{figure}
 
@@ -262,13 +262,13 @@ Ancilla Qubits, die einen Fehler erkennen, werden als Blau markiert. Durch die P
 
 \textbf{Praktische Umsetzung}\\
 Am 09.12.2024 hat Google den ersten selbst korrigierenden Quantencomputer vorgestellt, der auf dem Surface Code basiert.
-Der Chip namens \textbf{Willow} basiert auf 105 physischen Qubits, wobei diese auf der 7x7 Surface Code Architektur aufbaut.
+Der Chip namens \textbf{Willow}\footnote{\cite{acharya_quantum_2024}} basiert auf 105 physischen Qubits, wobei diese auf der 7x7 Surface Code Architektur aufbaut.
 Dies resultiert in 49 Qubits, die deutlich weniger anfällig gegen Fehler sind als phyische Qubits. Die restlichen Qubits werden für Parität und error Korrektur gebraucht.\\
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\linewidth]{img/Surface-Code-Scaling.png}
-    \caption{Error Korrektur des 7x7 Surface Code}
+    \caption{Error Korrektur des 7x7 Surface Code \cite{acharya_quantum_2024}}
     \label{fig:Willow}
 \end{figure}
 
