@@ -1,100 +1,584 @@
+% apalike online resource
+% https://tex.stackexchange.com/questions/146158/referencing-webpage-using-apalike-and-natbib
+
+% EXAMPLES
 @book{Dix04,
-	author = {Dix, Alan and Finlay, Janet E. and Abowd, Gregory D. and Beale, Russell},
-	title = {Human-Computer Interaction},
-	edition = {3.},
-	publisher = {Pearson Education Limited},
-	address = {Essex, England},
-	year = {2004},
-	note = {ISBN 0-13-046109-1}
+  author    = {Dix, Alan and Finlay, Janet E. and Abowd, Gregory D. and Beale, Russell},
+  title     = {Human-Computer Interaction},
+  edition   = {3.},
+  publisher = {Pearson Education Limited},
+  address   = {Essex, England},
+  year      = {2004},
+  note      = {ISBN 0-13-046109-1}
 }
 
 
-@ONLINE{Stanford09,
-	author = {Surname, First Name},
-	title = {This is a test entry of type {@ONLINE}},
-	month = jun,
-	year = {2009},
-	url = {http://today.slac.stanford.edu/images/2009/colloquium-web-collide.jpg},
-	note = {Last accessed 16 July 2013}
+@online{Stanford09,
+  author = {Surname, First Name},
+  title  = {This is a test entry of type {@ONLINE}},
+  month  = jun,
+  year   = {2009},
+  url    = {http://today.slac.stanford.edu/images/2009/colloquium-web-collide.jpg},
+  note   = {Last accessed 16 July 2013}
 }
 
 @misc{Iso9241-11,
-	author = {{DIN EN ISO 9241-11}}, 
-	type = {Norm},
-	number = {DIN EN ISO 9241-11},
-	month = {},
-	year = {1998},
-	title = {Ergonomic requirements for office work with visual display terminals - Part 11: Guidance on usability}
+  author = {{DIN EN ISO 9241-11}},
+  type   = {Norm},
+  number = {DIN EN ISO 9241-11},
+  month  = {},
+  year   = {1998},
+  title  = {Ergonomic requirements for office work with visual display terminals - Part 11: Guidance on usability}
 }
 
 # alternative for online resource 
 @misc{Patterson2013,
-	author = {Patterson, Dave},
-	title = {Dave Patterson's Writing Advice},
-	year = {2013},
-	url = {http://www.cs.berkeley.edu/~pattrsn/talks/writingtips.html},
-	note = {Last accessed 16 July 2013}
+  author = {Patterson, Dave},
+  title  = {Dave Patterson's Writing Advice},
+  year   = {2013},
+  url    = {http://www.cs.berkeley.edu/~pattrsn/talks/writingtips.html},
+  note   = {Last accessed 16 July 2013}
 }
 
 
 @misc{Hall,
-	author = {Hall, Shane},
-	title = {How to Cite Page Numbers in APA Format},
-	year = {2013},
-	url = {http://www.ehow.com/how_5689799_cite-numbers-apa-format.html},
-	note = {Last accessed 16 July 2013}
+  author = {Hall, Shane},
+  title  = {How to Cite Page Numbers in APA Format},
+  year   = {2013},
+  url    = {http://www.ehow.com/how_5689799_cite-numbers-apa-format.html},
+  note   = {Last accessed 16 July 2013}
 }
 
 @article{Baddeley:1974ts,
-	author = {Baddeley, Alan D and Hitch, Graham},
-	title = {{Working memory}},
-	journal = {Psychology of learning and motivation},
-	publisher = {Academic Press},
-	year = {1974},
-	pages = {47--89}
+  author    = {Baddeley, Alan D and Hitch, Graham},
+  title     = {{Working memory}},
+  journal   = {Psychology of learning and motivation},
+  publisher = {Academic Press},
+  year      = {1974},
+  pages     = {47--89}
+}
+
+% FIRST REFERENCE
+@book{homeister_quantum_2022,
+  address    = {Wiesbaden},
+  series     = {Computational {Intelligence}},
+  title      = {Quantum {Computing} verstehen: {Grundlagen} – {Anwendungen} – {Perspektiven}},
+  copyright  = {https://www.springer.com/tdm},
+  isbn       = {978-3-658-36433-5 978-3-658-36434-2},
+  shorttitle = {Quantum {Computing} verstehen},
+  url        = {https://link.springer.com/10.1007/978-3-658-36434-2},
+  language   = {de},
+  urldate    = {2025-03-17},
+  publisher  = {Springer Fachmedien},
+  author     = {Homeister, Matthias},
+  year       = {2022},
+  doi        = {10.1007/978-3-658-36434-2},
+  keywords   = {Algorithmen Informatik, Buch Quantencomputer, Buch Quantum Computing, Kryptographie, Matthias Homeister, Quantencomputer, Quantenkryptopgraphie, Quantenmechanik, Quantenphysik, Quantenrechner, Quantenverschlüsselung, Quantum Computing verstehen, Theoretische Informatik}
+}
+
+@misc{tuwien_grenzen_2023,
+  title        = {Grenzen für {Quantencomputer}: {Perfekte} {Uhren} sind unmöglich},
+  shorttitle   = {Grenzen für {Quantencomputer}},
+  author       = {{TU Wien}},
+  url          = {https://www.tuwien.at/tu-wien/aktuelles/news/grenzen-fuer-quantencomputer-perfekte-uhren-sind-unmoeglich},
+  howpublished = {\url{https://www.tuwien.at/tu-wien/aktuelles/news/grenzen-fuer-quantencomputer-perfekte-uhren-sind-unmoeglich}},
+  abstract     = {Immer besser gelingt es, Rechnungen mit Quantencomputern durchzuführen. Berechnungen der TU Wien zeigen aber: Es gibt fundamentale Grenzen – nämlich die Qualität der verwendeten Uhr.},
+  language     = {de},
+  urldate      = {2025-03-02},
+  note         = {2025-03-02},
+  month        = nov,
+  year         = {2023},
+  file         = {Snapshot:C\:\\Users\\julia\\Zotero\\storage\\D3SVLTWY\\grenzen-fuer-quantencomputer-perfekte-uhren-sind-unmoeglich.html:text/html}
+}
+
+@misc{BSI_QUITS_2022,
+  title        = {{Quantum} Machine Learning in the Context of {IT Security}},
+  shorttitle   = {Quantum Machine Learning},
+  author       = {{BSI; Bauckhage, Christian, et al.}},
+  url          = {https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/Studien/QML/QML_in_the_Context_of_IT_Security.pdf?__blob=publicationFile&v=2},
+  howpublished = {\url{https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/Studien/QML/QML_in_the_Context_of_IT_Security.pdf?__blob=publicationFile&v=2}},
+  language     = {en},
+  urldate      = {2025-03-02},
+  note         = {2025-03-02},
+  month        = jul,
+  year         = {2022}
+}
+
+@misc{BSI_quantum_2022,
+  title        = {Quantum {Machine} {Learning} im {Kontext} der {IT}-{Sicherheit} ({Grundlagen})},
+  author       = {{BSI}},
+  url          = {https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Studien/QML/QML.html?nn=1020142},
+  howpublished = {\url{https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Studien/QML/QML.html?nn=1020142}},
+  language     = {de},
+  urldate      = {2025-03-02},
+  note         = {2025-03-02},
+  year         = {2022},
+  journal      = {Bundesamt für Sicherheit in der Informationstechnik}
 }
 
 
-@article{segal1947postulates,
-  title={Postulates for general quantum mechanics},
-  author={Segal, Irving E},
-  journal={Annals of Mathematics},
-  volume={48},
-  number={4},
-  pages={930--948},
-  year={1947},
-  publisher={JSTOR}
+@misc{Fraunhofer_quantencomputing_2025,
+  title        = {Maschinelles Lernen auf Quantencomputern},
+  author       = {{Fraunhofer Cluster of Excellence Cognitive Internet Technologies}},
+  url          = {https://www.cit.fraunhofer.de/de/Forschungsthemen/quantencomputing.html},
+  howpublished = {\url{https://www.cit.fraunhofer.de/de/Forschungsthemen/quantencomputing.html}},
+  language     = {de},
+  urldate      = {2025-03-02},
+  note         = {2025-03-02},
+  journal      = {Fraunhofer Cluster of Excellence Cognitive Internet Technologies},
+  year         = {2025}
 }
 
-@book{quantuminfocambridge,
-	author = {Nielsen, Michael A.; Chuang, Isaac L.},
-	title = {Quantum computation and quantum information},
-	edition = {10 ed.},
-	publisher = {Cambridge Univ. Press.},
-	address = {Cambridge, England},
-	year = {2010},
-	note = {ISBN 978-0-521-63503-5}
+@misc{FraunhoferIWM_quantencomputer_2025,
+  title        = {Quantencomputer für innovative {Materialsimulation} nutzen},
+  author       = {{Fraunhofer IWM}},
+  url          = {https://www.iwm.fraunhofer.de/de/geschaeftsfelder/werkstoffbewertung-lebensdauerkonzepte/materialmodellierung/quantencomputer_innovative_materialsimulation_nutzen.html},
+  howpublished = {\url{https://www.iwm.fraunhofer.de/de/geschaeftsfelder/werkstoffbewertung-lebensdauerkonzepte/materialmodellierung/quantencomputer_innovative_materialsimulation_nutzen.html}},
+  language     = {de},
+  urldate      = {2025-03-02},
+  journal      = {Fraunhofer-Institut für Werkstoffmechanik IWM},
+  year         = {2025}
 }
 
-@article{couteau2018spontaneous,
-  title={Spontaneous parametric down-conversion},
-  author={Couteau, Christophe},
-  journal={Contemporary Physics},
-  volume={59},
-  number={3},
-  pages={291--304},
-  year={2018},
-  publisher={Taylor \& Francis}
+@article{segal_postulates_1947,
+  title   = {Postulates for {General} {Quantum} {Mechanics}},
+  volume  = {48},
+  issn    = {0003-486X},
+  url     = {https://www.jstor.org/stable/1969387},
+  doi     = {10.2307/1969387},
+  number  = {4},
+  urldate = {2025-03-17},
+  journal = {Annals of Mathematics},
+  author  = {Segal, I. E.},
+  year    = {1947},
+  note    = {Publisher: [Annals of Mathematics, Trustees of Princeton University on Behalf of the Annals of Mathematics, Mathematics Department, Princeton University]},
+  pages   = {930--948}
 }
 
-@article{hensen2015loophole,
-  title={Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres},
-  author={Hensen, Bas and Bernien, Hannes and Dr{\'e}au, Ana{\"\i}s E and Reiserer, Andreas and Kalb, Norbert and Blok, Machiel S and Ruitenberg, Just and Vermeulen, Raymond FL and Schouten, Raymond N and Abell{\'a}n, Carlos and others},
-  journal={Nature},
-  volume={526},
-  number={7575},
-  pages={682--686},
-  year={2015},
-  publisher={Nature Publishing Group UK London}
+
+
+@misc{nielsen_quantum_2010,
+  title      = {Quantum {Computation} and {Quantum} {Information}: 10th {Anniversary} {Edition}},
+  shorttitle = {Quantum {Computation} and {Quantum} {Information}},
+  url        = {https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE},
+  abstract   = {One of the most cited books in physics of all time, Quantum Computation and Quantum Information remains the best textbook in this exciting field of science. This 10th anniversary edition includes an introduction from the authors setting the work in context. This comprehensive textbook describes such remarkable effects as fast quantum algorithms, quantum teleportation, quantum cryptography and quantum error-correction. Quantum mechanics and computer science are introduced before moving on to describe what a quantum computer is, how it can be used to solve problems faster than 'classical' computers and its real-world implementation. It concludes with an in-depth treatment of quantum information. Containing a wealth of figures and exercises, this well-known textbook is ideal for courses on the subject, and will interest beginning graduate students and researchers in physics, computer science, mathematics, and electrical engineering.},
+  language   = {en},
+  urldate    = {2025-03-17},
+  journal    = {Higher Education from Cambridge University Press},
+  author     = {Nielsen, Michael A. and Chuang, Isaac L.},
+  month      = dec,
+  year       = {2010},
+  doi        = {10.1017/CBO9780511976667},
+  note       = {ISBN: 9780511976667 Publisher: Cambridge University Press}
 }
 
+@article{couteau_spontaneous_2018,
+  title    = {Spontaneous parametric down-conversion},
+  volume   = {59},
+  issn     = {0010-7514},
+  url      = {https://doi.org/10.1080/00107514.2018.1488463},
+  doi      = {10.1080/00107514.2018.1488463},
+  abstract = {Spontaneous Parametric Down-Conversion (SPDC), also known as parametric fluorescence, parametric noise, parametric scattering and all various combinations of the abbreviation SPDC, is a non-linear optical process where a photon spontaneously splits into two other photons of lower energies. One would think that this article is about particle physics and yet it is not, as this process can occur fairly easily on a day to day basis in an optics laboratory. Nowadays, SPDC is at the heart of many quantum optics experiments for applications in quantum cryptography, quantum simulation, quantum metrology but also for testing fundamentals laws of physics in quantum mechanics. In this article, we will focus on the physics of this process and highlight a few important properties of SPDC. There will be two parts: a first theoretical one showing the particular quantum nature of SPDC, and the second part, more experimental and in particular focusing on applications of parametric down-conversion. This is clearly a non-exhaustive article about parametric down-conversion as there is a tremendous literature on the subject, but it gives the necessary first elements needed for a novice student or researcher to work on SPDC sources of light.},
+  number   = {3},
+  urldate  = {2025-03-17},
+  journal  = {Contemporary Physics},
+  author   = {Couteau, Christophe},
+  month    = jul,
+  year     = {2018},
+  note     = {Publisher: Taylor \& Francis\_eprint: https://doi.org/10.1080/00107514.2018.1488463},
+  keywords = {non-linear optics, quantum information, Quantum optics},
+  pages    = {291--304}
+}
+
+@article{hensen_loophole-free_2015,
+  title    = {Loophole-free {Bell} inequality violation using electron spins separated by 1.3 kilometres},
+  volume   = {526},
+  issn     = {1476-4687},
+  doi      = {10.1038/nature15759},
+  abstract = {More than 50 years ago, John Bell proved that no theory of nature that obeys locality and realism can reproduce all the predictions of quantum theory: in any local-realist theory, the correlations between outcomes of measurements on distant particles satisfy an inequality that can be violated if the particles are entangled. Numerous Bell inequality tests have been reported; however, all experiments reported so far required additional assumptions to obtain a contradiction with local realism, resulting in 'loopholes'. Here we report a Bell experiment that is free of any such additional assumption and thus directly tests the principles underlying Bell's inequality. We use an event-ready scheme that enables the generation of robust entanglement between distant electron spins (estimated state fidelity of 0.92 ± 0.03). Efficient spin read-out avoids the fair-sampling assumption (detection loophole), while the use of fast random-basis selection and spin read-out combined with a spatial separation of 1.3 kilometres ensure the required locality conditions. We performed 245 trials that tested the CHSH-Bell inequality S ≤ 2 and found S = 2.42 ± 0.20 (where S quantifies the correlation between measurement outcomes). A null-hypothesis test yields a probability of at most P = 0.039 that a local-realist model for space-like separated sites could produce data with a violation at least as large as we observe, even when allowing for memory in the devices. Our data hence imply statistically significant rejection of the local-realist null hypothesis. This conclusion may be further consolidated in future experiments; for instance, reaching a value of P = 0.001 would require approximately 700 trials for an observed S = 2.4. With improvements, our experiment could be used for testing less-conventional theories, and for implementing device-independent quantum-secure communication and randomness certification.},
+  language = {eng},
+  number   = {7575},
+  journal  = {Nature},
+  author   = {Hensen, B. and Bernien, H. and Dréau, A. E. and Reiserer, A. and Kalb, N. and Blok, M. S. and Ruitenberg, J. and Vermeulen, R. F. L. and Schouten, R. N. and Abellán, C. and Amaya, W. and Pruneri, V. and Mitchell, M. W. and Markham, M. and Twitchen, D. J. and Elkouss, D. and Wehner, S. and Taminiau, T. H. and Hanson, R.},
+  month    = oct,
+  year     = {2015},
+  pmid     = {26503041},
+  pages    = {682--686}
+}
+
+\\ Bells Inequality
+@article{bell_einstein_1964,
+  title     = {On the {Einstein} {Podolsky} {Rosen} paradox},
+  volume    = {1},
+  copyright = {https://link.aps.org/licenses/aps-default-license},
+  issn      = {0554-128X},
+  url       = {https://link.aps.org/doi/10.1103/PhysicsPhysiqueFizika.1.195},
+  doi       = {10.1103/PhysicsPhysiqueFizika.1.195},
+  language  = {en},
+  number    = {3},
+  urldate   = {2025-03-14},
+  journal   = {Physics Physique Fizika},
+  author    = {Bell, J. S.},
+  month     = nov,
+  year      = {1964},
+  pages     = {195--200}
+}
+@misc{qiskit_entanglement_2024,
+  title        = {Entanglement and {Bell}’s {Inequality} {\textbar} {Qiskit} in the {Classroom}},
+  url          = {https://www.youtube.com/watch?v=pS69lqCMdy8},
+  howpublished = {\url{https://www.youtube.com/watch?v=pS69lqCMdy8}},
+  urldate      = {2025-03-17},
+  note         = {2025-03-17},
+  author       = {{Qiskit}},
+  month        = dec,
+  year         = {2024}
+}
+
+@misc{qiskit_entanglement_2023,
+  title        = {Entanglement in {Action} {\textbar} {Understanding} {Quantum} {Information} \& {Computation} - {Lesson} 04},
+  url          = {https://www.youtube.com/watch?v=GSsElSQgMbU},
+  howpublished = {\url{https://www.youtube.com/watch?v=GSsElSQgMbU}},
+  urldate      = {2025-03-18},
+  note         = {2025-03-18},
+  author       = {{Qiskit}},
+  month        = feb,
+  year         = {2023}
+}
+
+
+@misc{IBM_chsh_2025,
+  title        = {{CHSH} {Inequality}},
+  author       = {{IBM}},
+  year         = {2025},
+  howpublished = {\url{https://learning.quantum.ibm.com/tutorial/learning.quantum.ibm.com/tutorial/chsh-inequality/}},
+  url          = {https://learning.quantum.ibm.com/tutorial/learning.quantum.ibm.com/tutorial/chsh-inequality/},
+  abstract     = {In this tutorial, you will run an experiment on a quantum computer to demonstrate the violation of the CHSH inequality with the Estimator primitive.},
+  language     = {en},
+  urldate      = {2025-03-17},
+  note         = {2025-03-17},
+  file         = {Snapshot:C\:\\Users\\julia\\Zotero\\storage\\THQR53EG\\chsh-inequality.html:text/html}
+}
+
+@article{clauser_proposed_1969,
+  title    = {Proposed {Experiment} to {Test} {Local} {Hidden}-{Variable} {Theories}},
+  volume   = {23},
+  url      = {https://link.aps.org/doi/10.1103/PhysRevLett.23.880},
+  doi      = {10.1103/PhysRevLett.23.880},
+  abstract = {A theorem of Bell, proving that certain predictions of quantum mechanics are inconsistent with the entire family of local hidden-variable theories, is generalized so as to apply to realizable experiments. A proposed extension of the experiment of Kocher and Commins, on the polarization correlation of a pair of optical photons, will provide a decisive test between quantum mechanics and local hidden-variable theories.},
+  number   = {15},
+  urldate  = {2025-03-18},
+  journal  = {Physical Review Letters},
+  author   = {Clauser, John F. and Horne, Michael A. and Shimony, Abner and Holt, Richard A.},
+  month    = oct,
+  year     = {1969},
+  note     = {Publisher: American Physical Society},
+  pages    = {880--884}
+}
+
+@article{newton_gravitation_2009,
+  title    = {Understanding (in) {Newton}’s Argument for Universal {Gravitation}},
+  volume   = {40},
+  url      = {https://link.springer.com/article/10.1007/s10838-009-9096-y},
+  doi      = {10.1007/s10838-009-9096-y},
+  abstract = {In this essay, I attempt to assess Henk de Regt and Dennis Dieks recent pragmatic and contextual account of scientific understanding on the basis of an important historical case-study: understanding in Newton’s theory of universal gravitation and Huygens’ reception of universal gravitation. It will be shown that de Regt and Dieks’ Criterion for the Intelligibility of a Theory (CIT), which stipulates that the appropriate combination of scientists’ skills and intelligibility-enhancing theoretical virtues is a condition for scientific understanding, is too strong. On the basis of this case-study, it will be shown that scientists can understand each others’ positions qualitatively and quantitatively, despite their endorsement of different worldviews and despite their convictions as what counts as a proper explanation.},
+  urldate  = {2025-03-21},
+  journal  = {Journal for General Philosophy of Science},
+  author   = {Ducheyne, S},
+  month    = {12},
+  year     = {2009},
+  pages    = {227--258}
+}
+
+@inbook{faraday_maxwell_ether,
+  author    = {Assis, Andre and Ribeiro, A. and Vannucci, Alvaro},
+  year      = {2009},
+  month     = {01},
+  pages     = {31-38},
+  title     = {The field concepts of Faraday and Maxwell},
+  publisher = {UNICAMP}
+}
+
+@article{erp_1935,
+  title     = {Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
+  author    = {Einstein, A. and Podolsky, B. and Rosen, N.},
+  journal   = {Phys. Rev.},
+  volume    = {47},
+  issue     = {10},
+  pages     = {777--780},
+  numpages  = {0},
+  year      = {1935},
+  month     = {May},
+  publisher = {American Physical Society},
+  doi       = {10.1103/PhysRev.47.777},
+  url       = {https://link.aps.org/doi/10.1103/PhysRev.47.777}
+}
+
+@article{bohr_1935,
+  title     = {Can Quantum-Mechanical Description of Physical Reality be Considered Complete?},
+  author    = {Bohr, N.},
+  journal   = {Phys. Rev.},
+  volume    = {48},
+  issue     = {8},
+  pages     = {696--702},
+  numpages  = {0},
+  year      = {1935},
+  month     = {Oct},
+  publisher = {American Physical Society},
+  doi       = {10.1103/PhysRev.48.696},
+  url       = {https://link.aps.org/doi/10.1103/PhysRev.48.696}
+}
+
+@incollection{sep-qm-copenhagen,
+  author       = {Faye, Jan},
+  title        = {{Copenhagen Interpretation of Quantum Mechanics}},
+  booktitle    = {The {Stanford} Encyclopedia of Philosophy},
+  editor       = {Edward N. Zalta and Uri Nodelman},
+  howpublished = {\url{https://plato.stanford.edu/archives/sum2024/entries/qm-copenhagen/}},
+  year         = {2024},
+  edition      = {{S}ummer 2024},
+  publisher    = {Metaphysics Research Lab, Stanford University}
+}
+
+@article{PhysRev.85.166,
+  title     = {A Suggested Interpretation of the Quantum Theory in Terms of "Hidden" Variables. I},
+  author    = {Bohm, David},
+  journal   = {Phys. Rev.},
+  volume    = {85},
+  issue     = {2},
+  pages     = {166--179},
+  numpages  = {0},
+  year      = {1952},
+  month     = {Jan},
+  publisher = {American Physical Society},
+  doi       = {10.1103/PhysRev.85.166},
+  url       = {https://link.aps.org/doi/10.1103/PhysRev.85.166}
+}
+
+@misc{Stack_complex_2013,
+  title        = {Complex Numbers in Quantum Mechanics},
+  author       = {Stack, John D.},
+  year         = {2013},
+  howpublished = {\url{https://courses.physics.illinois.edu/phys580/fa2013/susy_v2.pdf}},
+  url          = {https://courses.physics.illinois.edu/phys580/fa2013/susy_v2.pdf},
+  urldate      = {2025-02-11},
+  note         = {2025-02-11}
+}
+
+@misc{why_complex_numbers,
+  title        = {Topological Explanation of Why Complex Numbers Are Needed in Quantum Physics},
+  author       = {Urenda, Julio C. and Kreinovich, Vladik},
+  year         = {2023},
+  howpublished = {\url{https://scholarworks.utep.edu/cs_techrep/1829/}},
+  url          = {https://scholarworks.utep.edu/cs_techrep/1829/},
+  urldate      = {2025-02-11},
+  note         = {2025-02-11}
+}
+
+
+% Quantenhardware
+
+@incollection{bacciagaluppi_role_2020,
+  edition   = {Fall 2020},
+  title     = {The {Role} of {Decoherence} in {Quantum} {Mechanics}},
+  url       = {https://plato.stanford.edu/archives/fall2020/entries/qm-decoherence/},
+  abstract  = {Interference phenomena are a well-known and crucial aspect of quantum mechanics, famously exemplified by the two-slit experiment. There are manysituations, however, in which interference effects are artificially orspontaneously suppressed. The theory of decoherence isprecisely the study of such situations. It is is relevant (or isclaimed to be relevant) to a variety of questions ranging from themeasurement problem to the arrow of time, and in particular to thequestion of whether and how the ‘classical world’ mayemerge from quantum mechanics. (See also the entry on philosophical issues in quantum theory.)},
+  urldate   = {2025-01-20},
+  booktitle = {The {Stanford} {Encyclopedia} of {Philosophy}},
+  publisher = {Metaphysics Research Lab, Stanford University},
+  author    = {Bacciagaluppi, Guido},
+  editor    = {Zalta, Edward N.},
+  year      = {2020},
+  keywords  = {chaos, constructive empiricism, quantum mechanics, quantum mechanics: action at a distance in, quantum mechanics: Bohmian mechanics, quantum mechanics: collapse theories, quantum mechanics: consistent histories approach, quantum mechanics: Copenhagen interpretation of, quantum mechanics: Everettian, quantum mechanics: many-worlds interpretation of, quantum mechanics: modal interpretations of, quantum mechanics: relational, quantum theory: and consciousness, quantum theory: Bayesian and pragmatist views, quantum theory: philosophical issues in, quantum theory: quantum entanglement and information, quantum theory: quantum field theory, quantum theory: quantum gravity, quantum theory: the Einstein-Podolsky-Rosen argument in, statistical physics: philosophy of statistical mechanics, time: thermodynamic asymmetry in}
+}
+
+@incollection{breuer_decoherence_2007,
+  title     = {Decoherence},
+  isbn      = {978-0-19-921390-0},
+  url       = {https://doi.org/10.1093/acprof:oso/9780199213900.003.04},
+  abstract  = {This chapter deals with the important field of environment-induced decoherence and the transition to the classical behaviour of open quantum systems. A number of techniques is developed that allows the determination of decoherence time scales. The decoherence behaviour in several Markovian models is investigated in detail, such as vacuum and thermal decoherence, decoherence in quantum Brownian motion, and the destruction of coherence through internal degrees of freedom and through the scattering of environmental particles. Moreover, experiments on the decoherence of Schrödinger cat states of the electromagnetic field are discussed, as well as the non-Markovian destruction of quantum coherence in the Caldeira–Leggett model, and the environment-induced selection of a pointer basis in the quantum theory of measurement.},
+  urldate   = {2025-01-23},
+  booktitle = {The {Theory} of {Open} {Quantum} {Systems}},
+  publisher = {Oxford University Press},
+  author    = {Breuer, Heinz-Peter and Petruccione, Francesco},
+  editor    = {Breuer, Heinz-Peter and Petruccione, Francesco},
+  month     = jan,
+  year      = {2007},
+  doi       = {10.1093/acprof:oso/9780199213900.003.04},
+  pages     = {0},
+  annote    = {Lindblad-Gleichung}
+}
+
+@article{nayak_non-abelian_2008,
+  title    = {Non-{Abelian} anyons and topological quantum computation},
+  volume   = {80},
+  url      = {https://link.aps.org/doi/10.1103/RevModPhys.80.1083},
+  doi      = {10.1103/RevModPhys.80.1083},
+  abstract = {Topological quantum computation has emerged as one of the most exciting approaches to constructing a fault-tolerant quantum computer. The proposal relies on the existence of topological states of matter whose quasiparticle excitations are neither bosons nor fermions, but are particles known as non-Abelian anyons, meaning that they obey non-Abelian braiding statistics. Quantum information is stored in states with multiple quasiparticles, which have a topological degeneracy. The unitary gate operations that are necessary for quantum computation are carried out by braiding quasiparticles and then measuring the multiquasiparticle states. The fault tolerance of a topological quantum computer arises from the nonlocal encoding of the quasiparticle states, which makes them immune to errors caused by local perturbations. To date, the only such topological states thought to have been found in nature are fractional quantum Hall states, most prominently the 𝜈=5/2 state, although several other prospective candidates have been proposed in systems as disparate as ultracold atoms in optical lattices and thin-film superconductors. In this review article, current research in this field is described, focusing on the general theoretical concepts of non-Abelian statistics as it relates to topological quantum computation, on understanding non-Abelian quantum Hall states, on proposed experiments to detect non-Abelian anyons, and on proposed architectures for a topological quantum computer. Both the mathematical underpinnings of topological quantum computation and the physics of the subject are addressed, using the 𝜈=5/2 fractional quantum Hall state as the archetype of a non-Abelian topological state enabling fault-tolerant quantum computation.},
+  number   = {3},
+  urldate  = {2025-01-27},
+  journal  = {Reviews of Modern Physics},
+  author   = {Nayak, Chetan and Simon, Steven H. and Stern, Ady and Freedman, Michael and Das Sarma, Sankar},
+  month    = sep,
+  year     = {2008},
+  note     = {Publisher: American Physical Society},
+  pages    = {1083--1159}
+}
+
+@article{kitaev_fault-tolerant_2003,
+  title    = {Fault-tolerant quantum computation by anyons},
+  volume   = {303},
+  issn     = {0003-4916},
+  url      = {https://www.sciencedirect.com/science/article/pii/S0003491602000180},
+  doi      = {10.1016/S0003-4916(02)00018-0},
+  abstract = {A two-dimensional quantum system with anyonic excitations can be considered as a quantum computer. Unitary transformations can be performed by moving the excitations around each other. Measurements can be performed by joining excitations in pairs and observing the result of fusion. Such computation is fault-tolerant by its physical nature.},
+  number   = {1},
+  urldate  = {2025-01-27},
+  journal  = {Annals of Physics},
+  author   = {Kitaev, A. Yu.},
+  month    = jan,
+  year     = {2003},
+  pages    = {2--30}
+}
+
+@article{aguado_majorana_2020,
+  title    = {Majorana qubits for topological quantum computing},
+  volume   = {73},
+  issn     = {0031-9228},
+  url      = {https://doi.org/10.1063/PT.3.4499},
+  doi      = {10.1063/PT.3.4499},
+  abstract = {Although physicists have observed neutrinos for more than 60 years, whether Majorana’s hypothesis is true remains unclear. For example, the discovery of neutrino oscillations, which earned Takaaki Kajita and Arthur McDonald the 2015 Nobel Prize in Physics, demonstrates that neutrinos have mass. But the standard model requires that neutrinos be massless, so various possibilities have been hypothesized to explain the discrepancy. One answer could come from massive neutrinos that do not interact through the weak nuclear force. Such sterile neutrinos could be the particles that Majorana predicted. Whereas conclusive evidence for the existence of Majorana neutrinos remains elusive, researchers are now using Majorana’s idea for other applications, including exotic excitations in superconductors.},
+  number   = {6},
+  urldate  = {2025-01-27},
+  journal  = {Physics Today},
+  author   = {Aguado, Ramón and Kouwenhoven, Leo P.},
+  month    = jun,
+  year     = {2020},
+  pages    = {44--50}
+}
+
+@misc{qutech_academy_quantum_2018,
+  title        = {Quantum error correction codes, Part 1 and 2},
+  url          = {https://www.youtube.com/watch?v=4hWUIGZh6WE and https://www.youtube.com/watch?v=wTaFd7nqbtQ},
+  howpublished = {\url{https://www.youtube.com/watch?v=4hWUIGZh6WE and https://www.youtube.com/watch?v=wTaFd7nqbtQ}},
+  abstract     = {Video: Quantum error correction codes.},
+  urldate      = {2025-01-30},
+  note         = {2025-01-30},
+  author       = {{QuTech Academy}},
+  month        = oct,
+  year         = {2018}
+}
+
+@misc{google_quantum_ai_demonstrating_2023,
+  title        = {Demonstrating {Quantum} {Error} {Correction}},
+  url          = {https://www.youtube.com/watch?v=_ugJLuJ1_gM},
+  howpublished = {\url{https://www.youtube.com/watch?v=_ugJLuJ1_gM}},
+  abstract     = {The Google Quantum AI team has made an important step towards the development of a large-scale useful quantum computer. This breakthrough is the first demonstration of a logical qubit prototype, showing that it’s possible to reduce errors by increasing the number of qubits.},
+  urldate      = {2025-01-30},
+  note         = {2025-01-30},
+  author       = {{Google Quantum AI}},
+  month        = feb,
+  year         = {2023}
+}
+
+@article{acharya_quantum_2024,
+  title     = {Quantum error correction below the surface code threshold},
+  copyright = {2024 The Author(s)},
+  issn      = {1476-4687},
+  url       = {https://www.nature.com/articles/s41586-024-08449-y},
+  doi       = {10.1038/s41586-024-08449-y},
+  abstract  = {Quantum error correction1–4 provides a path to reach practical quantum computing by combining multiple physical qubits into a logical qubit, in which the logical error rate is suppressed exponentially as more qubits are added. However, this exponential suppression only occurs if the physical error rate is below a critical threshold. Here we present two below-threshold surface code memories on our newest generation of superconducting processors, Willow: a distance-7 code and a distance-5 code integrated with a real-time decoder. The logical error rate of our larger quantum memory is suppressed by a factor of Λ = 2.14 ± 0.02 when increasing the code distance by 2, culminating in a 101-qubit distance-7 code with 0.143\% ± 0.003 per cent error per cycle of error correction. This logical memory is also beyond breakeven, exceeding the lifetime of its best physical qubit by a factor of 2.4 ± 0.3. Our system maintains below-threshold performance when decoding in real time, achieving an average decoder latency of 63 microseconds at distance 5 up to a million cycles, with a cycle time of 1.1 microseconds. We also run repetition codes up to distance 29 and find that logical performance is limited by rare correlated error events, occurring approximately once every hour or 3 × 109 cycles. Our results indicate device performance that, if scaled, could realize the operational requirements of large-scale fault-tolerant quantum algorithms.},
+  language  = {en},
+  urldate   = {2025-02-03},
+  journal   = {Nature},
+  author    = {Acharya, Rajeev and Abanin, Dmitry A. and Aghababaie-Beni, Laleh and Aleiner, Igor and Andersen, Trond I. and Ansmann and {Google Quantum AI and Collaborators}},
+  month     = dec,
+  year      = {2024},
+  note      = {Publisher: Nature Publishing Group},
+  keywords  = {Quantum information, Computer science},
+  pages     = {1--7}
+}
+
+@article{arute_quantum_2019,
+  title     = {Quantum supremacy using a programmable superconducting processor},
+  volume    = {574},
+  copyright = {2019 The Author(s), under exclusive licence to Springer Nature Limited},
+  issn      = {1476-4687},
+  url       = {https://www.nature.com/articles/s41586-019-1666-5},
+  doi       = {10.1038/s41586-019-1666-5},
+  abstract  = {The promise of quantum computers is that certain computational tasks might be executed exponentially faster on a quantum processor than on a classical processor1. A fundamental challenge is to build a high-fidelity processor capable of running quantum algorithms in an exponentially large computational space. Here we report the use of a processor with programmable superconducting qubits2–7 to create quantum states on 53 qubits, corresponding to a computational state-space of dimension 253 (about 1016). Measurements from repeated experiments sample the resulting probability distribution, which we verify using classical simulations. Our Sycamore processor takes about 200 seconds to sample one instance of a quantum circuit a million times—our benchmarks currently indicate that the equivalent task for a state-of-the-art classical supercomputer would take approximately 10,000 years. This dramatic increase in speed compared to all known classical algorithms is an experimental realization of quantum supremacy8–14 for this specific computational task, heralding a much-anticipated computing paradigm.},
+  language  = {en},
+  number    = {7779},
+  urldate   = {2025-01-24},
+  journal   = {Nature},
+  author    = {Arute, Frank and Arya, Kunal and Babbush, Ryan and Bacon, Dave and Bardin, Joseph C. and Barends, Rami and Biswas, Rupak and Boixo, Sergio and Brandao, Fernando G. S. L. and Buell, David A. and Burkett, Brian and Chen, Yu and Chen, Zijun and Chiaro, Ben and Collins, Roberto and Courtney, William and Dunsworth, Andrew and Farhi, Edward and Foxen, Brooks and Fowler, Austin and Gidney, Craig and Giustina, Marissa and Graff, Rob and Guerin, Keith and Habegger, Steve and Harrigan, Matthew P. and Hartmann, Michael J. and Ho, Alan and Hoffmann, Markus and Huang, Trent and Humble, Travis S. and Isakov, Sergei V. and Jeffrey, Evan and Jiang, Zhang and Kafri, Dvir and Kechedzhi, Kostyantyn and Kelly, Julian and Klimov, Paul V. and Knysh, Sergey and Korotkov, Alexander and Kostritsa, Fedor and Landhuis, David and Lindmark, Mike and Lucero, Erik and Lyakh, Dmitry and Mandrà, Salvatore and McClean, Jarrod R. and McEwen, Matthew and Megrant, Anthony and Mi, Xiao and Michielsen, Kristel and Mohseni, Masoud and Mutus, Josh and Naaman, Ofer and Neeley, Matthew and Neill, Charles and Niu, Murphy Yuezhen and Ostby, Eric and Petukhov, Andre and Platt, John C. and Quintana, Chris and Rieffel, Eleanor G. and Roushan, Pedram and Rubin, Nicholas C. and Sank, Daniel and Satzinger, Kevin J. and Smelyanskiy, Vadim and Sung, Kevin J. and Trevithick, Matthew D. and Vainsencher, Amit and Villalonga, Benjamin and White, Theodore and Yao, Z. Jamie and Yeh, Ping and Zalcman, Adam and Neven, Hartmut and Martinis, John M.},
+  month     = oct,
+  year      = {2019},
+  note      = {Publisher: Nature Publishing Group},
+  keywords  = {Quantum information, Quantum physics},
+  pages     = {505--510}
+}
+
+@article{vandersypen_quantum_2019,
+  title    = {Quantum computing with semiconductor spins},
+  volume   = {72},
+  issn     = {0031-9228},
+  url      = {https://doi.org/10.1063/PT.3.4270},
+  doi      = {10.1063/PT.3.4270},
+  abstract = {Imagine the spin state as a vector pointing on a sphere, commonly known as the Bloch sphere. Single-qubit gates correspond to rotations of the state vector that are independent of the state of any other qubit in the system. In the case of two-qubit gates, rotation of one qubit depends on the state of the other. And when the second qubit itself starts off in a superposition of states, the two qubits become entangled with each other. The recent satisfaction of all those requirements with quantum dots led to the demonstration of the first—and at two qubits the smallest possible—quantum semiconductor processor.},
+  number   = {8},
+  urldate  = {2025-03-21},
+  journal  = {Physics Today},
+  author   = {Vandersypen, Lieven M. K. and Eriksson, Mark A.},
+  month    = aug,
+  year     = {2019},
+  pages    = {38--45}
+}
+
+@misc{Golovach_condensed_2006,
+  title        = {Condensed {Matter} {Theory}},
+  author       = {{Vitaly} {Golovach}},
+  url          = {https://quantumtheory.physik.unibas.ch/people/golovach/},
+  howpublished = {\url{https://quantumtheory.physik.unibas.ch/people/golovach/}},
+  year         = {2006},
+  urldate      = {2025-03-21},
+  note         = {2025-03-21}
+}
+
+
+@article{kjaergaard_superconducting_2020,
+  title      = {Superconducting {Qubits}: {Current} {State} of {Play}},
+  volume     = {11},
+  issn       = {1947-5454, 1947-5462},
+  shorttitle = {Superconducting {Qubits}},
+  url        = {https://www.annualreviews.org/content/journals/10.1146/annurev-conmatphys-031119-050605},
+  doi        = {10.1146/annurev-conmatphys-031119-050605},
+  abstract   = {Superconducting qubits are leading candidates in the race to build a quantum computer capable of realizing computations beyond the reach of modern supercomputers. The superconducting qubit modality has been used to demonstrate prototype algorithms in the noisy intermediate-scale quantum (NISQ) technology era, in which non-error-corrected qubits are used to implement quantum simulations and quantum algorithms. With the recent demonstrations of multiple high-fidelity, two-qubit gates as well as operations on logical qubits in extensible superconducting qubit systems, this modality also holds promise for the longer-term goal of building larger-scale error-corrected quantum computers. In this brief review, we discuss several of the recent experimental advances in qubit hardware, gate implementations, readout capabilities, early NISQ algorithm implementations, and quantum error correction using superconducting qubits. Although continued work on many aspects of this technology is certainly necessary, the pace of both conceptual and technical progress in recent years has been impressive, and here we hope to convey the excitement stemming from this progress.},
+  language   = {en},
+  number     = {Volume 11, 2020},
+  urldate    = {2025-03-21},
+  journal    = {Annual Review of Condensed Matter Physics},
+  author     = {Kjaergaard, Morten and Schwartz, Mollie E. and Braumüller, Jochen and Krantz, Philip and Wang, Joel I.-J. and Gustavsson, Simon and Oliver, William D.},
+  month      = mar,
+  year       = {2020},
+  note       = {Publisher: Annual Reviews},
+  pages      = {369--395},
+  file       = {Full Text:C\:\\Users\\julia\\Zotero\\storage\\995S3UL2\\Kjaergaard et al. - 2020 - Superconducting Qubits Current State of Play.pdf:application/pdf}
+}
+
+@article{loss_quantum_1998,
+  title    = {Quantum computation with quantum dots},
+  volume   = {57},
+  issn     = {1050-29470556-2791},
+  url      = {https://ui.adsabs.harvard.edu/abs/1998PhRvA..57..120L},
+  doi      = {10.1103/PhysRevA.57.120},
+  abstract = {We propose an implementation of a universal set of one- and two-quantum-bit gates for quantum computation using the spin states of coupled single-electron quantum dots. Desired operations are effected by the gating of the tunneling barrier between neighboring dots. Several measures of the gate quality are computed within a recently derived spin master equation incorporating decoherence caused by a prototypical magnetic environment. Dot-array experiments that would provide an initial demonstration of the desired nonequilibrium spin dynamics are proposed.},
+  urldate  = {2025-03-21},
+  journal  = {Physical Review A},
+  author   = {Loss, Daniel and Divincenzo, David P.},
+  month    = jan,
+  year     = {1998},
+  note     = {Publisher: APS
+              ADS Bibcode: 1998PhRvA..57..120L},
+  keywords = {03.67.Lx, 75.10.Jm, 89.70.+c, 89.80.+h, Condensed Matter - Mesoscale and Nanoscale Physics, Information theory and communication theory, Quantized spin models, Quantum computation, Quantum Physics},
+  pages    = {120--126}
+}

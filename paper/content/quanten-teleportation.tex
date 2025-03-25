@@ -21,9 +21,9 @@ ermöglicht die Übertragung von Quanteninformation zwischen weit entfernten Par
 \subsection{Aufbau}\label{subsec:setup}
 
 Es muss ein Quanten-Verschränkungspaar vorhanden sein.
-Dieses Paar muss sich im Bell-Zustand\footnote{Vgl: Quantum computation and quantum information, Nielsen, Michael A.; Chuang, Isaac L., 2010} befinden, um sicherzustellen, dass die Messung des einen den Zustand des anderen beeinflusst.
+Dieses Paar muss sich im Bell-Zustand\footnote{\cite{nielsen_quantum_2010}} befinden, um sicherzustellen, dass die Messung des einen den Zustand des anderen beeinflusst.
 Dieses Paar wird in der Regel durch einen Prozess wie
-Spontane parametrische Abwärtsumwandlung\footnote{Vgl: Spontaneous parametric down-conversion, Couteau, Christophe, 2018, S.291--304} erzeugt.
+spontane parametrische Abwärtsumwandlung\footnote{\cite{couteau_spontaneous_2018}} erzeugt.
 Derzeit werden dafür in der Regel einfache Photonen oder Ionen verwendet.\\
 
 
@@ -51,7 +51,7 @@ Alice teleportiert.
 Als Nächstes verwendet Alice ihren klassischen Kommunikationskanal, um ihre Messung an Bob zu senden.
 Dies erfordert die Übertragung von nur zwei Bits (den beobachteten Zustand des zu teleportierenden Qubits und den beobachteten Zustand des
 des verschränkten Paares), was für keinen Kommunikationskanal ein Problem darstellen sollte.
-Diese geringe Bandbreitenanforderung in der klassischen Kommunikation macht in der Tat mehrere Kommunikationskanäle verfügbar
+Diese geringe Bandbreitenanforderung in der klassischen Kommunikation macht in der Tat mehrere Kommunikationskanäle verfügbar,
 die normalerweise wegen ihrer geringen Bandbreite nicht infrage kämen, insbesondere wenn die Teleportation über große
 Entfernungen stattfinden soll.
 Diese Information reicht jedoch aus, um Bob zu instruieren, wie er sein eigenes System einstellen muss.
@@ -127,15 +127,15 @@ Durch diese Operationen wird der Zustand des Teilchens 3 in den ursprünglichen 
 
 
 \subsection{Herausforderungen}\label{subsec:challenges}
-Obwohl die Quantenteleportation ein vielversprechender Forschungszweig ist, gibt es noch einige Herausforderungen zu bewältigen
+Obwohl die Quantenteleportation ein vielversprechender Forschungszweig ist, gibt es noch einige Herausforderungen zu bewältigen.
 
 \subsubsection{Verschränkung Erzeugen und Erhalten}
-Eine der größten Herausforderung ist die Erzeugung und Erhaltung eines verschränkten Systems zwischen dem Start- und Zielpunkt
+Eine der größten Herausforderungen ist die Erzeugung und Erhaltung eines verschränkten Systems zwischen dem Start- und Zielpunkt
 der Teleportation.
-Die Teleportation ist zwar theoretisch nicht durch Entfernung begrenzt, aber je größer die Entfernung zwischen den Orten
-des do schwieriger ist es die verschränkten Teilchen aufzuteilen, ohne die Verschränkung zu beschädigen.\\
+Die Teleportation ist zwar theoretisch nicht durch Entfernung begrenzt, aber je größer die Entfernung zwischen den Orten,
+desto schwieriger ist es die verschränkten Teilchen aufzuteilen, ohne die Verschränkung zu beschädigen.\\
 
-Ein Lösungsansatz sind hier Quantenrepeater: Spezialisierte Geräte die die Entfernung zwischen direkt verschränkten Teilchen reduzieren,
+Ein Lösungsansatz sind hier Quantenrepeater: Spezialisierte Geräte, die die Entfernung zwischen direkt verschränkten Teilchen reduzieren,
 indem sie diese nur zwischen Repeater Stationen aufteilen müssen.
 In der Station werden dann mithilfe von Entanglement Swapping zwei Verbindungen des Repeaters verschränkt.
 
@@ -144,12 +144,12 @@ Auch wenn die benötigte Bandbreite der klassischen Kommunikation minimal ist, m
 existieren.
 Das hat zwei signifikante Nachteile: Zum einen ist die klassische Kommunikation auf die Lichtgeschwindigkeit begrenzt,
 was ein Geschwindigkeitslimit für die Teleportation erzeugt, auch wenn die ``spukhafte Fernwirkung'' der Quantenmechanik
-schneller passieren könnte\footnote{Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres, Hensen et. al., 2015, S. 682--686}.
+schneller passieren könnte\footnote{\cite{hensen_loophole-free_2015}}.
 Zum anderen sind klassische Kommunikationskanäle anfällig für Observation - ein Angreifer kann zwar
-ohne das verschränkte Teilchen den Quantenzustand nicht reproduzieren ist aber in der Lage festzustellen, dass die
+ohne das verschränkte Teilchen den Quantenzustand nicht reproduzieren, ist aber in der Lage festzustellen, dass die
 Kommunikation stattgefunden hat.
 Ebenfalls könnte der Angreifer auch die Kommunikation stören, was zwar bei geeigneten Protokollen den Teilnehmern
-offensichtlich ist aber trotzdem eine Schwachstelle darstellt.
+offensichtlich ist, aber trotzdem eine Schwachstelle darstellt.
 Die einzige bekannte Lösung ist hier ein robustes klassisches Kommunikationssystem, was für andere Kommunikationszwecke
 bereits aufgebaut ist oder wird, aber leider die Lichtgeschwindigkeitslimitation nicht umgehen kann.
 
@@ -159,15 +159,15 @@ bereits aufgebaut ist oder wird, aber leider die Lichtgeschwindigkeitslimitation
 Ein weiteres bedeutendes Problem der Quantenteleportation ist die Skalierbarkeit.
 Während die Quantenteleportation in kleinen, kontrollierten Systemen von einigen wenigen Qubits relativ einfach durchgeführt werden kann,
 stellt die Skalierung auf größere Netzwerke und damit nützliche Datenmengen und die Integration in reale Kommunikationssysteme eine enorme Herausforderung dar.
-Um Quantenteleportation praktisch nutzen zu können würde es ein großflächiges System von Kommunikationskomponenten
+Um Quantenteleportation praktisch nutzen zu können, würde es ein großflächiges System von Kommunikationskomponenten
 benötigen.
-Die Erstellung dieser bräuchte Quantentechnologien in einer Menge in der diese momentan weder technisch möglich
+Die Erstellung dieser bräuchte Quantentechnologien in einer Menge, die momentan weder technisch möglich
 noch finanziell tragbar ist, wenn man bestehende Preise hochrechnet.\\
 
 Hier ist allerdings die Erwartung, dass weitere Forschung dieses Problem beheben wird.
 Es wird sowohl an günstigeren Methoden zur Erstellung von verschränkten Systemen und der Stabilisierung dieser,
 als auch an der Erstellung von Quantenkomponenten rege geforscht.
-Auch an Forschungsbudget fehlt es hier nicht, da einige große Technologiefirmen wie Google und Microsoft an Quantentechnologie forschen.
+Auch an Forschungsbudgets fehlt es hier nicht, da einige große Technologiefirmen wie Google und Microsoft an Quantentechnologie forschen.
 
 \subsubsection{Fehlerquellen und Messgenauigkeit}
 Die Messgenauigkeit ist entscheidend für die erfolgreiche Durchführung der Quantenteleportation.

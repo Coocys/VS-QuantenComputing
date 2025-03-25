@@ -4,20 +4,20 @@
 \subsection{Drei Prinzipien des Quanten Computing}
 \label{subsec:drei-prinzipien-des-quanten-computing}
 
-Zusammenfassend lässt sich Quanten Computing auf 3 wesentliche Prinzipien herunterbrechen.\\\\
-\textbullet Prinzip 1 - \textbf{Das Quantenregister}: Ein Quantenregister, das aus n-Qubits besteht, wird durch einen $2^n$-dimensionalen Vektorraum über komplexen Zahlen beschrieben.
+Zusammenfassend lässt sich Quanten Computing auf drei wesentliche Prinzipien herunterbrechen.\\\\
+Prinzip 1 - \textbf{Das Quantenregister}: Ein Quantenregister, das aus n-Qubits besteht, wird durch einen $2^n$-dimensionalen Vektorraum über komplexen Zahlen beschrieben.
 Der Zustand eines solchen Registers ist eine Überlagerung (Superposition) aller möglichen Basiszustände.
 Das bedeutet, dass das Register eine Kombination vieler möglicher Werte gleichzeitig annehmen kann.
 
 Diese Fähigkeit der Superposition ist eine der Hauptstärken von Quantencomputern, da sie es ermöglichen, mehrere Berechnungen parallel durchzuführen.\\
 
-\textbullet Prinzip 2 - \textbf{Rechenschritte}: Rechenschritte in einem Quantencomputer basieren auf unitären Transformationen.
+Prinzip 2 - \textbf{Rechenschritte}: Rechenschritte in einem Quantencomputer basieren auf unitären Transformationen.
 Diese Transformationen sind umkehrbar, was bedeutet, dass die Berechnung ohne Informationsverlust rückgängig gemacht werden kann.
 Jede Operation kann lokal beschrieben werden, wobei nur zwei Qubits gleichzeitig beteiligt sind.
 
 Diese Reversibilität der Rechenschritte stellt einen fundamentalen Unterschied zu klassischen Computern dar, bei denen Informationen während der Berechnung verloren gehen können.\\
 
-\textbullet Prinzip 3 - \textbf{Messungen}: Misst man den Zustand eines Quantenregisters, so erhält man als Ergebnis einen der Basiszustände mit einer Wahrscheinlichkeit, die aus der Amplitude dieses Zustands abgeleitet werden kann.
+Prinzip 3 - \textbf{Messungen}: Misst man den Zustand eines Quantenregisters, so erhält man als Ergebnis einen der Basiszustände mit einer Wahrscheinlichkeit, die aus der Amplitude dieses Zustands abgeleitet werden kann.
 
 Die Messung verändert den Zustand des Systems auf den gemessenen Wert, sodass die ursprüngliche Superposition zerstört wird.\\
 
@@ -63,7 +63,7 @@ Das ergibt:\\
 Wenn wir nun das erste Bit messen, kommt mit einer Wahrscheinlichkeit 50\% das Ergebnis $\ket{0}$ mit dem Folgezustand $\ket{00}$ und mit einer Wahrscheinlichkeit von 50\% das Ergebnis $\ket{1}$ mit dem Folgezustand $\ket{11}$ heraus.
 Wir wissen also nach der ersten Messung schon, bevor wir das zweite Qubit überhaupt gemessen haben, wie der Endzustand des Quantenregisters ist.
 Und wie bereits zuvor erwähnt, bleibt diese Eigenschaft bei räumlicher Trennung der Qubits erhalten.
-Hierbei ist auch zu erwähnen, dass es egal ist, welches der Qubits zuerst gemessen wird oder ob diese überhaupt gleichzeitig gemessen werden.\footnote{Homeister, 2022, S. 76.}\\
+Hierbei ist auch zu erwähnen, dass es egal ist, welches der Qubits zuerst gemessen wird oder ob diese überhaupt gleichzeitig gemessen werden.\footnote{\cite[S. 76]{homeister_quantum_2022}}\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{img/Verschränkung Definition}
@@ -75,7 +75,7 @@ Diesen Zustand nennt man auch Bell-Zustand.
 Es gibt insgesamt 4 solcher Bell-Zustände.
 Diese beschreiben verschränkte Bits mit einer starken Kopplung (maximal verschränkt).\\
 Daraus resultierend gibt es auch Verschränkungen mit einer weniger starken Kopplung.
-Ein solcher Zustand könnte beispielsweise so aussehen:\\
+Ein solcher Zustand könnte beispielsweise so aussehen:
 \begin{equation}
     \ket{\phi} = 0.9\ket{00} + 0.1\ket{11}
 \end{equation}\\
@@ -91,7 +91,7 @@ Das geht mit Leistungseinbußen einher, weshalb versucht wird, den Zustand der m
 
 „Klassische Schaltkreise bestehen aus Leitungen und Gattern.
 Ganz analog bestehen Quantenschaltkreise aus Quantenleitungen und Quantengattern.
-Jede Quantenleitung entspricht einem Quantenbit und ein Quantengatter führt eine unitäre Transformation aus.“\footnote{Homeister, 2022, S. 76.}\\
+Jede Quantenleitung entspricht einem Quantenbit und ein Quantengatter führt eine unitäre Transformation aus.“\footnote{\cite[S. 76]{homeister_quantum_2022}}\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.35\textwidth]{img/Quantengatter Basic}
@@ -99,10 +99,10 @@ Jede Quantenleitung entspricht einem Quantenbit und ein Quantengatter führt ein
     \label{fig:quantenschaltkreis}
 \end{figure}
 
-Wenn wir eine Berechnung mit mehreren Qubits ausführen, ergibt sich der Endzustand $\ket{x´, y´, z´}$ aus dem Tensorprodukt der einzelnen Gatter\footnote{Homeister, 2022, S. 76.}:\\
+Wenn wir eine Berechnung mit mehreren Qubits ausführen, ergibt sich der Endzustand $\ket{x, y, z}$ aus dem Tensorprodukt der einzelnen Gatter\footnote{\cite[S. 76]{homeister_quantum_2022}}:
 \begin{equation}
     (I_{2} \otimes W \otimes I_{2})(U \otimes V)\ket{x, y, z}
-\end{equation}\\
+\end{equation}
 
 \begin{figure}[H]
     \centering
@@ -111,19 +111,19 @@ Wenn wir eine Berechnung mit mehreren Qubits ausführen, ergibt sich der Endzust
     \label{fig:quantenschaltkreis-tensorprodukt}
 \end{figure}
 
-Da bei Quantenschaltkreisen die Umkehrbarkeit der Berechnungen garantiert werden muss, ist die Summe der Eingabe-Qubits = Summe der Ausgabe-Qubits und pro Gatter dürfen höchsten 3 Qubits einbezogen werden.
+Da bei Quantenschaltkreisen die Umkehrbarkeit der Berechnungen garantiert werden muss, ist die Summe der Eingabe-Qubits gleich der Summe der Ausgabe-Qubits und pro Gatter dürfen höchsten 3 Qubits einbezogen werden.
 Um dies zu gewährleisten, nutzen wir das Toffoli-Gatter, welches im nächsten Kapitel erläutert wird.
 Außerdem können Qubits nicht kopiert werden, deshalb dürfen sich die Quantenleitungen nicht verzweigen und das Ergebnis eines Gatters nicht mehrfach verwendet werden.
 Auf den Grund dafür kommen wir später nochmal zurück.\\
 
 Eine der wichtigsten Operationen in der Quanteninformatik ist die Negation, genauer die kontrollierte Negation CNOT\@.
 Dieses Gatter wird für alle Quantenoperationen benötigt, so zum Beispiel bei der Verschränkung.
-Darstellen lässt es sich wie folgt:\\
+Darstellen lässt es sich wie folgt:
 \begin{equation}
     CNOT : \ket{x,y} \rightarrow \ket{x,y\oplus x}
-\end{equation}\\
+\end{equation}
 
-oder als Matrix:\\
+oder als Matrix:
 \begin{equation}
     CNOT =
     \begin{pmatrix}
@@ -132,38 +132,38 @@ oder als Matrix:\\
         0 & 0 & 0 & 1 \\
         0 & 0 & 1 & 0
     \end{pmatrix}
-\end{equation}\\
+\end{equation}
 
 Dieses CNOT-Gatter negiert nur dann das zweite Qubit, wenn das erste Qubit im Zustand $\ket{1}$ ist.\\
 
 Weitere wichtige Operationen sind die Hadamard-Transformation, die wir bereits kennen, sowie die Pauli-Matrizen.
 Die Pauli-Matrizen negieren ebenfalls, mithilfe einer unitären Transformation auf einem Bit.
-Die bekannteste ist der „Bitflip“ X:\footnote{Homeister, 2022, S. 79.}\\
+Die bekannteste ist der „Bitflip“ X:\footnote{\cite[S. 79]{homeister_quantum_2022}}
 \begin{equation}
     X =
     \begin{pmatrix}
         0 & 1 \\
         1 & 0
     \end{pmatrix}
-\end{equation}\\
+\end{equation}
 
-Die zwei weiteren Pauli-Matrizen sind der „Phasenflip“ Z:\\
+Die zwei weiteren Pauli-Matrizen sind der „Phasenflip“ Z:
 \begin{equation}
     Z =
     \begin{pmatrix}
         1 & 0 \\
         0 & -1
     \end{pmatrix}
-\end{equation}\\
+\end{equation}
 
-und der „Y-Flip“ Y:\\
+und der „Y-Flip“ Y:
 \begin{equation}
     Y =
     \begin{pmatrix}
         0 & -i \\
         i & 0
     \end{pmatrix}
-\end{equation}\\
+\end{equation}
 
 \begin{figure}[H]
     \centering
@@ -174,7 +174,7 @@ und der „Y-Flip“ Y:\\
 
 Durch die Kombination dieser drei Gatter CNOT, Hadamard-Transformation, sowie Pauli-Matrizen lassen sich alle Quantenberechnungen abbilden.
 Sie bilden die grundlegendsten Rechenoperationen eines Quantencomputers.
-Mit einem wesentlichen Unterschied zu logischen Gattern: bei diesen lässt sich der Endzustand nicht unbedingt wieder in den Anfangszustand überführen.
+Mit einem wesentlichen Unterschied zu logischen Gattern: Bei diesen lässt sich der Endzustand nicht unbedingt wieder in den Anfangszustand überführen.
 Bei Quantengattern ist dies eine zwingende Voraussetzung, sie müssen umkehrbar sein.\\
 
 
@@ -191,7 +191,7 @@ Allerdings kann jede klassische Operation in eine umkehrbare Operation umgewande
 Veranschaulichen wir uns dies anhand des Toffoli-Gatters.\\
 
 Das Toffoli-Gatter ist ein universelles, umkehrbares Gatter, welches AND, OR und NOT Operationen ersetzen kann.
-Es besteht aus drei Eingabebits a, b, c und drei Ausgabebits a, b und $c\oplus(a\land b)$:\footnote{Homeister, 2022, S. 87.}\\
+Es besteht aus drei Eingabebits a, b, c und drei Ausgabebits a, b und $c\oplus(a\land b)$:\footnote{\cite[S. 87]{homeister_quantum_2022}}\\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.35\textwidth]{img/Umkehrbare_Berechnungen Toffoli}
@@ -231,7 +231,7 @@ Würden wir zum Beispiel ein Qubit durch 3 Quantengatter nacheinander umformen, 
 Das heißt, bei 50 Quantengattern welche einen Fehler von 2\% hinzufügen, beträgt der Fehler des Endzustands 100\%.
 Wenn die Fehler nun aber exponentiell wachsen würden, hätten wir nach 3 Gattern einen Fehler von 8\%, nach 50 Gattern (theoretisch) einen Fehler von $2^{50}$\%.\\
 
-Um die Frage vom Beginn des Kapitels nochmal aufzunehmen: Einer der Gründe weshalb nicht jeder einen Quantencomputer zu Hause stehen hat, ist die Fehleranfälligkeit der Berechnungen.
+Um die Frage vom Beginn des Kapitels nochmal aufzunehmen: Einer der Gründe, weshalb nicht jeder einen Quantencomputer zu Hause stehen hat, ist die Fehleranfälligkeit der Berechnungen.
 Es bedarf großen Aufwands solche Fehler zu vermeiden und zu korrigieren.\\
 
 
@@ -250,7 +250,7 @@ Und würde man für ein NP-vollständiges Problem eine Lösung finden, also ein 
 Doch selbst Quantencomputer scheinen keine Lösung für diese Probleme finden zu können.
 Das liegt daran, dass selbst Quantenalgorithmen, wie etwa der bekannte Shor-Algorithmus (zur Faktorisierung großer Zahlen),
 oder der Grover-Algorithmus (zur unstrukturierten Suche in Datenbanken), zwar eine deutliche Geschwindigkeitsverbesserung im Vergleich zu klassischen Algorithmen bieten,
-jedoch keine exponentielle Reduktion der Komplexität bei NP-vollständigen Problemen ermöglichen.\footnote{Homeister, 2022, S. 165.}\\
+jedoch keine exponentielle Reduktion der Komplexität bei NP-vollständigen Problemen ermöglichen.\footnote{\cite[S. 165]{homeister_quantum_2022}}\\
 Hier stoßen Quantencomputer also auf dieselben grundlegenden Herausforderungen wie klassische Computer.\\
 
 \begin{tcolorbox}[title=Kommentar,
@@ -262,7 +262,7 @@ Hier stoßen Quantencomputer also auf dieselben grundlegenden Herausforderungen 
 
     Als wir mit dem Thema und der Recherche zur Quanteninformatik begonnen haben, war mir nicht bewusst, dass selbst Quantencomputer,
     welche noch in den Anfängen stecken und ein großes Potenzial bieten, schon jetzt an Grenzen stoßen, wie bei den NP-vollständigen Problemen.
-    Es ist faszinierend zu sehen, dass selbst Quantencomputer, eine Technologie die man sonst nur aus Sci-Fi Serien kennt, nicht alle mathematischen Probleme lösen kann.
+    Es ist faszinierend zu sehen, dass selbst Quantencomputer, eine Technologie, die man sonst nur aus Sci-Fi Serien kennt, nicht alle mathematischen Probleme lösen kann.
 \end{tcolorbox}
 
 \subsubsection{Die perfekte Uhr}
@@ -274,7 +274,7 @@ Ein Forscherteam hat gezeigt, dass es unmöglich ist gleichzeitig die perfekte P
 
 Warum ist das wichtig für das Quanten Computing?
 Aktuell haben Quantencomputer noch mit anderen Problemen, wie etwa der Dekohärenz oder Ungenauigkeiten bei den verwendeten Bauteilen zu kämpfen.
-Allerdings zeigen Rechnungen, dass man nicht mehr so weit davon entfernt ist, bis die physikalische Grenze der Zeitrechnung die nächste Limitation für Geschwindigkeit und Zuverlässigkeit darstellt.\footnote{Vgl. Technische Universität Wien. \textit{Grenzen für Quantencomputer: Perfekte Uhren sind unmöglich}. tuwien.at., \href{https://www.tuwien.at/tu-wien/aktuelles/news/grenzen-fuer-quantencomputer-perfekte-uhren-sind-unmoeglich} (abgerufen am 02. März 2025)}\\\\
+Allerdings zeigen Rechnungen, dass man nicht mehr so weit davon entfernt ist, bis die physikalische Grenze der Zeitrechnung die nächste Limitation für Geschwindigkeit und Zuverlässigkeit darstellt.\footnote{\cite{tuwien_grenzen_2023}}\\\\
 
 \begin{tcolorbox}[title=Kommentar,
     title filled=false,
@@ -295,13 +295,13 @@ Was sind oder werden Anwendungsgebiete für diese Technologie sein?\\
 \label{subsubsec:quantum-machine-learning}
 Künstliche Intelligenz oder auch Machine Learning sind zwei der Bereiche, in denen Quantencomputer eine große Rolle spielen könnten.
 So schreibt die Fraunhofer-Allianz Big Data und Künstliche Intelligenz: \("\)Verfahren der künstlichen Intelligenz und des Machine Learnings lassen sich für Quantencomputer so anpassen, dass sie mehrere Lösungswege gleichzeitig beschreiten können.
-Damit können Quantencomputer große Datenbestände in einem einzigen Schritt verarbeiten, Muster in den Daten aufspüren, die klassische Computer nicht entdecken und auch auf unvollständigen oder unsicheren Daten verlässliche Ergebnisse liefern.\("\)\footnote{Vgl. Technische Universität Wien. \textit{Grenzen für Quantencomputer: Perfekte Uhren sind unmöglich}. tuwien.at., \href{https://www.tuwien.at/tu-wien/aktuelles/news/grenzen-fuer-quantencomputer-perfekte-uhren-sind-unmoeglich} (abgerufen am 02. März 2025)}
+Damit können Quantencomputer große Datenbestände in einem einzigen Schritt verarbeiten, Muster in den Daten aufspüren, die klassische Computer nicht entdecken und auch auf unvollständigen oder unsicheren Daten verlässliche Ergebnisse liefern.\("\)\footnote{\cite{tuwien_grenzen_2023}}
 Quantencomputer könnten also die Lernverfahren von KI deutlich beschleunigen und verbessern.\\
 
-Dies birgt allerdings auch ein Risiko, dessen ist sich auch das Bundesamt für Sicherheit in der Informationstechnik bewusst und gab in Kooperation mit Capgemini und dem Fraunhofer-Institut für Intelligente Analyse- und Informationssysteme eine Studie in Auftrag, die Quantum Machine Learning (QML) im Kontext von IT-Sicherheit untersuchen soll.\footnote{Vgl. Bauckhage, Christian, et al. \textit{Quantum Machine Learning in the Context of IT Security}. bsi.bund.de., \href{https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/Studien/QML/QML_in_the_Context_of_IT_Security.pdf} (abgerufen am 02. März 2025)}
+Dies birgt allerdings auch ein Risiko, dessen ist sich auch das Bundesamt für Sicherheit in der Informationstechnik bewusst und gab in Kooperation mit Capgemini und dem Fraunhofer-Institut für Intelligente Analyse- und Informationssysteme eine Studie in Auftrag, die Quantum Machine Learning (QML) im Kontext von IT-Sicherheit untersuchen soll.\footnote{\cite{BSI_QUITS_2022}}
 So hat QML beispielsweise großes Potenzial für die Malware und Spam Erkennung, sowie Kryptografie.
 Gleichzeitig weiß man jetzt schon, dass aktuelle Verschlüsselungsmethoden, wie RSA oder ECC, durch Quantencomputer gebrochen werden können.
-Daher wird bereits an quanten-resistenten Verschlüsselungsmethoden gearbeitet.\footnote{Vgl. Bundesamt für Sicherheit in der Informationstechnik. \textit{Quantenmechanische Sicherheitslücken (QML) - Studien}. bsi.bund.de., \href{https://www.bsi.bund.de/DE/Service-Navi/Publikationen/Studien/QML/QML_node.html} (abgerufen am 02. März 2025)}\\
+Daher wird bereits an quanten-resistenten Verschlüsselungsmethoden gearbeitet.\footnote{\cite{BSI_quantum_2022}}\\
 
 \begin{tcolorbox}[title=Kommentar,
     title filled=false,
@@ -320,10 +320,10 @@ Hier könnten Quantencomputer Unterstützung leisten.
 So schreibt das Fraunhofer Cluster of Excellence Cognitive Internet Technologies:
 \("\) Mithilfe der Simulation von Molekülen könnten in Zukunft beispielsweise gezielt Katalysatoren entwickelt werden, die chemische Produktionsverfahren effizienter machen.
 Chancen ähnlicher Größenordnung ergeben sich für die Pharmaindustrie.
-Auch Forschung zu den im Angesicht des Klimawandels besondere relevanten Batterien zählt zum Anwendungsbereich der Simulation.\("\)\footnote{Vgl. Fraunhofer Cluster of Excellence Cognitive Internet Technologies. \textit{Quantencomputing – Forschungsthemen}. cit.fraunhofer.de., \href{https://www.cit.fraunhofer.de/de/Forschungsthemen/quantencomputing.html} (abgerufen am 02. März 2025)}
-Deshalb erforscht das deutsche Zentrum für Luft- und Raumfahrt (DLR) zusammen mit dem Fraunhofer-Institut für Werkstoffmechanik IWM unter Verwendung des IBM-Quantencomputers neue Wege des Materialdesigns.\footnote{Vgl. Fraunhofer-Institut für Werkstoffmechanik IWM. \textit{Quantencomputer für innovative Materialsimulation nutzen}. iwm.fraunhofer.de., \href{https://www.iwm.fraunhofer.de/de/geschaeftsfelder/werkstoffbewertung-lebensdauerkonzepte/materialmodellierung/quantencomputer_innovative_materialsimulation_nutzen.html} (abgerufen am 02. März 2025)}\\
+Auch Forschung zu den im Angesicht des Klimawandels besondere relevanten Batterien zählt zum Anwendungsbereich der Simulation.\("\)\footnote{\cite{Fraunhofer_quantencomputing_2025}}
+Deshalb erforscht das deutsche Zentrum für Luft- und Raumfahrt (DLR) zusammen mit dem Fraunhofer-Institut für Werkstoffmechanik IWM unter Verwendung des IBM-Quantencomputers neue Wege des Materialdesigns.\footnote{\cite{FraunhoferIWM_quantencomputer_2025}}\\
 
-Neben den genannten Anwendungsgebiete wird außerdem ein Nutzer in der Logistik (optimaler Verteilung begrenzter Ressourcen), den Ingenieurswissenschaften und dem Finanzwesen (Risikoanalysen und Optimierung von Portfolios) gesehen.\footnote{Vgl. Fraunhofer Cluster of Excellence Cognitive Internet Technologies. \textit{Quantencomputing – Forschungsthemen}. cit.fraunhofer.de., \href{https://www.cit.fraunhofer.de/de/Forschungsthemen/quantencomputing.html} (abgerufen am 02. März 2025)}\\
+Neben den genannten Anwendungsgebiete wird außerdem ein Nutzer in der Logistik (optimaler Verteilung begrenzter Ressourcen), den Ingenieurswissenschaften und dem Finanzwesen (Risikoanalysen und Optimierung von Portfolios) gesehen.\footnote{\cite{Fraunhofer_quantencomputing_2025}}\\
 
 
 
